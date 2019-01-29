@@ -26,7 +26,9 @@ function init() {
         let active = false;
         for (let i = 0; i < sections.length; i++) {
             let top = sections[i].getBoundingClientRect().top;
-            if (top / vwHeight <= 0.7 && top / vwHeight >= -0.3 && !active) {
+            let bottom = sections[i].getBoundingClientRect().bottom;
+
+            if ((top / vwHeight <= 0.7 && top>0) || (bottom/vwHeight >=0.7)  && !active) {
                 bars[i].classList.add('active-bar');
                 navItems[i].classList.add('nav-active');
                 navNumPrimary[i].style.opacity = 0;

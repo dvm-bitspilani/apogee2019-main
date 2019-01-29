@@ -4,6 +4,7 @@
     outline: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'bahnschrift';
 }
 
 html, body{
@@ -17,14 +18,7 @@ html, body{
     min-height: 100vh;
 }
 
-#about {
-    background: gray;
-}
-
-#events {
-    background: green;
-}
-
-#workshop {
-    background: gray;
+#events{
+    position: relative;
+    height: 130vh;
 }

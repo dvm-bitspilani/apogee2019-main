@@ -12,6 +12,7 @@
 .event-card {
     display: flex;
     height: 22%;
+    background-image: linear-gradient(45deg, #1f0936, #200736)
 }
 
 .event-image{
@@ -22,4 +23,8 @@
 .event-info {
     width: 75%;
     overflow: auto;
+    h3{
+        color: white;
+        font-family: 'bahnschrift'
+    }
 }

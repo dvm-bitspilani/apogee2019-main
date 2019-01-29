@@ -1,12 +1,14 @@
-html, body {
+*{
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
+html, body{
+    height: 100%;
+    width: 100%;
 }
 
 .section {

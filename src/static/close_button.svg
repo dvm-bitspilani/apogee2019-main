@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.119" y1="-0.134" x2="-0.131" y2="1.128" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1d149b"/>
+      <stop offset="0.176" stop-color="#821c8c"/>
+      <stop offset="0.856" stop-color="#dc247f"/>
+      <stop offset="1" stop-color="#f9277b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.218" y1="1.295" x2="-0.228" y2="0.085" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.576" stop-color="#fff" stop-opacity="0.031"/>
+      <stop offset="0.582" stop-color="#fff" stop-opacity="0.361"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_75" data-name="Group 75" transform="translate(-1773 -50)">
+    <rect id="Rectangle_20" data-name="Rectangle 20" width="56" height="56" rx="28" transform="translate(1773 50)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_8" data-name="Ellipse 8" cx="28" cy="28" r="28" transform="translate(1773 50)" opacity="0.94" fill="url(#linear-gradient-2)"/>
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="25.103" cy="25.103" r="25.103" transform="translate(1776 53)" fill="#230836"/>
+    <g id="Group_27" data-name="Group 27" transform="translate(-4191.063 753.267)">
+      <line id="Line_10" data-name="Line 10" y1="21.385" x2="21.385" transform="translate(5981.231 -685.959)" fill="none" stroke="#c91ab7" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_12" data-name="Line 12" y1="21.385" x2="21.385" transform="translate(5981.231 -685.959)" fill="none" stroke="#c91ab7" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g id="Group_33" data-name="Group 33" transform="translate(1125.594 -5913.924) rotate(90)">
+      <line id="Line_10-2" data-name="Line 10" y1="21.385" x2="21.385" transform="translate(5981.231 -685.959)" fill="none" stroke="#c91ab7" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_12-2" data-name="Line 12" y1="21.385" x2="21.385" transform="translate(5981.231 -685.959)" fill="none" stroke="#c91ab7" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

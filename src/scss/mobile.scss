@@ -1,5 +1,32 @@
 @media all and (max-width: 600px) and (orientation: portrait) {
     .desktop-only {
-        display: none;
+        display: none !important;
+    }
+
+    #navbar {
+        height: 60px;
+        padding: 0 5vw;
+        border-bottom: 2px solid red;
+    }
+
+    #logo {
+        max-height: 30px;
+    }
+
+    #hamburger {
+        max-height: 30px;
+    }
+
+    #side-menu {
+        width: 100vw;
+        right: -100vw;
+    }
+
+    #side-menu-top {
+        height: 60px;
+    }
+
+    #close-hamburger {
+        max-height: 27px;
     }
 }

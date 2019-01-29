@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135" height="50.6" viewBox="0 0 135 50.6">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.165" y1="-3.87" x2="1.254" y2="3.989" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.439"/>
+      <stop offset="0.414" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.525" stop-color="#fff" stop-opacity="0.231"/>
+      <stop offset="0.527" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.199" y1="-0.764" x2="-0.085" y2="1.146" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0800e7"/>
+      <stop offset="0.361" stop-color="#ca22e6"/>
+      <stop offset="1" stop-color="#e627e6"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_127" data-name="Group 127" transform="translate(6083 -10948)">
+    <g id="Group_126" data-name="Group 126">
+      <path id="Subtraction_13" data-name="Subtraction 13" d="M110,50.6H25a24.979,24.979,0,0,1-25-25V25A24.98,24.98,0,0,1,25,0h85a24.98,24.98,0,0,1,25,25v.6a24.979,24.979,0,0,1-25,25ZM25.3,3a22.3,22.3,0,0,0,0,44.6h84.4a22.3,22.3,0,1,0,0-44.6Z" transform="translate(-6083 10948)" fill="url(#linear-gradient)"/>
+      <path id="Subtraction_14" data-name="Subtraction 14" d="M109.7,50.6H25.3A25.307,25.307,0,0,1,15.452,1.988,25.141,25.141,0,0,1,25.3,0h84.4a25.307,25.307,0,0,1,9.848,48.612A25.142,25.142,0,0,1,109.7,50.6ZM25.3,3a22.3,22.3,0,0,0,0,44.6h84.4a22.3,22.3,0,1,0,0-44.6Z" transform="translate(-6083 10948)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <text id="REGISTER" transform="translate(-6057 10978)" fill="#fff" font-size="16" font-family="Bahnschrift" letter-spacing="0.124em"><tspan x="0" y="0">REGISTER</tspan></text>
+  </g>
+</svg>

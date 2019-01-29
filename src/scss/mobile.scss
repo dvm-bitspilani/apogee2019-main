@@ -6,7 +6,7 @@
     #navbar {
         height: 60px;
         padding: 0 5vw;
-        border-bottom: 2px solid red;
+        border-bottom: 1px solid #B525E9;
     }
 
     #logo {
@@ -28,5 +28,9 @@
 
     #close-hamburger {
         max-height: 27px;
+    }
+    
+    #container {
+        padding: 80px 0 0 0;
     }
 }

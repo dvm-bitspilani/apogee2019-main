@@ -8,3 +8,19 @@ html, body {
 * {
     box-sizing: border-box;
 }
+
+.section {
+    min-height: 100vh;
+}
+
+#about {
+    background: gray;
+}
+
+#events {
+    background: green;
+}
+
+#workshop {
+    background: gray;
+}

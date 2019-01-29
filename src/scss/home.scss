@@ -40,12 +40,12 @@
     .home-footer {
         position: absolute;
         bottom: 0;
-        width: 100vw;
+        width: 100%;
         height: 80px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-
+        
         .social-icons {
             display: flex;
         }

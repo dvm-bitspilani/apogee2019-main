@@ -12,29 +12,42 @@
             letter-spacing: 20px;
         }
 
-        // > div {
-        //     display: flex;
+        .content-wrap {
+            display: flex;
+            width: 33vw;
+            justify-content: space-between;
 
-        //     div {
-        //         line-height: 20px;
-        //     }
+            .content-line-wrap {
+                display: flex;
+                align-items: center;
+                height: 33px;
 
-        //     > div {
-        //         display: flex;
-        //         align-items: center;
-        //         height: 20px;
+                .before-content-line {
+                    background: #fc18b9;
+                    width: 70px;
+                    height: 2px;
+                }
+            }
+            .content-text {
+                line-height: 33px;
+                width: 85%;
+                font-size: 20px;
+            }
+        }
 
-        //         > div {
-        //             background: #fc18b9;
-        //             width: 20px;
-        //             height: 2px;
-        //         }
-        //     }
-        // }
-        .before-content-line {
-            background: #fc18b9;
-            width: 70px;
-            height: 2px;
+    }
+
+    .home-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .social-icons {
+            display: flex;
         }
     }
 }

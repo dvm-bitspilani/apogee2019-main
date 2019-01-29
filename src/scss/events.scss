@@ -1,0 +1,32 @@
+#events-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+}
+
+#events-content-inner{
+    position: absolute;
+    border: 1px solid white;
+    right: 2px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.event-card {
+    display: flex;
+    height: 22%;
+}
+
+.event-image{
+    width: 25%;
+    border: 1px solid magenta;
+}
+
+.event-info {
+    width: 75%;
+    overflow: auto;
+}

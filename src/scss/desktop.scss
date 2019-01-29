@@ -1,3 +1,19 @@
+// #pointer {
+//     position: fixed;
+//     height: 90vh;
+//     width: 90vh;
+//     border-radius: 100%;
+//     background: radial-gradient(rgba(256,256,256,0.4), rgba(256,256,256,0) 70%);
+// }
+
+.vertical-lines {
+    background: #1d4273;
+    height: 100vh;
+    width: 1px;
+    position: fixed;
+    opacity: 0.65;
+}
+
 #nav {
     position: fixed;
     top: 50%;

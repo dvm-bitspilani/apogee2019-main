@@ -4,9 +4,12 @@
     outline: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'bahnschrift';
 }
 
 html, body{
+    color: #fff;
+    background: #00061c;
     height: 100%;
     width: 100%;
     background: #000;
@@ -129,4 +132,9 @@ html, body{
 
 #hamburger:hover, #close-hamburger:hover {
     transform: rotate(90deg);
+}
+
+#events{
+    position: relative;
+    height: 130vh;
 }

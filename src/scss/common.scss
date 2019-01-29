@@ -12,24 +12,12 @@ html, body{
     background: #00061c;
     height: 100%;
     width: 100%;
-    background: #000;
+    background: #01061C;
 }
 
 .section {
     min-height: 100vh;
     position: relative;
-}
-
-#about {
-    background: gray;
-}
-
-#events {
-    background: blueviolet;
-}
-
-#workshop {
-    background: gray;
 }
 
 #navbar {
@@ -42,6 +30,7 @@ html, body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 }
 
 #logo {
@@ -67,21 +56,21 @@ html, body{
 }
 
 #nav-links span {
-    margin-right: 70px;
+    margin-right: 60px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 #nav-links span:hover {
-    color: red;
     transform: scale(1.1);
 }
 
 #register-btn {
-    max-height: 40px;
-    margin-right: 70px;
     color: #fff;
+    padding: 5px 20px;
+    border: 1.5px solid #B525E9;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -95,6 +84,8 @@ html, body{
     padding: 0 25px;
     overflow-y: auto;
     transition: right 0.5s cubic-bezier(0,.93,.39,1);
+    background-image: linear-gradient(60deg, #250135, #162539);
+    z-index: 9999;
 }
 
 #side-menu-top {
@@ -127,7 +118,13 @@ html, body{
         color: #fff;
         font-size: 20px;
         text-transform: uppercase;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
+        transition: all 0.2s ease-in-out;        
+        cursor: pointer;
+    }
+
+    span:hover {
+        margin-left: 10px;
     }
 }
 

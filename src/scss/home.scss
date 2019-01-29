@@ -1,12 +1,40 @@
 #home {
-    h1 {
-        font-family: 'teko-light';
-        font-size: 100px;
+    .home-content {
         position: absolute;
         top: 25vh;
         left: 20vw;
-        line-height: 1;
-        font-weight: lighter;
-        letter-spacing: 20px;
+
+        h1 {
+            font-family: 'teko-light';
+            font-size: 100px;
+            line-height: 1;
+            font-weight: lighter;
+            letter-spacing: 20px;
+        }
+
+        // > div {
+        //     display: flex;
+
+        //     div {
+        //         line-height: 20px;
+        //     }
+
+        //     > div {
+        //         display: flex;
+        //         align-items: center;
+        //         height: 20px;
+
+        //         > div {
+        //             background: #fc18b9;
+        //             width: 20px;
+        //             height: 2px;
+        //         }
+        //     }
+        // }
+        .before-content-line {
+            background: #fc18b9;
+            width: 70px;
+            height: 2px;
+        }
     }
 }

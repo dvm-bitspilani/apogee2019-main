@@ -11,7 +11,18 @@ html, body{
     width: 100%;
 }
 
-body{
-    background: #000;
-    color: #fff;
+.section {
+    min-height: 100vh;
+}
+
+#about {
+    background: gray;
+}
+
+#events {
+    background: green;
+}
+
+#workshop {
+    background: gray;
 }

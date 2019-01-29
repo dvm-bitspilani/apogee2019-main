@@ -8,13 +8,17 @@ function init() {
     let vwHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     let waiting = false;
 
-    onScrollHandler();
-    
+    bars[0].classList.add('active-bar');
+    navItems[0].classList.add('nav-active');
+    navNumPrimary[0].style.opacity = 0;
+    navTexts[0].style.opacity = 1;
+    navNumSecondary[0].style.opacity = 1;
+
     window.addEventListener("scroll", function () {
-        if(!waiting) {
+        if (!waiting) {
             onScrollHandler();
             waiting = true;
-            setTimeout(function () {waiting = false;}, 50);
+            setTimeout(function () { waiting = false; }, 50);
         }
     })
 

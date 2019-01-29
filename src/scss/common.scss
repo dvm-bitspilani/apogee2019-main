@@ -12,10 +12,126 @@ html, body{
     background: #00061c;
     height: 100%;
     width: 100%;
+    background: #000;
 }
 
 .section {
     min-height: 100vh;
+}
+
+#about {
+    background: gray;
+}
+
+#events {
+    background: blueviolet;
+}
+
+#workshop {
+    background: gray;
+}
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 100vw;
+    padding: 0px 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    max-height: 50px;
+}
+
+#hamburger {
+    max-height: 40px;
+    cursor: pointer;
+    transition: all 0.07s ease-in-out;
+}
+
+#links {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#nav-links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#nav-links span {
+    margin-right: 70px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#nav-links span:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+#register-btn {
+    max-height: 40px;
+    margin-right: 70px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#side-menu {
+    position: fixed;
+    right: -400px;
+    top: 0px;
+    width: 400px;
+    background: blue;
+    height: 100vh;
+    padding: 0 25px;
+    overflow-y: auto;
+    transition: right 0.5s cubic-bezier(0,.93,.39,1);
+}
+
+#side-menu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    align-items: center;
+}
+
+#close-hamburger {
+    max-height: 35px;
+    cursor: pointer;
+    transition: all 0.07s ease-in-out;
+}
+
+#side-menu-heading {
+    font-size: 20px;
+    color: #fff;
+}
+
+#side-menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#side-menu-list {
+    span {
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+}
+
+#hamburger:hover, #close-hamburger:hover {
+    transform: rotate(90deg);
 }
 
 #events{

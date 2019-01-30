@@ -20,7 +20,7 @@ function init() {
         if (!waiting) {
             onScrollHandler();
             waiting = true;
-            setTimeout(function () { waiting = false; }, 50);
+            setTimeout(function () { waiting = false; }, 20);
         }
     })
 

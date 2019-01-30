@@ -1,0 +1,64 @@
+#workshop-content{
+    position: absolute;
+    height: 80vh;
+    width: 75vw;
+    top: 50%;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.workshop-row{
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+
+.workshop-row:nth-child(odd){
+    justify-content: left;
+}
+
+.workshop-row:nth-child(even){
+    justify-content: right;
+}
+.workshop-cell{
+    height: 100%;
+    width: 40%;
+    margin-right: 3%;
+    margin-left: 3%;
+    display: flex;
+    padding: 4% 2%;
+    background-image: linear-gradient(116deg, #250135, #161639);
+}
+
+.workshop-image{
+    width: 30%;
+    background-image: url('../imgs/cara.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.workshop-info{
+    width: 70%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3{
+        letter-spacing: 2px;
+        font-size: 23px;
+        font-weight: 400;
+    }
+    h6{
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    h6:nth-child(1){
+        color: #fc18b9;
+    }
+
+}

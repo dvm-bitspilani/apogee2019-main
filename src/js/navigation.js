@@ -1,3 +1,5 @@
+import jump from 'jump.js';
+
 function init() {
     let sections = document.getElementsByClassName('section');
     let navItems = document.getElementsByClassName('nav-item');
@@ -44,6 +46,22 @@ function init() {
             }
         }
     }
+
+
+    let navLinks = document.getElementsByClassName("nav-link");
+
+    function goToPage(pageId) {
+        jump(document.getElementById(pageId));
+    }
+
+    Array.from(navLinks).forEach((link) => {
+        (function () {
+                link.addEventListener("click", function () {
+                    goToPage(link.dataset.to);
+                })
+            }
+        )();
+    })
 }
 
 init();

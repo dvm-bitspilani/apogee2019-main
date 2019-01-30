@@ -20,7 +20,7 @@
     align-items: center;
     height: 200px;
     width: 200px;
-    border: 0.5px solid #B525E9;
+    border: 0.5px solid #fc18b9;
     border-radius: 50%;
 }
 
@@ -145,5 +145,19 @@
     100% {
         transform: scale(2);
         opacity: 0;
+    }
+}
+
+#about-content {
+    position: absolute;
+    right: 10vw;
+    top: 28vh;
+
+    h1 {
+        font-family: 'teko-light';
+        font-size: 100px;
+        line-height: 1;
+        font-weight: lighter;
+        letter-spacing: 20px;
     }
 }

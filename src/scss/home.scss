@@ -67,4 +67,15 @@
             width: 25vw;
         }
     }
+
+    @media all and (max-width: 600px) and (orientation: portrait) {
+        .home-content {
+            left: 5vw;
+
+            h1 {
+                font-size: 15vw;
+                letter-spacing: 10px;
+            }
+        }
+    }
 }

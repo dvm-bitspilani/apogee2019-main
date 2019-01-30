@@ -48,6 +48,33 @@ function init() {
     }
 
 
+    let hamburger = document.getElementById("hamburger");
+    let sideMenu = document.getElementById("side-menu");
+    let closeMenuIcon = document.getElementById("close-hamburger");
+    let sideMenuRight = sideMenu.style.right;
+    let isMenuOpen = false;
+
+    function openMenu () {
+        if(!isMenuOpen) {
+            sideMenu.style.right = 0;
+        } else {
+            sideMenu.style.right = sideMenuRight;
+        }
+    }
+
+    function closeMenu () {
+        if(isMenuOpen) {
+            sideMenu.style.right = 0;
+        } else {
+            sideMenu.style.right = sideMenuRight;
+        }
+    }
+
+    hamburger.addEventListener("click", openMenu);
+
+    closeMenuIcon.addEventListener("click", closeMenu);
+
+
     let navLinks = document.getElementsByClassName("nav-link");
 
     function goToPage(pageId) {
@@ -58,6 +85,7 @@ function init() {
         (function () {
                 link.addEventListener("click", function () {
                     goToPage(link.dataset.to);
+                    closeMenu();
                 })
             }
         )();

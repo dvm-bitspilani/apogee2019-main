@@ -76,9 +76,15 @@ function init() {
 
 
     let navLinks = document.getElementsByClassName("nav-link");
+    let isScrolling = false;
+    let prevScroll = window.scrollY;
 
     function goToPage(pageId) {
-        jump(document.getElementById(pageId));
+        setTimeout(() => isScrolling = true, 100);
+
+        jump(document.getElementById(pageId), {
+            callback: () => isScrolling = false
+        });
     }
 
     Array.from(navLinks).forEach((link) => {
@@ -90,6 +96,26 @@ function init() {
             }
         )();
     })
+
+    document.addEventListener('scroll', handleNavHiding);
+
+    function handleNavHiding () {
+        let currScroll;
+        if (!isScrolling) {
+            currScroll = window.scrollY;
+            if (currScroll > 0) {
+                if (currScroll > prevScroll) {
+                    // scroll down
+                    navbar.style.transform = "translateY(-100%)";
+                }
+                else if (currScroll < prevScroll) {
+                    // scroll up
+                    navbar.style.transform = "translateY(0%)";
+                }
+            }
+        }
+        prevScroll = currScroll;
+    }
 }
 
 init();

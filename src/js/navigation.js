@@ -84,7 +84,8 @@ function init() {
     Array.from(navLinks).forEach((link) => {
         (function () {
                 link.addEventListener("click", function () {
-                    goToPage(link.dataset.to);
+                    if(link.dataset.to) 
+                        goToPage(link.dataset.to);
                     closeMenu();
                 })
             }

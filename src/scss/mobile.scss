@@ -3,6 +3,10 @@
         display: none !important;
     }
 
+    .mobile-only {
+        display: block;
+    }
+
     #navbar {
         height: 60px;
         padding: 0 5vw;

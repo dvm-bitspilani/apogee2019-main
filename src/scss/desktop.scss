@@ -5,6 +5,13 @@
 //     border-radius: 100%;
 //     background: radial-gradient(rgba(256,256,256,0.4), rgba(256,256,256,0) 70%);
 // }
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
 
 .vertical-lines {
     background: #1d4273;

@@ -6,7 +6,7 @@
 
         h1 {
             font-family: 'teko-light';
-            font-size: 100px;
+            font-size: 80px;
             line-height: 1;
             font-weight: lighter;
             letter-spacing: 20px;
@@ -22,9 +22,13 @@
         justify-content: space-around;
         align-items: center;
         letter-spacing: 1.5px;
+        font-size: 95%;
 
-        .before-content-line {
-            width: 17%;
+        .home-footer-line-wrap {
+            width: 25%;
+            .before-content-line {
+                width: 70%;
+            }
         }
 
         .social-links {

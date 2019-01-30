@@ -136,3 +136,27 @@ html, body{
     position: relative;
     height: 130vh;
 }
+
+.content-wrap {
+    display: flex;
+    width: 33vw;
+    justify-content: space-between;
+
+    .content-line-wrap {
+        display: flex;
+        align-items: center;
+        height: 33px;
+        width: 10%;
+    }
+    .content-text {
+        line-height: 33px;
+        width: 85%;
+        font-size: 20px;
+    }
+}
+
+.before-content-line {
+    background: #fc18b9;
+    width: 70px;
+    height: 2px;
+}

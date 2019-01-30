@@ -38,7 +38,7 @@
 #about-exhibitions, #about-exhibitions-ripple-1,  #about-exhibitions-ripple-2, #about-exhibitions-ripple-3,  #about-exhibitions-ripple-4 {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 20vh;
 }
 
 #about-exhibitions-ripple-1, #about-exhibitions-ripple-2 {
@@ -62,8 +62,8 @@
 
 #about-speakers, #about-speakers-ripple-1, #about-speakers-ripple-2, #about-speakers-ripple-3, #about-speakers-ripple-4 {
     position: absolute;
-    top: 200px;
-    left: 100px;
+    top: 45vh;
+    right: 400px;
 }
 
 #about-speakers-ripple-1, #about-speakers-ripple-2 {
@@ -88,7 +88,7 @@
 #about-workshops, #about-workshops-ripple-1, #about-workshops-ripple-2, #about-workshops-ripple-3, #about-workshops-ripple-4 {
     transform: scale(0.8);
     position: absolute;
-    bottom: 200px;
+    top:  65vh;
     right: 30px;
 }
 

@@ -9,6 +9,21 @@ function init() {
     let bars = document.getElementsByClassName('bar');
     let vwHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     let waiting = false;
+    
+
+    // initalise nav
+    let nav = document.getElementById("nav");
+    let navData = ["About", "Events", "Speakers", "Workshops", "Contact"];
+    navData.map((data, index) => {
+        nav.innerHTML += `
+        <div class="nav-item">
+            <div class="bar"></div>
+            <div class="nav-number-primary">${index < 10 ? '0' : null}${index+2}</div>
+            <div class="nav-number-secondary">${index < 10 ? '0' : null}${index+2}</div>
+            <div class="nav-text">${data}</div>
+        </div>
+        `;
+    });
 
     bars[0].classList.add('active-bar');
     navItems[0].classList.add('nav-active');
@@ -20,7 +35,7 @@ function init() {
         if (!waiting) {
             onScrollHandler();
             waiting = true;
-            setTimeout(function () { waiting = false; }, 20);
+            setTimeout(function () { waiting = false; }, 0);
         }
     })
 

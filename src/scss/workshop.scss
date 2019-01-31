@@ -118,3 +118,12 @@
         }
     }    
 }
+
+@media screen and (max-width: 450px){
+    #workshop-content{
+        height: 85%;
+    }
+    #workshop-cell{
+        height: 47%;
+    }
+}

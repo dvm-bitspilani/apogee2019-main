@@ -1,3 +1,5 @@
+@import './variables';
+
 #events-content-inner{
     position: absolute;
     padding-right: 15vw;
@@ -46,7 +48,7 @@
         letter-spacing: 1px;
     }
     p{
-        color: #fc18b9;
+        color: $pink-here;
         font-family: 'bahnschrift';
         font-weight: lighter;
         font-size: 16px;
@@ -56,7 +58,7 @@
     hr{
         height: 1.5px;
         width: 20%;
-        background-color: #fc18b9;
+        background-color: $pink-here;
         margin-top: 10px;
         display: inline-block;
         transform: translateY(-4px);

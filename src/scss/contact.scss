@@ -1,3 +1,5 @@
+@import './variables';
+
 #contact {
     min-height: 90vh;
     background-image: linear-gradient(60deg, #250135, #162539);
@@ -82,6 +84,58 @@
 
             .person-info {
                 font-size: 12px;
+            }
+        }
+    }
+
+    #contact-footer {
+        height: 70px;
+        width: 80vw;
+        border-top: solid 2px $pink-here;
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .social-links {
+            width: 20%;
+            justify-content: space-between;
+
+            @media (max-width: 1200px) {
+                width: 25%;
+            }
+        }
+
+        .dvm-tag {
+            letter-spacing: 1px;
+            padding: 5px 0;
+        }
+
+        @media (max-width: 900px) {
+            height: 80px;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 70%;
+
+            .social-links {
+                height: 25%;
+                width: 32%;
+
+                .social-icons {
+                    height: 100%;
+                    width: 50%;
+
+                    img {
+                        height: auto;
+                        width: 60%;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            .social-links {
+                width: 60%;
             }
         }
     }

@@ -1,10 +1,24 @@
 @import './variables';
 
+#events{
+    h1{
+            font-family: 'teko-light';
+            font-size: 40px;
+            line-height: 1;
+            font-weight: lighter;
+            letter-spacing: 20px;
+            text-align: center;
+            margin-top: 30px;
+    }
+}
+
 #events-content-inner{
     position: absolute;
-    padding-right: 15vw;
-    right: 2px;
+    // padding-right: 17.5vw;
     height: 100%;
+    // right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 65%;
     display: flex;
     flex-direction: column;
@@ -66,5 +80,16 @@
     span{
         padding-left: 8px;
         letter-spacing: 2.6px;
+    }
+}
+@media screen and (max-width: 600px){
+    #events{
+        h1{
+            display: block;
+            margin-top: 70px;
+        }
+    }    
+    #events-content-inner{
+        width: 75%;
     }
 }

@@ -42,6 +42,7 @@ function init() {
             displayError('');
         }
         document.getElementById("register").style.top = 0;
+        window.closeMenu();
     }
 
     function closeReg() {

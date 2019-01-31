@@ -257,11 +257,12 @@
         </div>
         <div id="side-menu-list">
             <span class="nav-link" data-to="home">HOME</span>
-            <span class="nav-link" id="register-navlink" data-to="">REGISTER</span>
+            <span id="register-navlink">REGISTER</span>
             <span class="nav-link" data-to="about">About</span>
             <span class="nav-link" data-to="events">EVENTS</span>
             <span class="nav-link" data-to="workshop">WORKSHOPS</span>
             <span class="nav-link" data-to="contact">CONTACTS</span>
+            <span id="dev-navlink">DEVELOPERS</span>
 
         </div>
         <div id = "side-menu-footer" class = "mobile-only">
@@ -574,12 +575,12 @@
             </div>
         </div>
 
-        <div id="register">
-            <div id="register-topbar">
-                <img id="logo-register" src="./static/logo.svg" alt="APOGEE 2019" />
-                <img src="static/close_button.svg" alt="CLOSE" id="close-register" />
+        <div id="register" class = "overlay">
+            <div class="overlay-topbar">
+                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
+                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
             </div>
-            <div id="register-content">
+            <div id="register-content" class = "overlay-content">
                 <h2>REGISTRATION</h2>
                 <form id="register-form" action="">
                     <div id="register-form-content">
@@ -646,6 +647,32 @@
                         <button id='register-again' class='register-button'>Register again</button>
                     </div>
                 </form>
+            </div>
+        </div>
+
+        <div id="developers" class = "overlay" style = "top: 0">
+            <div class="overlay-topbar">
+                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
+                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-dev" />
+            </div>
+            <div id="dev-content" class = "overlay-content">
+                <h2>DEVELOPERS</h2>
+
+                <div id = "dev-container">
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/yash.jpg" />
+                        </div>
+                        <div class = "dev-name">Yash Bhagat</div>
+                        <div class="dev-role">Designer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://www.facebook.com/bitsapogee/" target="_blank"><img src="./static/fb-icon.png" /></a>
+                            <a href="https://www.instagram.com/bitsapogee/?hl=en" target="_blank"><img src="./static/insta-icon.png" /></a>
+                            <a href="https://twitter.com/bitsapogee?lang=en" target="_blank"><img src="./static/twitter-icon.png" /></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

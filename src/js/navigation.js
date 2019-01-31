@@ -70,6 +70,8 @@ function init() {
         }
     }
 
+    window.closeMenu = closeMenu;
+
     hamburger.addEventListener("click", openMenu);
 
     closeMenuIcon.addEventListener("click", closeMenu);
@@ -117,6 +119,7 @@ function init() {
         }
         prevScroll = currScroll;
     }
+
 }
 
 init();

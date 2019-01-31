@@ -15,6 +15,11 @@ html, body{
     background: #01061C;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .section {
     min-height: 100vh;
     position: relative;

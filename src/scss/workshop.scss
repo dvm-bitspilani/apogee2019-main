@@ -1,5 +1,17 @@
 @import './variables';
 
+#workshop{
+    h1{
+            font-family: 'teko-light';
+            font-size: 40px;
+            line-height: 1;
+            font-weight: lighter;
+            letter-spacing: 20px;
+            text-align: center;
+            margin-top: 70px;
+    }
+
+}
 #workshop-content{
     position: absolute;
     height: 80%;
@@ -97,4 +109,12 @@
         height: 40%;
         width: 100%;
     }
+}
+
+@media screen and (max-width: 600px){
+    #workshop{
+        h1{
+            display: block;
+        }
+    }    
 }

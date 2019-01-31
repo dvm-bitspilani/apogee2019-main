@@ -1,3 +1,5 @@
+@import './variables';
+
 #about {
     display: flex;
     width: 100%;
@@ -20,7 +22,7 @@
     align-items: center;
     height: 200px;
     width: 200px;
-    border: 0.5px solid #fc18b9;
+    border: 0.5px solid $pink-here;
     border-radius: 50%;
 }
 
@@ -63,7 +65,7 @@
 #about-speakers, #about-speakers-ripple-1, #about-speakers-ripple-2, #about-speakers-ripple-3, #about-speakers-ripple-4 {
     position: absolute;
     top: 280px;
-    left: 20px;
+    left: 90px;
 }
 
 #about-speakers-ripple-1, #about-speakers-ripple-2 {

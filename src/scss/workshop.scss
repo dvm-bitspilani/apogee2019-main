@@ -1,3 +1,5 @@
+@import './variables';
+
 #workshop-content{
     position: absolute;
     height: 80vh;
@@ -58,7 +60,7 @@
         letter-spacing: 1px;
     }
     h6:nth-child(1){
-        color: #fc18b9;
+        color: $pink-here;
     }
 
 }

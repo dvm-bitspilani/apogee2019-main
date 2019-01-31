@@ -1,3 +1,5 @@
+@import './variables';
+
 #register-topbar {
     display: flex;
     width: 100vw;
@@ -48,7 +50,7 @@
         font-size: 4em;
         font-family: 'teko-light';
         letter-spacing: 20px;
-        color: #fc18b9;
+        color: $pink-here;
     }
     #register-form {
         display: flex;
@@ -105,13 +107,13 @@
             font-family: 'teko-light';
             font-size: 25px;
             letter-spacing: 5px;
-            color: #fc18b9;
+            color: $pink-here;
             background: none;
             transition: all 0.1s ease-in-out;
             text-align: center;
         }
         .register-button:hover {
-            background: #fc18b9;
+            background: $pink-here;
             color: #fff;
         }
 

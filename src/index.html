@@ -6,9 +6,197 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>APOGEE 2019 | The Reality Roulette</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #loader-wrap {
+            height: 100vh;
+            width: 100%;
+            z-index: 999;
+            background: #01061c;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: opacity 0.2s linear;
+        }
+
+        #loader-title {
+            color: #fff;
+            font-family: 'teko-light', sans-serif;
+            font-size: 70px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 65%;
+        }
+
+        .loader-circles {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        /* transform: rotate(45deg); */
+        transform: translateY(-10%);
+        }
+        .loader-circles .circle {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background-color: transparent;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        text-align: center;
+        }
+        .loader-circles .circle:nth-child(even) {
+        border-color: #d81959;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        }
+        .loader-circles .circle:nth-child(odd) {
+        border-color: #6257bd;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        }
+        .loader-circles .circle:nth-child(1) {
+        width: 20px;
+        height: 20px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 12s;
+        }
+        .loader-circles .circle:nth-child(2) {
+        width: 40px;
+        height: 40px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 6s;
+        }
+        .loader-circles .circle:nth-child(3) {
+        width: 60px;
+        height: 60px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 4s;
+        }
+        .loader-circles .circle:nth-child(4) {
+        width: 80px;
+        height: 80px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 3s;
+        }
+        .loader-circles .circle:nth-child(5) {
+        width: 100px;
+        height: 100px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 2.4s;
+        }
+        .loader-circles .circle:nth-child(6) {
+        width: 120px;
+        height: 120px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 2s;
+        }
+        .loader-circles .circle:nth-child(7) {
+        width: 140px;
+        height: 140px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 1.71429s;
+        }
+        .loader-circles .circle:nth-child(8) {
+        width: 160px;
+        height: 160px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 1.5s;
+        }
+        .loader-circles .circle:nth-child(9) {
+        width: 180px;
+        height: 180px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 1.33333s;
+        }
+        .loader-circles .circle:nth-child(10) {
+        width: 200px;
+        height: 200px;
+        animation: rotate-circle linear infinite;
+        animation-duration: 1.2s;
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        @keyframes rotate-circle {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+
+    </style>
 </head>
 
 <body>
+
+    <div id="loader-wrap">
+        <div class="loader-circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div id="loader-title">
+            APOGEE 2019
+        </div>
+    </div>
+
     <div id="pointer"></div>
 
     <hr class="vertical-lines" style="left: 10vw;" />
@@ -361,6 +549,20 @@
                         +91-9151178228 <br>
                         president@pilani.bits-pilani.ac.in <br>
                     </div>
+                </div>
+            </div>
+
+            <div id="contact-footer">
+                <div class="social-links">
+                    FOLLOW US ON
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/bitsapogee/" target="_blank"><img src="./static/fb-icon.png" /></a>
+                        <a href="https://www.instagram.com/bitsapogee/?hl=en" target="_blank"><img src="./static/insta-icon.png" /></a>
+                        <a href="https://twitter.com/bitsapogee?lang=en" target="_blank"><img src="./static/twitter-icon.png" /></a>
+                    </div>
+                </div>
+                <div class="dvm-tag">
+                    Department of Visual Media, BITS Pilani
                 </div>
             </div>
         </div>

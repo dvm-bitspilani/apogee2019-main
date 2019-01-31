@@ -1,3 +1,5 @@
+@import './variables';
+
 *{
     margin: 0;
     padding: 0;
@@ -35,7 +37,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
+    z-index: 998;
     transition: transform 0.1s linear;
     background: #01061C;
 }
@@ -163,9 +165,28 @@ a {
 }
 
 .before-content-line {
-    background: #fc18b9;
+    background: $pink-here;
     width: 70px;
     height: 2px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25vw;
+    height:100%;
+
+    .social-icons {
+        height: 22%;
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            height: 100%;
+        }
+    }
 }
 
 @media all and (max-width: 600px) and (orientation: portrait) {

@@ -1,3 +1,5 @@
+@import './variables';
+
 // #pointer {
 //     position: fixed;
 //     height: 90vh;
@@ -46,7 +48,7 @@
 .bar {
     height: 100%;
     width: 1px;
-    background: #fc18b9;
+    background: $pink-here;
     margin-right: 15px;
 }
 

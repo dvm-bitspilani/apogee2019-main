@@ -30,6 +30,35 @@
         height: 60px;
     }
 
+    #side-menu-footer {
+        position: absolute;
+        bottom:20px;
+        height: 80px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content-line-wrap {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            align-items: center;
+
+            .before-content-line {
+                width: 100%;
+            }
+        }
+
+        a {
+            height: 22%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
     #close-hamburger {
         max-height: 27px;
     }

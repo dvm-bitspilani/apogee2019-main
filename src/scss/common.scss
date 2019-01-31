@@ -62,10 +62,11 @@ a {
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width: 35vw;
 }
 
 #nav-links span {
-    margin-right: 60px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s ease-in-out;

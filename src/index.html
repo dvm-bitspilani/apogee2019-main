@@ -199,11 +199,11 @@
 
     <div id="pointer"></div>
 
-    <hr class="vertical-lines" style="left: 10vw;" />
-    <hr class="vertical-lines" style="left: 30vw;" />
-    <hr class="vertical-lines" style="left: 50vw;" />
-    <hr class="vertical-lines" style="left: 70vw;" />
-    <hr class="vertical-lines" style="left: 90vw;" />
+    <hr class="vertical-lines desktop-only" style="left: 10vw;" />
+    <hr class="vertical-lines desktop-only" style="left: 30vw;" />
+    <hr class="vertical-lines desktop-only" style="left: 50vw;" />
+    <hr class="vertical-lines desktop-only" style="left: 70vw;" />
+    <hr class="vertical-lines desktop-only" style="left: 90vw;" />
 
     <div id="nav" class="desktop-only">
         <div class="nav-item">
@@ -233,12 +233,13 @@
         </div>
         <div id="side-menu-list">
             <span class="nav-link" data-to="home">HOME</span>
-            <span class="nav-link" id="register-navlink" data-to="">REGISTER</span>
+            <span id="register-navlink">REGISTER</span>
             <span class="nav-link" data-to="about">About</span>
             <span class="nav-link" data-to="events">EVENTS</span>
             <span class="nav-link" data-to="speakers">Speakers</span>
             <span class="nav-link" data-to="workshop">WORKSHOPS</span>
             <span class="nav-link" data-to="contact">CONTACTS</span>
+            <span id="dev-navlink">DEVELOPERS</span>
 
         </div>
         <div id="side-menu-footer" class="mobile-only">
@@ -569,12 +570,12 @@
             </div>
         </div>
 
-        <div id="register">
-            <div id="register-topbar">
-                <img id="logo-register" src="./static/logo.svg" alt="APOGEE 2019" />
-                <img src="static/close_button.svg" alt="CLOSE" id="close-register" />
+        <div id="register" class = "overlay">
+            <div class="overlay-topbar">
+                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
+                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
             </div>
-            <div id="register-content">
+            <div id="register-content" class = "overlay-content">
                 <h2>REGISTRATION</h2>
                 <form id="register-form" action="">
                     <div id="register-form-content">
@@ -641,6 +642,127 @@
                         <button id='register-again' class='register-button'>Register again</button>
                     </div>
                 </form>
+            </div>
+        </div>
+
+        <div id="developers" class = "overlay" style = "top: 0">
+            <div class="overlay-topbar">
+                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
+                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-dev" />
+            </div>
+            <div id="dev-content" class = "overlay-content">
+                <h2>DEVELOPERS</h2>
+
+                <div id = "dev-container">
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/sarthak.jpeg" />
+                        </div>
+                        <div class = "dev-name">Sarthak Sehgal</div>
+                        <div class="dev-role">Frontend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://github.com/sarthak-sehgal" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                            <a href="https://www.linkedin.com/in/sarthak-sehgal99/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/yash.jpg" />
+                        </div>
+                        <div class = "dev-name">Yash Bhagat</div>
+                        <div class="dev-role">Designer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://instagram.com/yash.bhagat3" target="_blank"><img src="./static/dev-insta-icon.svg" /></a>
+                            <a href="https://www.behance.net/yashbhagatd053" target="_blank"><img src="./static/dev-behance-logo.svg" /></a>
+                            <a href="https://dribbble.com/yashbhagat" target="_blank"><img src="./static/dev-dribble-icon.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/placeholder.png" />
+                        </div>
+                        <div class = "dev-name">Laksh Singla</div>
+                        <div class="dev-role">Frontend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://github.com/LakshSingla" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/kunal.jpg" />
+                        </div>
+                        <div class = "dev-name">Kunal Mohta</div>
+                        <div class="dev-role">Frontend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://github.com/kunal-mohta" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                            <a href="https://www.linkedin.com/in/kunal-mohta/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/sanchit.jpg" />
+                        </div>
+                        <div class = "dev-name">Sanchit Ahuja</div>
+                        <div class="dev-role">Backend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://github.com/sanchit-ahuja" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                            <a href="https://www.linkedin.com/in/sanchit-ahuja-146541149/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/nayan.jpg" />
+                        </div>
+                        <div class = "dev-name">Nayan Khanna</div>
+                        <div class="dev-role">Backend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://github.com/nayan2000" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                            <a href="https://www.linkedin.com/in/nayankhanna/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/divyam.jpg" />
+                        </div>
+                        <div class = "dev-name">Divyam Goel</div>
+                        <div class="dev-role">Backend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://github.com/DiVyaM17" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                            <a href="https://www.linkedin.com/in/divyam-goel/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/raghav.jpg" />
+                        </div>
+                        <div class = "dev-name">Raghav Arora</div>
+                        <div class="dev-role">Backend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <a href="https://github.com/RAraghavarora" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                            <a href="https://www.linkedin.com/in/raghav-arora-9820a648/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                        </div>
+                    </div>
+                    <div class = "dev-card">
+                        <div class = "dev-img">
+                            <img src = "imgs/devs/placeholder.png" />
+                        </div>
+                        <div class = "dev-name">Hemant Alluri</div>
+                        <div class="dev-role">Backend Developer</div>
+                        <hr>
+                        <div class="dev-links">
+                            <!-- <a href="https://github.com/DiVyaM17" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                            <a href="https://www.linkedin.com/in/divyam-goel/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a> -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

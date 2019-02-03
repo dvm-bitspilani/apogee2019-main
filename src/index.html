@@ -10,7 +10,7 @@
         #loader-wrap {
             height: 100vh;
             width: 100%;
-            z-index: 999;
+            z-index: 9999;
             background: #01061c;
             position: fixed;
             top: 0;
@@ -218,11 +218,15 @@
         <img id="logo" src="./static/logo.svg" alt="APOGEE 2019" />
         <div id="links">
             <div id="nav-links" class="desktop-only">
+                <span id="view-all-events">ALL EVENTS</span>
                 <span>AIC</span>
                 <span>Profshows</span>
                 <span id="register-btn">Register</span>
             </div>
             <img src="./static/hamburger.svg" alt="MENU" id="hamburger">
+        </div>
+        <div id="links2">
+            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-events" />
         </div>
     </div>
 
@@ -249,6 +253,18 @@
             <a href="https://www.facebook.com/bitsapogee/" target="_blank"><img src="./static/fb-icon.png" /></a>
             <a href="https://www.instagram.com/bitsapogee/?hl=en" target="_blank"><img src="./static/insta-icon.png" /></a>
             <a href="https://twitter.com/bitsapogee?lang=en" target="_blank"><img src="./static/twitter-icon.png" /></a>
+        </div>
+    </div>
+
+    <div id="all-events">
+        <span id="all-events-title">EVENTS</span>
+        <div id="all-events-categories">
+            <span>Categories</span>
+            <div id="category-loading" class="category-status">Loading...</div>
+            <div id="category-notfound" class="category-status">No events found!</div>
+            <div id="category-error" class="category-status">Error occurred while fetching events!</div>
+        </div>
+        <div id="category-events">
         </div>
     </div>
 

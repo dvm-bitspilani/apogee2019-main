@@ -74,7 +74,7 @@ function init() {
  
         let currEvents = document.getElementsByClassName("event-box");
         for (let i = currEvents.length - 1; i > 0; i--) {
-            setTimeout(() => currEvents[i].classList.add('popout-class'), (currEvents.length - i - 1) * 100);
+            setTimeout(() => currEvents[i].classList.add('popout-class'), (currEvents.length - i - 1) * 10);
         }
         setTimeout(function () {
             eventsContainer.innerHTML = '';

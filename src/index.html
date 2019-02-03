@@ -591,7 +591,7 @@
             </div>
         </div>
 
-        <div id="register" class = "overlay">
+        <div id="register" class = "overlay" style = "top: 0;">
             <div class="overlay-topbar">
                 <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
                 <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
@@ -600,63 +600,67 @@
                 <h2>REGISTRATION</h2>
                 <form id="register-form" action="">
                     <div id="register-form-content">
-                        <label class="required">Name</label>
-                        <input type="text" name="name" id="register-name">
-                        <label class="required">College</label>
-                        <select id="register-college">
-                            <option value="select" disabled selected>Select</option>
-                        </select>
-                        <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
-                        <label class="required">Gender</label>
-                        <div id="gender-div">
-                            <div>
-                                <input type="radio" id="male" class="gender-option" name="gender" value="1" checked>
-                                Male
+                        <div class="reg-col">
+                            <label class="required">Name</label>
+                            <input type="text" name="name" id="register-name">
+                            <label class="required">College</label>
+                            <select id="register-college">
+                                <option value="select" disabled selected>Select</option>
+                            </select>
+                            <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
+                            <label class="required">Gender</label>
+                            <div id="gender-div">
+                                <div>
+                                    <input type="radio" id="male" class="gender-option" name="gender" value="1" checked>
+                                    Male
+                                </div>
+                                <div>
+                                    <input type="radio" id="female" class="gender-option" name="gender" value="2">
+                                    Female
+                                </div>
+                                <div>
+                                    <input type="radio" id="other" class="gender-option" name="gender" value="0"> Other
+                                </div>
                             </div>
-                            <div>
-                                <input type="radio" id="female" class="gender-option" name="gender" value="2">
-                                Female
-                            </div>
-                            <div>
-                                <input type="radio" id="other" class="gender-option" name="gender" value="0"> Other
+                            <label class="required">Year of study</label>
+                            <div id="year-div">
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="1" checked>
+                                    1
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="2">
+                                    2
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="3">
+                                    3
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="4">
+                                    4
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="5">
+                                    5
+                                </div>
                             </div>
                         </div>
-                        <label class="required">Year of study</label>
-                        <div id="year-div">
-                            <div>
-                                <input type="radio" id="" class="year-option" name="year" value="1" checked>
-                                1
-                            </div>
-                            <div>
-                                <input type="radio" id="" class="year-option" name="year" value="2">
-                                2
-                            </div>
-                            <div>
-                                <input type="radio" id="" class="year-option" name="year" value="3">
-                                3
-                            </div>
-                            <div>
-                                <input type="radio" id="" class="year-option" name="year" value="4">
-                                4
-                            </div>
-                            <div>
-                                <input type="radio" id="" class="year-option" name="year" value="5">
-                                5
-                            </div>
+                        <div class="reg-col">
+                            <label class="required">City</label>
+                            <input type="text" name="city" id="register-city">
+                            <label class="required">Email</label>
+                            <input type="email" name="email" id="register-email">
+                            <label class="required">Phone</label>
+                            <input type="text" name="phone" id="register-phone">
+                            <label>Referral</label>
+                            <input type="text" name="referral" id="register-referral">
                         </div>
-                        <label class="required">City</label>
-                        <input type="text" name="city" id="register-city">
-                        <label class="required">Email</label>
-                        <input type="email" name="email" id="register-email">
-                        <label class="required">Phone</label>
-                        <input type="text" name="phone" id="register-phone">
-                        <label>Referral</label>
-                        <input type="text" name="referral" id="register-referral">
-                        <label id="error"></label>
-                        <div id="register-buttons">
-                            <input type="submit" id="register-submit" class="register-button" value="Register">
-                            <button id="register-back" class="register-button">Go back</button>
-                        </div>
+                    </div>
+                    <label id="error"></label>
+                    <div id="register-buttons">
+                        <input type="submit" id="register-submit" class="register-button" value="Register">
+                        <button id="register-back" class="register-button">Go back</button>
                     </div>
                     <div id="register-form-complete">
                         <label>Your registration is complete.</label><br>

@@ -11,15 +11,33 @@
         flex-direction: column;
         font-family: 'bahnschrift', sans-serif;
         margin-top: 15px;
+        padding-bottom: 100px;
 
         #register-form-content {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .reg-col {
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+            }
+
+            @media all and (max-width: 800px) {
+                flex-direction: column;
+
+                .reg-col {
+                    width: 100%;
+                }
+            }
         }
         
         #register-form-complete {
+            display: flex;
             flex-direction: column;
-            display: none;
+            align-items: center;
+            // display: none;
         }
 
         label {
@@ -48,6 +66,9 @@
         }
 
         #register-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             margin-top: 20px;
         }
 
@@ -78,6 +99,7 @@
         }
 
         #error {
+            text-align: center;
             color: red;
         }
 

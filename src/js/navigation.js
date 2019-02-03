@@ -14,11 +14,14 @@ function init() {
     // initalise nav
     let nav = document.getElementById("nav");
     let navData = ["About", "Events", "Speakers", "Workshops", "Contact"];
+    let navToPage = ["about", "events", "speakers", "workshop", "contact"]; // MAINTAIN ORDER
     navData.map((data, index) => {
         nav.innerHTML += `
         <div class="nav-item">
             <div class="bar"></div>
-            <div class="nav-number-primary">${index < 10 ? '0' : null}${index+2}</div>
+            <div class="nav-number-primary">${index < 10 ? '0' : null}${index+2}
+            </div>
+            <span class="nav-hover-text">&nbsp;&nbsp;&nbsp;${data}</span>
             <div class="nav-number-secondary">${index < 10 ? '0' : null}${index+2}</div>
             <div class="nav-text">${data}</div>
         </div>
@@ -50,6 +53,7 @@ function init() {
                 navItems[i].classList.add('nav-active');
                 navNumPrimary[i].style.opacity = 0;
                 navTexts[i].style.opacity = 1;
+                navTexts[i].style.zIndex = 5;
                 navNumSecondary[i].style.opacity = 1;
                 active = true;
             } else {
@@ -57,6 +61,7 @@ function init() {
                 navItems[i].classList.remove('nav-active');
                 navNumPrimary[i].style.opacity = 1;
                 navTexts[i].style.opacity = 0;
+                navTexts[i].style.zIndex = 4;
                 navNumSecondary[i].style.opacity = 0;
             }
         }
@@ -116,7 +121,7 @@ function init() {
                 })
             }
         )();
-    })
+    });
 
     document.addEventListener('scroll', handleNavHiding);
 

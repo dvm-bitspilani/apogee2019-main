@@ -123,21 +123,26 @@ function init() {
     let tempIndex = 0;
     let isArrowEnabled = true;
 
-    document.getElementById("speaker-left-arrow").addEventListener("click", function () {
+    function speakerLeft () {
         if (vwWidth > MOBILE_WIDTH) {
             gotoIndex(currentDesktopIndex - 1);
         } else {
             gotoIndex(currentMobileIndex - 1);
         }
-    });
+    }
 
-    document.getElementById("speaker-right-arrow").addEventListener("click", function () {
+    function speakerRight () {
         if (vwWidth > MOBILE_WIDTH) {
             gotoIndex(currentDesktopIndex + 1);
         } else {
             gotoIndex(currentMobileIndex + 1);
         }
-    });
+    }
+
+    document.getElementById("speaker-left-arrow").addEventListener("click", speakerLeft);
+    document.getElementById("speaker-right-arrow").addEventListener("click", speakerRight);
+    document.getElementById("mobile-speaker-left-arrow").addEventListener("click", speakerLeft);
+    document.getElementById("mobile-speaker-right-arrow").addEventListener("click", speakerRight);
 
     function gotoIndex(index) {
         if (isArrowEnabled) {

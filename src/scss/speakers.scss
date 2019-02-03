@@ -83,7 +83,7 @@
     margin-bottom: 10px;
 }
 
-#speaker-right-arrow {
+#speaker-right-arrow, #mobile-speaker-right-arrow {
     transform: rotate(180deg);
 }
 
@@ -119,6 +119,27 @@
     }
     #speakers {
         padding-top: 10px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .speaker {
+        width: 65%;
+    }
+
+    .speaker-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        height: 35px;
+    }
+
+    #mobile-speaker-left-arrow {
+        left: 3%;
+    }
+
+    #mobile-speaker-right-arrow {
+        right: 3%;
     }
 }
 

@@ -100,7 +100,10 @@ function init() {
         setTimeout(() => isScrolling = true, 100);
 
         jump(document.getElementById(pageId), {
-            callback: () => isScrolling = false
+            callback: () => {
+                isScrolling = false;
+                navbar.style.transform = "translateY(-100%)";
+            }
         });
     }
 

@@ -20,8 +20,8 @@
 
         #loader-title {
             color: #fff;
-            font-family: monospace;
-            font-size: 70px;
+            font-family: Helvetica;
+            font-size: 230%;
             width: 100%;
             text-align: center;
             position: absolute;
@@ -173,6 +173,8 @@
             transform: rotate(360deg);
         }
         }
+
+        /* @media all and (max-width) */
 
     </style>
 </head>
@@ -427,10 +429,12 @@
 
         <div id="speakers" class="section">
             <span id="speakers-heading">Speakers</span>
-            <div id="arrows">
+            <div id="arrows" class = "desktop-only">
                 <img src="static/speakers/arrow.png" alt="GO LEFT" id="speaker-left-arrow" class="speaker-arrow" />
                 <img src="static/speakers/arrow.png" alt="GO LEFT" id="speaker-right-arrow" class="speaker-arrow" />
             </div>
+            <img src="static/speakers/arrow.png" alt="GO LEFT" id="mobile-speaker-left-arrow" class="speaker-arrow" />
+            <img src="static/speakers/arrow.png" alt="GO RIGHT" id="mobile-speaker-right-arrow" class="speaker-arrow" />
         </div>
 
         <div id="workshop" class="section">

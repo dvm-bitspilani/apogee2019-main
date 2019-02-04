@@ -107,7 +107,6 @@ function init() {
         jump(document.getElementById(pageId), {
             callback: () => {
                 isScrolling = false;
-                navbar.style.transform = "translateY(-100%)";
             }
         });
     }

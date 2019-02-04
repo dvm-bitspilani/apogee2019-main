@@ -21,7 +21,7 @@
             .reg-col {
                 display: flex;
                 flex-direction: column;
-                width: 40%;
+                width: 45%;
             }
 
             @media all and (max-width: 800px) {
@@ -41,6 +41,7 @@
         }
 
         label {
+            margin-top: 10px;
             font-size: 20px;
             color: #fff;
         }
@@ -63,6 +64,7 @@
 
         input:active, input:focus {
             background: #00000010;
+            border-bottom-color: #fff;
         }
 
         #register-buttons {

@@ -2,7 +2,7 @@
 
 .required::after {
     content: '*';
-    color: #ff0000;
+    // color: #ff0000;
 }
 
 #register {
@@ -46,13 +46,17 @@
             color: #fff;
         }
 
+        input[type="text"], input[type="email"], select {
+            margin-top: 30px;
+        }
+
         input, select {
-            background: none;
+            background: #ffffff20;
             outline: none;
             border: none;
             border-bottom: 1.5px solid #ffffff80;
             font-size: 18px;
-            padding: 5px 0;
+            padding: 10px;
             color: #fff;
             margin-bottom: 15px;
             transition: all 0.1s ease-in-out;

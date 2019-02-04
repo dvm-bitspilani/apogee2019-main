@@ -9,6 +9,7 @@
             letter-spacing: 20px;
             text-align: center;
             margin-top: 70px;
+            padding-left: 20px;
     }
 
 }
@@ -119,11 +120,18 @@
     }    
 }
 
-@media screen and (max-width: 450px){
-    #workshop-content{
-        height: 85%;
+@media screen and (max-width: 480px){
+    #workshop {
+        h1 {
+            font-size: 36px;
+        }
     }
-    #workshop-cell{
-        height: 47%;
+    .workshop-cell {
+        h3 {
+            font-size: 16px;
+        }
+        h6 {
+            font-size: 12px;
+        }
     }
 }

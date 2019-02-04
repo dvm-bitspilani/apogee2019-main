@@ -93,8 +93,14 @@ function init() {
     window.closeMenu = closeMenu;
 
     hamburger.addEventListener("click", openMenu);
+    hamburger.addEventListener("click", function() {
+        document.body.classList.add('scroll-disable');
+    });
 
     closeMenuIcon.addEventListener("click", closeMenu);
+    closeMenuIcon.addEventListener("click", function() {
+        document.body.classList.remove('scroll-disable');
+    });
 
 
     let navLinks = document.getElementsByClassName("nav-link");

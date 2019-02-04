@@ -3,6 +3,7 @@ function init() {
         let loader = document.getElementById("loader-wrap");
         loader.style.opacity = "0";
         setTimeout(() => loader.style.display = "none", 400);
+        document.body.classList.remove('scroll-disable');
     }
 
     let homeFooterVisible = true;

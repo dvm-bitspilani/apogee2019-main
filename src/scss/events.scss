@@ -8,14 +8,15 @@
             font-weight: lighter;
             letter-spacing: 20px;
             text-align: center;
-            margin-top: 30px;
+            padding-left:20px
+            // margin-top: 30px;
     }
 }
 
 #events-content-inner{
     position: absolute;
     // padding-right: 17.5vw;
-    height: 100%;
+    height: 85%;
     // right: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -27,7 +28,7 @@
 
 .event-card {
     display: flex;
-    height: 22.5%;
+    height: 23.5%;
     background-image: linear-gradient(45deg, #1f0936, #200736)
 }
 
@@ -58,7 +59,6 @@
         font-family: 'bahnschrift';
         font-weight: lighter;
         font-size: 16px;
-        margin-top: -7px;
         letter-spacing: 1px;
     }
     p{
@@ -130,5 +130,28 @@
     }    
     #events-content-inner{
         width: 75%;
+    }
+
+    .event-info {
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .event-info{
+        h3 {
+            font-size: 16px;
+        }
+        h6, span{
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+            margin-top: 3px;
+            margin-bottom: 0;
+        }
+        overflow-y: hidden;
     }
 }

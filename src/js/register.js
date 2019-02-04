@@ -170,7 +170,7 @@ function init() {
                   if (index != clgs.length) setTimeout(() => lazyRenderClgs(clgs, index), 1000);
                   else {
                     // console.log(index);
-                    regClgLabel.innerHTML = "Select College";
+                    regClgLabel.innerHTML = "Select College*";
                   }
                   // console.log('a');
                 }

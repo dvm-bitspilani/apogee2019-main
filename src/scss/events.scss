@@ -82,6 +82,45 @@
         letter-spacing: 2.6px;
     }
 }
+
+#single-event-page {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+
+    .overlay-topbar {
+        justify-content: flex-end;
+    }
+
+    .register-button {
+        padding: 10px 15px;
+        border: 2px solid #fff;
+        text-transform: uppercase;
+        width: 200px;
+        cursor: pointer;
+        font-family: 'teko-light';
+        font-size: 170%;
+        letter-spacing: 5px;
+        color: $pink-here;
+        background: none;
+        transition: all 0.1s ease-in-out;
+        text-align: center;
+        margin-top: 20px;
+
+        @media all and (max-width: 600px) {
+            width: 150px;
+        }
+    }
+    .register-button:hover {
+        background: $pink-here;
+        color: #fff;
+    }
+}
+
 @media screen and (max-width: 600px){
     #events{
         h1{

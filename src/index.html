@@ -272,6 +272,25 @@
         </div>
     </div>
 
+    <div id="single-event-page" class = "overlay">
+        <div class="overlay-topbar">
+            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-single-event" />
+        </div>
+        <div class = "overlay-content">
+            <h2 id = "single-event-heading">EVENT NAME</h2>
+            <h3>DESCRIPTION</h3>
+            <div id = "single-event-content">
+                description
+            </div>
+            <br>
+            <h3>RULES</h3>
+            <div id = "single-event-rules">
+                rules
+            </div>
+            <input type="submit" id="single-event-register" class="register-button" value="Register">
+        </div>
+    </div>
+
 
     <div id="container">
         <div id="home" class="section">
@@ -604,7 +623,7 @@
                         <div class="reg-col">
                             <input type="text" name="name" id="register-name" placeholder="Name*">
                             <select id="register-college">
-                                <option value="select" disabled selected>Select College*</option>
+                                <option id = "reg-clg-label" value="select" disabled selected>Loading...</option>
                             </select>
                             <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
                             <label class="required">Gender</label>

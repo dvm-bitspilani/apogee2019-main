@@ -123,21 +123,52 @@ function init() {
     let tempIndex = 0;
     let isArrowEnabled = true;
 
-    document.getElementById("speaker-left-arrow").addEventListener("click", function () {
+    function speakerLeft () {
         if (vwWidth > MOBILE_WIDTH) {
             gotoIndex(currentDesktopIndex - 1);
         } else {
             gotoIndex(currentMobileIndex - 1);
         }
-    });
+    }
 
-    document.getElementById("speaker-right-arrow").addEventListener("click", function () {
+    function speakerRight () {
         if (vwWidth > MOBILE_WIDTH) {
             gotoIndex(currentDesktopIndex + 1);
         } else {
             gotoIndex(currentMobileIndex + 1);
         }
+    }
+
+    document.getElementById("speaker-left-arrow").addEventListener("click", speakerLeft);
+    document.getElementById("speaker-right-arrow").addEventListener("click", speakerRight);
+    document.getElementById("mobile-speaker-left-arrow").addEventListener("click", speakerLeft);
+    document.getElementById("mobile-speaker-right-arrow").addEventListener("click", speakerRight);
+
+    let left, top;
+    speakers.addEventListener('touchstart', function (e) {
+        left = e.changedTouches[0].screenX;
+        top = e.changedTouches[0].screenY;
     });
+
+    speakers.addEventListener('touchend', function (e) {
+        let leftNow = e.changedTouches[0].screenX;
+        let topNow = e.changedTouches[0].screenY;
+
+        let delLeft = Math.abs(leftNow - left);
+        let delTop = Math.abs(topNow - top);
+
+
+        if (delLeft != 0 && delTop/delLeft < 0.15) {
+            if (leftNow > left) {
+                //right swipe
+                speakerRight();
+            }
+            else {
+                //left swipe
+                speakerLeft();
+            }
+        }
+    })
 
     function gotoIndex(index) {
         if (isArrowEnabled) {

@@ -14,7 +14,7 @@
     }
 
     #logo {
-        max-height: 30px;
+        height: 75%;
     }
 
     #hamburger {
@@ -31,10 +31,10 @@
     }
 
     #side-menu-footer {
-        position: absolute;
+        // position: absolute;
         bottom:20px;
         height: 80px;
-        width: 80%;
+        width: 95%;
         display: flex;
         justify-content: space-between;
         align-items: center;

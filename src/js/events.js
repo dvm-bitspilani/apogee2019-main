@@ -1,5 +1,5 @@
 function init() {
-    const URL = "https://bits-oasis.org/2018/events/info/";
+    const URL = "http://test.bits-apogee.org/2019/registrations/events_details";
 
     // define divs here
     const loadingDiv = document.getElementById("category-loading");
@@ -25,17 +25,17 @@ function init() {
                     events.map((category, index) => {
                         let span = document.createElement("span");
                         span.className = `category-item ${index === 0 ? 'active-category' : ''}`;
-                        span.setAttribute('data', `category: '${category.name}', index: '${index}'`);
+                        span.setAttribute('data', `category: '${category.category_name}', index: '${index}'`);
                         span.addEventListener("click", () => changeCategory(index));
-                        span.innerHTML = category.name;
+                        span.innerHTML = category.category_name;
                         categoriesDiv.appendChild(span);
-                        
+
                         if (index === 0) {
-                            Object.keys(category.events).map(eventName => {
+                            category.events.map(event => {
                                 eventsContainer.innerHTML += `
-                            <div class="event-box" data-category=${category} data-event=${eventName}>
-                                <img src=${require('../static/speakers/cara.jpg')} />
-                                <span>${eventName}</span>
+                            <div class="event-box" data-category=${category.category_name} data-event=${event.name}>
+                                ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
+                                <span>${event.name}</span>
                             </div>
                             `;
                             })
@@ -63,26 +63,26 @@ function init() {
 
     function changeCategory(categoryIndex) {
         categoryIndex = parseInt(categoryIndex);
- 
+
         let categoriesDiv = document.getElementsByClassName("category-item");
-        for (let i=0; i<categoriesDiv.length; i++) {
+        for (let i = 0; i < categoriesDiv.length; i++) {
             categoriesDiv[i].classList.remove('active-category');
-            if(i===categoryIndex) {
+            if (i === categoryIndex) {
                 categoriesDiv[i].classList.add('active-category');
             }
         }
- 
+
         let currEvents = document.getElementsByClassName("event-box");
         for (let i = currEvents.length - 1; i > 0; i--) {
             setTimeout(() => currEvents[i].classList.add('popout-class'), (currEvents.length - i - 1) * 10);
         }
         setTimeout(function () {
             eventsContainer.innerHTML = '';
-            Object.keys(events[categoryIndex].events).map(eventName => {
+            events[categoryIndex].events.map(event => {
                 eventsContainer.innerHTML += `
-                <div class="event-box" data-category=${events[categoryIndex].name} data-event=${eventName}>
-                    <img src=${require('../static/speakers/cara.jpg')} />
-                    <span>${eventName}</span>
+                <div class="event-box" data-category=${events[categoryIndex].category_name} data-event=${event.name}>
+                    ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
+                    <span>${event.name}</span>
                 </div>
                 `;
             })
@@ -91,7 +91,7 @@ function init() {
 
     document.getElementById("view-all-events").addEventListener("click", openAllEvents);
 
-    function openAllEvents () {
+    function openAllEvents() {
         let container = document.getElementById("container");
         let nav = document.getElementById("nav");
         let navLinks = document.getElementById("links");
@@ -114,7 +114,7 @@ function init() {
         }, 600)
     }
 
-    function closeAllEvents () {
+    function closeAllEvents() {
         let container = document.getElementById("container");
         let nav = document.getElementById("nav");
         let navLinks = document.getElementById("links");

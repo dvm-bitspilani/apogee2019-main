@@ -35,7 +35,7 @@ function init() {
     }
 
     function closeReg() {
-        document.getElementById("developers").style.top = '100%';
+        document.getElementById("developers").style.top = '120%';
     }
 };
 

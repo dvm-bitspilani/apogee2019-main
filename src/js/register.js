@@ -46,7 +46,7 @@ function init() {
     }
 
     function closeReg() {
-        document.getElementById("register").style.top = '100%';
+        document.getElementById("register").style.top = '120%';
     }
 
     document.getElementById("register-form").onsubmit = function (e) {

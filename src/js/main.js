@@ -4,6 +4,7 @@ function init() {
         loader.style.opacity = "0";
         setTimeout(() => loader.style.display = "none", 400);
         window.scrollTo(5,0);
+        document.body.classList.remove('scroll-disable');
     }
 
     let homeFooterVisible = true;

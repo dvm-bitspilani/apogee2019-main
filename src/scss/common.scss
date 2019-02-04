@@ -153,8 +153,20 @@ a {
     }
 }
 
-#hamburger:hover, #close-hamburger:hover {
-    transform: rotate(90deg);
+#hamburger:hover, #close-hamburger:hover, #close-events:hover {
+    animation: rotateAnim 0.5s ease-out;
+}
+
+@keyframes rotateAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 #events{
@@ -263,7 +275,19 @@ a {
     }
     
     .close-overlay:hover {
-        transform: rotate(90deg);
+        animation: rotateAnim 0.5s ease-out;
+    }
+    
+    @keyframes rotateAnim {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(360deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
 
     .logo-overlay {

@@ -71,31 +71,31 @@ function init() {
                 }
 
                 div.innerHTML += `
-            <div class="speaker ${isCenter ? "speaker-center" : ''}">
-                <img src=${(data[i].image)} alt=${data[i].name} class="speaker-img" />
-                <div class="speaker-content">
-                    <span class="speaker-name">${data[i].name}</span>
-                    <span class="speaker-occupation">${data[i].occupation}</span>
-                    <p class="speaker-info">${data[i].info}</p>
-                    <span class="speaker-bar"></span>
+                <div class="speaker ${isCenter ? "speaker-center" : ''}">
+                    <img src=${(data[i].image)} alt=${data[i].name} class="speaker-img" />
+                    <div class="speaker-content">
+                        <span class="speaker-name">${data[i].name}</span>
+                        <span class="speaker-occupation">${data[i].occupation}</span>
+                        <p class="speaker-info">${data[i].info}</p>
+                        <span class="speaker-bar"></span>
+                    </div>
                 </div>
-            </div>
-            `;
+                `;
                 if (i % 3 === 2 || i === data.length - 1) {
                     speakersDiv.appendChild(div);
                 }
             } else {
                 speakersDiv.innerHTML += `
-            <div class="speaker ${i > 0 ? 'speaker-hidden' : ''}">
-                <img src=${(data[i].image)} alt=${data[i].name} class="speaker-img" />
-                <div class="speaker-content">
-                    <span class="speaker-name">${data[i].name}</span>
-                    <span class="speaker-occupation">${data[i].occupation}</span>
-                    <p class="speaker-info">${data[i].info}</p>
-                    <span class="speaker-bar"></span>
+                <div class="speaker ${i > 0 ? 'speaker-hidden' : ''}">
+                    <img src=${(data[i].image)} alt=${data[i].name} class="speaker-img" />
+                    <div class="speaker-content">
+                        <span class="speaker-name">${data[i].name}</span>
+                        <span class="speaker-occupation">${data[i].occupation}</span>
+                        <p class="speaker-info">${data[i].info}</p>
+                        <span class="speaker-bar"></span>
+                    </div>
                 </div>
-            </div>
-            `;
+                `;
             }
         }
     }
@@ -105,15 +105,35 @@ function init() {
     window.addEventListener("resize", function () {
         let newVwWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         if ((vwWidth >= MOBILE_WIDTH && newVwWidth < MOBILE_WIDTH) || (vwWidth <= MOBILE_WIDTH && newVwWidth > MOBILE_WIDTH)) {
+            console.log("resized!");
             vwWidth = newVwWidth;
             currentMobileIndex = 0;
             currentDesktopIndex = 0;
             speakersDiv.innerHTML =
-                `<span id="speakers-heading">Speakers</span>
-            <div id="arrows">
-                <img src=${require('../static/speakers/arrow.png')} alt="GO LEFT" id="speaker-left-arrow" class="speaker-arrow" />
-                <img src=${require('../static/speakers/arrow.png')} alt="GO LEFT" id="speaker-right-arrow" class="speaker-arrow" />
-            </div>`;
+            `
+            <span id="speakers-heading">Speakers</span>
+            `;
+            let div = document.createElement("div");
+            div.id = "arrows";
+            
+            let leftImgDiv = document.createElement("img");
+            leftImgDiv.src = require('../static/speakers/arrow.png');
+            leftImgDiv.alt = "GO LEFT";
+            leftImgDiv.id = "speaker-left-arrow";
+            leftImgDiv.className = "speaker-arrow";
+            leftImgDiv.addEventListener("click", speakerLeft);
+            
+            let rightImgDiv = document.createElement("img");
+            rightImgDiv.src = require('../static/speakers/arrow.png');
+            rightImgDiv.alt = "GO LEFT";
+            rightImgDiv.id = "speaker-right-arrow";
+            rightImgDiv.className = "speaker-arrow";
+            rightImgDiv.addEventListener("click", speakerRight);
+
+            div.appendChild(leftImgDiv);
+            div.appendChild(rightImgDiv);
+            speakersDiv.appendChild(div);
+
             initialiseSpeakers();
         }
     });
@@ -138,7 +158,7 @@ function init() {
             gotoIndex(currentMobileIndex + 1);
         }
     }
-
+    
     document.getElementById("speaker-left-arrow").addEventListener("click", speakerLeft);
     document.getElementById("speaker-right-arrow").addEventListener("click", speakerRight);
     document.getElementById("mobile-speaker-left-arrow").addEventListener("click", speakerLeft);

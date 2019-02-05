@@ -2,46 +2,16 @@ function init() {
     const MOBILE_WIDTH = 900;
     const data = [
         {
-            image: require('../static/speakers/cara.jpg'),
-            name: "Cara Something 01",
-            occupation: "Yash ko nahi degi",
-            info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quas velit corporis ad sunt corrupti voluptatum consequatur quaerat et sed minima, quidem beatae est perferendis voluptas nesciunt doloribus in sint."
+            image: require('../static/speakers/alan.jpg'),
+            name: "Alan Emtage",
+            occupation: "FOUNDER",
+            info: "The man who laid the foundation of the internet. Creator of world's first search engine - ARCHIE. \"I wrote a piece of code that gave birth to a multibillion-dollar industry.\""
         },
         {
-            image: require('../static/speakers/cara.jpg'),
-            name: "Cara Something 02",
-            occupation: "Yash ko nahi degi",
-            info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quas velit corporis ad sunt corrupti voluptatum consequatur quaerat et sed minima, quidem beatae est perferendis voluptas nesciunt doloribus in sint."
-        },
-        {
-            image: require('../static/speakers/cara.jpg'),
-            name: "Cara Something 03",
-            occupation: "Yash ko nahi degi",
-            info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quas velit corporis ad sunt corrupti voluptatum consequatur quaerat et sed minima, quidem beatae est perferendis voluptas nesciunt doloribus in sint."
-        },
-        {
-            image: require('../static/speakers/cara.jpg'),
-            name: "Cara Something 04",
-            occupation: "Yash ko nahi degi",
-            info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quas velit corporis ad sunt corrupti voluptatum consequatur quaerat et sed minima, quidem beatae est perferendis voluptas nesciunt doloribus in sint."
-        },
-        {
-            image: require('../static/speakers/cara.jpg'),
-            name: "Cara Something 05",
-            occupation: "Yash ko nahi degi",
-            info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quas velit corporis ad sunt corrupti voluptatum consequatur quaerat et sed minima, quidem beatae est perferendis voluptas nesciunt doloribus in sint."
-        },
-        {
-            image: require('../static/speakers/cara.jpg'),
-            name: "Cara Something 06",
-            occupation: "Yash ko nahi degi",
-            info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quas velit corporis ad sunt corrupti voluptatum consequatur quaerat et sed minima, quidem beatae est perferendis voluptas nesciunt doloribus in sint."
-        },
-        {
-            image: require('../static/speakers/cara.jpg'),
-            name: "Cara Something 07",
-            occupation: "Yash ko nahi degi",
-            info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit quas velit corporis ad sunt corrupti voluptatum consequatur quaerat et sed minima, quidem beatae est perferendis voluptas nesciunt doloribus in sint."
+            image: require('../static/speakers/ashwin.jpg'),
+            name: "Ashwin Sanghi",
+            occupation: "Author",
+            info: "India's best-selling and most popular author. Author of three best-selling novels: The Rozabal Line, Chanakya's Chant and The Krishna Key. \"The India Dan Brown\""
         }
     ];
 
@@ -194,8 +164,10 @@ function init() {
         if (isArrowEnabled) {
             isArrowEnabled = false;
             if (vwWidth > MOBILE_WIDTH) {
+                if(Math.ceil(data.length / 3) - 1 == 0)
+                    return;
                 if (index > Math.ceil(data.length / 3) - 1)
-                index = 0;
+                    index = 0;
                 if (index < 0)
                     index = Math.ceil(data.length / 3) - 1
                 let speakersContainers = document.getElementsByClassName("speakers-container");

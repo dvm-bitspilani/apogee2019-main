@@ -77,6 +77,8 @@ function init() {
     function openMenu () {
         if(!isMenuOpen) {
             sideMenu.style.right = 0;
+            console.log("hi");
+            document.body.classList.add('scroll-disable');
         } else {
             sideMenu.style.right = sideMenuRight;
         }
@@ -86,6 +88,8 @@ function init() {
         if(isMenuOpen) {
             sideMenu.style.right = 0;
         } else {
+            console.log("bye");
+            document.body.classList.remove('scroll-disable');
             sideMenu.style.right = sideMenuRight;
         }
     }
@@ -93,14 +97,8 @@ function init() {
     window.closeMenu = closeMenu;
 
     hamburger.addEventListener("click", openMenu);
-    hamburger.addEventListener("click", function() {
-        document.body.classList.add('scroll-disable');
-    });
 
     closeMenuIcon.addEventListener("click", closeMenu);
-    closeMenuIcon.addEventListener("click", function() {
-        document.body.classList.remove('scroll-disable');
-    });
 
 
     let navLinks = document.getElementsByClassName("nav-link");

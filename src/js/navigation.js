@@ -107,11 +107,12 @@ function init() {
     let prevScroll = window.scrollY;
 
     function goToPage(pageId) {
-        setTimeout(() => isScrolling = true, 100);
+        // navbar.style.transform = "translateY(-100%)";
+        // setTimeout(() => isScrolling = true, 100);
 
         jump(document.getElementById(pageId), {
             callback: () => {
-                isScrolling = false;
+                navbar.style.transform = "translateY(-100%)";
             }
         });
     }

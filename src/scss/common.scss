@@ -15,6 +15,7 @@ html, body{
     height: 100%;
     width: 100%;
     background: #01061C;
+    overflow-x: none;
 }
 
 #container {
@@ -151,6 +152,10 @@ a {
     span:hover {
         margin-left: 10px;
     }
+}
+
+#events, #speakers {
+    padding-top: 100px;
 }
 
 #hamburger:hover, #close-hamburger:hover, #close-events:hover {

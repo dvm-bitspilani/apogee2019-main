@@ -1,5 +1,5 @@
 function init() {
-    const URL = "http://test.bits-apogee.org/2019/registrations/events_details";
+    const URL = "https://bits-apogee.org/2019/registrations/events_details";
 
     // define divs here
     const loadingDiv = document.getElementById("category-loading");
@@ -20,7 +20,6 @@ function init() {
         .then(res => {
             if (res) {
                 events = res;
-                console.log(events);
                 let eventCount = 0; // to check if events rendered in reg
                 if (events) {
                     let categoriesDiv = document.createElement("div");
@@ -47,13 +46,13 @@ function init() {
                                     <span>${event.name}</span>
                                 `;
 
-                                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules));
+                                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules, event.id));
 
                                 eventsContainer.appendChild(eventBox);
 
                                 // for registrations
                                 let eventOption = document.createElement("option");
-                                eventOption.setAttribute("value", event.name);
+                                eventOption.setAttribute("value", event.id);
                                 eventOption.innerHTML = event.name;
                                 regEvents.appendChild(eventOption);
                             })
@@ -128,7 +127,7 @@ function init() {
                     <span>${event.name}</span>
                 `;
 
-                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules));
+                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules, event.id));
 
                 eventsContainer.appendChild(eventBox);
             })
@@ -191,13 +190,13 @@ function init() {
 
     singleEventCloseBtn.addEventListener("click", closeSingleEventPage);
 
-    function eventClick (name, content, rules) {
+    function eventClick (name, content, rules, id) {
         document.getElementById("single-event-heading").innerHTML = name;
         document.getElementById("single-event-content").innerHTML = content;
         document.getElementById("single-event-rules").innerHTML = rules;
 
         document.getElementById("single-event-register").addEventListener("click", function () {
-            window.registerForEvent = name;
+            window.registerForEvent = id;
 
             setTimeout(() => window.registerForEvent = "", 2000);
 

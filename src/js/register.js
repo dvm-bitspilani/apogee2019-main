@@ -38,6 +38,7 @@ function init() {
     });
 
     function openReg() {
+
         if (!isRegisteredOnce) {
             displayError('');
         }
@@ -99,42 +100,38 @@ function init() {
                 name,
                 college_id: college,
                 city,
-                email: email,
+                email_id: email,
                 phone: parseInt(phone),
                 gender,
                 year,
-                events
+                events: (events) ? events:[]
             };
 
             console.log(sendData);
 
             if (referral) sendData[referral] = referral;
 
-            fetch(BASE_URL + "/registrations/new/register", {
-                method: "post",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-
-                body: JSON.stringify(sendData)
-            })
-                .then((res) => res.json())
-                .then((response) => {
-                    console.log(response);
-                    if(response.status === 0) {
-                        displayError('Email already exists!');
-                    } else if ( response.status === 1) {
-                        displayError('');
-                        setTimeout(function () {
-                            document.getElementById("register-form-content").style.display = "none";
-                            document.getElementById("register-form-complete").style.display = "flex";
-                        }, 100);
-                        isRegisteredOnce = true;
-                    } else {
-                        displayError('Some error occurred while connecting to server');
-                    }
-                });
+            // $.ajax(
+            //     {
+            //         type: "POST",
+            //         contentType: "application/json",
+            //         url: BASE_URL + "/registrations/new/register",
+            //         data: JSON.stringify(sendData),
+            //         dataType: "json",
+            //         success: function (response) {
+            //             displayError('');
+            //             setTimeout(function () {
+            //                 document.getElementById("register-form-content").style.display = "none";
+            //                 document.getElementById("register-form-complete").style.display = "flex";
+            //             }, 100);
+            //             isRegisteredOnce = true;
+            //             document.getElementById("backend-reg-success").innerHTML = response.message;
+            //         },
+            //         error: function (err) {
+            //             displayError(err.responseJSON.message);
+            //         }
+            //     }
+            // )
         }
     }
 

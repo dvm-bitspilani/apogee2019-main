@@ -16,16 +16,19 @@ function init() {
     let navData = ["About", "Events", "Speakers", "Workshops", "Contact"];
     let navToPage = ["about", "events", "speakers", "workshop", "contact"]; // MAINTAIN ORDER
     navData.map((data, index) => {
-        nav.innerHTML += `
-        <div class="nav-item">
-            <div class="bar"></div>
-            <div class="nav-number-primary">${index < 10 ? '0' : null}${index+2}
-            </div>
-            <span class="nav-hover-text">&nbsp;&nbsp;&nbsp;${data}</span>
-            <div class="nav-number-secondary">${index < 10 ? '0' : null}${index+2}</div>
-            <div class="nav-text">${data}</div>
+        let div = document.createElement("div");
+        div.className = "nav-item";
+        div.addEventListener("click", () => goToPage(navToPage[index]))
+        div.innerHTML = 
+        `
+        <div class="bar"></div>
+        <div class="nav-number-primary">${index < 10 ? '0' : null}${index+2}
         </div>
-        `;
+        <span class="nav-hover-text">&nbsp;&nbsp;&nbsp;${data}</span>
+        <div class="nav-number-secondary">${index < 10 ? '0' : null}${index+2}</div>
+        <div class="nav-text">${data}</div>
+        `
+        nav.appendChild(div);
     });
 
     bars[0].classList.add('active-bar');
@@ -77,6 +80,8 @@ function init() {
     function openMenu () {
         if(!isMenuOpen) {
             sideMenu.style.right = 0;
+            console.log("hi");
+            document.body.classList.add('scroll-disable');
         } else {
             sideMenu.style.right = sideMenuRight;
         }
@@ -86,6 +91,8 @@ function init() {
         if(isMenuOpen) {
             sideMenu.style.right = 0;
         } else {
+            console.log("bye");
+            document.body.classList.remove('scroll-disable');
             sideMenu.style.right = sideMenuRight;
         }
     }
@@ -93,14 +100,8 @@ function init() {
     window.closeMenu = closeMenu;
 
     hamburger.addEventListener("click", openMenu);
-    hamburger.addEventListener("click", function() {
-        document.body.classList.add('scroll-disable');
-    });
 
     closeMenuIcon.addEventListener("click", closeMenu);
-    closeMenuIcon.addEventListener("click", function() {
-        document.body.classList.remove('scroll-disable');
-    });
 
 
     let navLinks = document.getElementsByClassName("nav-link");

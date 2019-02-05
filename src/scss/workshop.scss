@@ -3,7 +3,7 @@
 #workshop{
     h1{
             font-family: 'teko-light';
-            font-size: 40px;
+            font-size: 100px;
             line-height: 1;
             font-weight: lighter;
             letter-spacing: 20px;
@@ -116,6 +116,8 @@
     #workshop{
         h1{
             display: block;
+            font-size: 15vw;
+            letter-spacing: 10px;
         }
     }    
 }
@@ -123,7 +125,7 @@
 @media screen and (max-width: 480px){
     #workshop {
         h1 {
-            font-size: 36px;
+            // font-size: 36px;
         }
     }
     .workshop-cell {

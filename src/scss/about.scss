@@ -178,12 +178,18 @@
 }
 
 @media all and (max-width: 600px) {
+    #about-stats {
+        transform: scale(1);
+    }
+
     #about {
         flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
     }
     #about-stats {
         display: block;
-        width: 100%;
+        width: 300px;
         position: static;
         height: 500px;
         margin-bottom: 50px;
@@ -197,6 +203,83 @@
         h1 {
             font-size: 15vw;
             letter-spacing: 10px;
+        }
+    }
+
+    .circle-ripple {
+        width: 90px;
+        height: 90px;
+    }
+
+    .about-stat-num {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .about-stat-title {
+        letter-spacing: 0px;
+        font-size: 12px;
+        word-break: break-all;
+        text-align: center;
+    }
+
+    #about-exhibitions, #about-exhibitions-ripple-1,  #about-exhibitions-ripple-2, #about-exhibitions-ripple-3,  #about-exhibitions-ripple-4 {
+        transform: scale(1);        
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    #about-exhibitions-ripple-4 {
+        display: none;
+    }
+
+    #about-exhibitions-ripple-1 {
+        animation: about-exhibitions-ripple 1.5s infinite;
+    }
+
+    #about-speakers, #about-speakers-ripple-1, #about-speakers-ripple-2, #about-speakers-ripple-3, #about-speakers-ripple-4 {
+        transform: scale(1);
+        position: absolute;
+        top: 0px;
+        left: 100px;
+    }
+
+    #about-speakers-ripple-4 {
+        display: none;
+    }
+
+    #about-speakers-ripple-1 {
+        animation: about-exhibitions-ripple 1.5s infinite;
+    }
+
+    #about-workshops, #about-workshops-ripple-1, #about-workshops-ripple-2, #about-workshops-ripple-3, #about-workshops-ripple-4 {
+        transform: scale(1);
+        position: absolute;
+        top:  0px;
+        left: 200px;
+    }
+
+    #about-workshops-ripple-4 {
+        display: none;
+    }
+
+    #about-workshops-ripple-1 {
+        animation: about-exhibitions-ripple 1.5s infinite;
+    }
+
+    #about-stats {
+        height: 120px;
+    }
+
+    @keyframes about-exhibitions-ripple {
+        0% {
+            transform: scale(1);
+            opacity: 0.3;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
         }
     }
 }

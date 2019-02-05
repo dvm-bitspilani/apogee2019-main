@@ -108,12 +108,16 @@
     transition: opacity 0.1s linear;
 }
 
-.nav-number-primary:hover {
+.nav-item {
     cursor: pointer;
 }
 
-.nav-number-primary:hover ~ .nav-hover-text {
+.nav-item:hover > .nav-hover-text {
     opacity: 1;
+}
+
+.nav-active:hover > .nav-hover-text {
+    opacity: 0;
 }
 
 .nav-number-secondary {

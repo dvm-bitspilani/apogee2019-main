@@ -6,10 +6,13 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 config = {
-	entry: path.resolve(__dirname, "src", "js", "index.js"),
+	entry: {
+		main: path.resolve(__dirname, "src", "js", "index.js"),
+		sponsors: path.resolve(__dirname, "src", "js", "sponsors.js")
+	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "bundle.js",
+		filename: "[name].js",
 	},
 	mode: 'production', 
 	devServer: {
@@ -57,6 +60,7 @@ config = {
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "src", "index.html"),
 			inject: 'body',
+			chunks: ['main'],
 			minify: {
 				removeComments: true,
     			collapseWhitespace: true,
@@ -65,6 +69,19 @@ config = {
 				minifyCSS: true
 			}
 		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, "src", "sponsors.html"),
+			inject: 'body',
+			filename: 'sponsors.html',
+			chunks: ['sponsors'],
+			minify: {
+				removeComments: true,
+    			collapseWhitespace: true,
+    			conservativeCollapse: false,
+				preserveLineBreaks: false,
+				minifyCSS: true
+			}
+		})
 		new UglifyJSPlugin(),
 	],
 }

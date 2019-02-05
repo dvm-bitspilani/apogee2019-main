@@ -5,10 +5,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 config = {
-	entry: path.resolve(__dirname, "src", "js", "index.js"),
+	entry: {
+		main: path.resolve(__dirname, "src", "js", "index.js"),
+		sponsors: path.resolve(__dirname, "src", "js", "sponsors.js")
+	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "bundle.js",
+		filename: "[name].js",
 	},
 	devtool: 'inline-source-map',
 	mode: 'development',
@@ -54,8 +57,14 @@ config = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, "src", "sponsors.html"),
+			filename: "sponsors.html",
+			chunks: ['sponsors']
+		}),
+		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "src", "index.html"),
-			inject: 'body'
+			inject: 'body',
+			chunks: ['main']
 		}),
 	],
 }

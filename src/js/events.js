@@ -19,6 +19,7 @@ function init() {
         .then(res => {
             if (res) {
                 events = res;
+                console.log(events);
                 if (events) {
                     let categoriesDiv = document.createElement("div");
                     categoriesDiv.id = "categories-items";
@@ -32,12 +33,19 @@ function init() {
 
                         if (index === 0) {
                             category.events.map(event => {
-                                eventsContainer.innerHTML += `
-                            <div class="event-box" data-category=${category.category_name} data-event=${event.name}>
-                                ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
-                                <span>${event.name}</span>
-                            </div>
-                            `;
+                                let eventBox = document.createElement("div");
+                                eventBox.className = "event-box";
+                                eventBox.setAttribute("data-category", category.category_name);
+                                eventBox.setAttribute("data-event", event.name);
+
+                                eventBox.innerHTML += `
+                                    ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
+                                    <span>${event.name}</span>
+                                `;
+
+                                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules));
+
+                                eventsContainer.appendChild(eventBox);
                             })
                         }
                     });
@@ -79,12 +87,19 @@ function init() {
         setTimeout(function () {
             eventsContainer.innerHTML = '';
             events[categoryIndex].events.map(event => {
-                eventsContainer.innerHTML += `
-                <div class="event-box" data-category=${events[categoryIndex].category_name} data-event=${event.name}>
+                let eventBox = document.createElement("div");
+                eventBox.className = "event-box";
+                eventBox.setAttribute("data-category", events[categoryIndex].category_name);
+                eventBox.setAttribute("data-event", event.name);
+
+                eventBox.innerHTML += `
                     ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
                     <span>${event.name}</span>
-                </div>
                 `;
+
+                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules));
+
+                eventsContainer.appendChild(eventBox);
             })
         }, currEvents.length * 10)
     }
@@ -134,6 +149,26 @@ function init() {
             nav.style.opacity = 1;
             navLinks.style.opacity = 1;
         }, 600)
+    }
+
+    let singleEventPage = document.getElementById("single-event-page");
+    let singleEventCloseBtn = document.getElementById("close-single-event");
+
+    singleEventCloseBtn.addEventListener("click", closeSingleEventPage);
+
+    function eventClick (name, content, rules) {
+        document.getElementById("single-event-heading").innerHTML = name;
+        document.getElementById("single-event-content").innerHTML = content;
+        document.getElementById("single-event-rules").innerHTML = rules;
+        openSingleEventPage();
+    }
+
+    function openSingleEventPage () {
+        singleEventPage.style.display = "block";
+    }
+
+    function closeSingleEventPage () {
+        singleEventPage.style.display = "none";
     }
 };
 

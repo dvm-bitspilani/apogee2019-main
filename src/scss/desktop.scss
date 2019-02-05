@@ -126,3 +126,13 @@
 #about {
     min-height: 120vh;
 }
+
+.scroll-disable {
+    overflow: hidden;
+}
+.scroll-x-disable {
+    overflow-x: hidden;
+}
+.scroll-y-disable {
+    overflow-x: hidden;
+}

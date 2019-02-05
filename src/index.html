@@ -179,7 +179,7 @@
     </style>
 </head>
 
-<body>
+<body class="scroll-disable">
 
     <div id="loader-wrap">
         <div class="loader-circles">
@@ -269,6 +269,25 @@
             <div id="category-error" class="category-status">Error occurred while fetching events!</div>
         </div>
         <div id="category-events">
+        </div>
+    </div>
+
+    <div id="single-event-page" class = "overlay">
+        <div class="overlay-topbar">
+            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-single-event" />
+        </div>
+        <div class = "overlay-content">
+            <h2 id = "single-event-heading">EVENT NAME</h2>
+            <h3>DESCRIPTION</h3>
+            <div id = "single-event-content">
+                description
+            </div>
+            <br>
+            <h3>RULES</h3>
+            <div id = "single-event-rules">
+                rules
+            </div>
+            <input type="submit" id="single-event-register" class="register-button" value="Register">
         </div>
     </div>
 
@@ -592,7 +611,7 @@
             </div>
         </div>
 
-        <div id="register" class = "overlay">
+        <div id="register" class = "overlay" >
             <div class="overlay-topbar">
                 <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
                 <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
@@ -602,11 +621,9 @@
                 <form id="register-form" action="">
                     <div id="register-form-content">
                         <div class="reg-col">
-                            <label class="required">Name</label>
-                            <input type="text" name="name" id="register-name">
-                            <label class="required">College</label>
+                            <input type="text" name="name" id="register-name" placeholder="Name*">
                             <select id="register-college">
-                                <option value="select" disabled selected>Select</option>
+                                <option id = "reg-clg-label" value="select" disabled selected>Loading...</option>
                             </select>
                             <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
                             <label class="required">Gender</label>
@@ -648,14 +665,10 @@
                             </div>
                         </div>
                         <div class="reg-col">
-                            <label class="required">City</label>
-                            <input type="text" name="city" id="register-city">
-                            <label class="required">Email</label>
-                            <input type="email" name="email" id="register-email">
-                            <label class="required">Phone</label>
-                            <input type="text" name="phone" id="register-phone">
-                            <label>Referral</label>
-                            <input type="text" name="referral" id="register-referral">
+                            <input type="text" name="city" id="register-city" placeholder="City*">
+                            <input type="email" name="email" id="register-email" placeholder="Email*">
+                            <input type="text" name="phone" id="register-phone" placeholder="Phone*">
+                            <input type="text" name="referral" id="register-referral" placeholder="Referral">
                         </div>
                     </div>
                     <label id="error"></label>

@@ -87,12 +87,16 @@
     transform: rotate(180deg);
 }
 
+#mobile-speaker-left-arrow, #mobile-speaker-right-arrow {
+    display: none;
+}
+
 #arrows {
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translate(-50%);
-    // z-index: 999;
+    z-index: 500;
 }
 
 .speaker-arrow {
@@ -132,6 +136,10 @@
         top: 50%;
         z-index: 5;
         height: 35px;
+    }
+
+    #mobile-speaker-left-arrow, #mobile-speaker-right-arrow {
+        display: block;
     }
 
     #mobile-speaker-left-arrow {

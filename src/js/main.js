@@ -3,7 +3,7 @@ function init() {
         let loader = document.getElementById("loader-wrap");
         loader.style.opacity = "0";
         setTimeout(() => loader.style.display = "none", 400);
-        window.scrollTo(5,0);
+        document.body.classList.remove('scroll-disable');
     }
 
     let homeFooterVisible = true;
@@ -35,7 +35,7 @@ function init() {
     }
 
     function closeReg() {
-        document.getElementById("developers").style.top = '100%';
+        document.getElementById("developers").style.top = '120%';
     }
 };
 

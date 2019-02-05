@@ -73,6 +73,12 @@
                 margin: 0;
                 font-size: 18px;
             }
+
+            .search-choice-close {
+                background: url('../static/cross-reg-event.svg');
+                background-repeat: no-repeat;
+                background-size: 80% 80%;
+            }
         }
 
         input, select {

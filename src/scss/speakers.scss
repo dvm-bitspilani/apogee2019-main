@@ -105,6 +105,10 @@
     cursor: pointer;
 }
 
+.speaker-arrow:active, .speaker-arrow:focus {
+    outline: none;
+}
+
 @media all and (max-width: 900px) {
     .speaker {
         position: absolute;
@@ -118,7 +122,7 @@
         display: none;
     }    
     #speakers-heading {
-        font-size: 50px;
+        font-size: 15vw;
         padding-left: 10px;
     }
     #speakers {

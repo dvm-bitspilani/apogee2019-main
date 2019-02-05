@@ -1,6 +1,5 @@
 function init() {
     const BASE_URL = "https://bits-apogee.org/2019";
-    setColleges();
 
     let isRegisteredOnce = false;
 
@@ -91,6 +90,8 @@ function init() {
             displayError('Please select your gender')
         } else if (college === 'select') {
             displayError('Please select a college');
+        } else if (!events) {
+            displayError('Please select event(s) you want to register for')
         } else if (!validateEmail(email)) {
             displayError('Please enter a valid email address');
         } else if (!validatePhone(phone)) {
@@ -104,34 +105,34 @@ function init() {
                 phone: parseInt(phone),
                 gender,
                 year,
-                events: (events) ? events:[]
+                events
             };
 
-            console.log(sendData);
+            
+            if (referral) sendData['referral'] = referral;
 
-            if (referral) sendData[referral] = referral;
-
-            // $.ajax(
-            //     {
-            //         type: "POST",
-            //         contentType: "application/json",
-            //         url: BASE_URL + "/registrations/new/register",
-            //         data: JSON.stringify(sendData),
-            //         dataType: "json",
-            //         success: function (response) {
-            //             displayError('');
-            //             setTimeout(function () {
-            //                 document.getElementById("register-form-content").style.display = "none";
-            //                 document.getElementById("register-form-complete").style.display = "flex";
-            //             }, 100);
-            //             isRegisteredOnce = true;
-            //             document.getElementById("backend-reg-success").innerHTML = response.message;
-            //         },
-            //         error: function (err) {
-            //             displayError(err.responseJSON.message);
-            //         }
-            //     }
-            // )
+            $.ajax(
+                {
+                    type: "POST",
+                    contentType: "application/json",
+                    url: BASE_URL + "/registrations/new/register",
+                    data: JSON.stringify(sendData),
+                    dataType: "json",
+                    success: function (response) {
+                        displayError('');
+                        setTimeout(function () {
+                            document.getElementById("register-form-content").style.display = "none";
+                            document.getElementById("register-form-complete").style.display = "flex";
+                        }, 100);
+                        isRegisteredOnce = true;
+                        document.getElementById("backend-reg-success").innerHTML = response.message;
+                    },
+                    error: function (err) {
+                        // console.log(err);
+                        displayError(err.responseJSON.message);
+                    }
+                }
+            )
         }
     }
 
@@ -150,43 +151,6 @@ function init() {
             document.getElementById("error").innerHTML = '';
         else
             document.getElementById("error").innerHTML = 'Error! ' + errorMsg + '!';
-    }
-
-    function setColleges() {
-        fetch(BASE_URL + '/registrations/get_college')
-            .then((resp) => resp.json())
-            .then(function (data) {
-                // console.log(data);
-                // let count = 0;
-                // data.data.map(college => {
-                //     if (count == 100) 
-                //     document.getElementById("register-college").innerHTML += `<option value=${college.id}>${college.name}</option>`;
-                // })
-
-                let colleges = data.data;
-                let regClgDropDown = document.getElementById('register-college');
-                let regClgLabel = document.getElementById('reg-clg-label');
-
-                function lazyRenderClgs (clgs, index) {
-                  let count = 0;
-                  for (; index < clgs.length && count < 500; index++, count++) {
-                    let college = clgs[index];
-
-                    let opt = document.createElement('option');
-                    opt.setAttribute('value', college.id);
-                    opt.innerHTML = college.name;
-                    regClgDropDown.appendChild(opt);
-                  }
-                  if (index != clgs.length) setTimeout(() => lazyRenderClgs(clgs, index), 1000);
-                  else {
-                    // console.log(index);
-                    regClgLabel.innerHTML = "Select College*";
-                  }
-                  // console.log('a');
-                }
-                lazyRenderClgs(colleges, 0);
-            })
-            .catch(err => console.log(err))
     }
 }
 

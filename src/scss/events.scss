@@ -87,10 +87,15 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 120%;
     left: 0;
     text-align: center;
-    display: none;
+    display: block;
+    transition: top 0.5s cubic-bezier(.55,.01,.17,1);
+
+    h2 {
+        text-transform: uppercase;
+    }
 
     .overlay-topbar {
         justify-content: flex-end;

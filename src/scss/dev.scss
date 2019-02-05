@@ -3,6 +3,8 @@
 #developers {
     h2 {
         color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
 
         @media all and (max-width: 1000px) {
             text-align: center;
@@ -22,6 +24,7 @@
     #dev-container {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         @media all and (max-width: 1000px) {
             justify-content: space-around;

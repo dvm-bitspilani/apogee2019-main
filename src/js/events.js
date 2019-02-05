@@ -199,7 +199,8 @@ function init() {
             window.registerForEvent = id;
 
             setTimeout(() => window.registerForEvent = "", 2000);
-
+            
+            closeSingleEventPage();
             window.openReg();
         });
 
@@ -207,11 +208,11 @@ function init() {
     }
 
     function openSingleEventPage () {
-        singleEventPage.style.display = "block";
+        singleEventPage.style.top = 0;
     }
 
     function closeSingleEventPage () {
-        singleEventPage.style.display = "none";
+        singleEventPage.style.top = "120%";
     }
 };
 

@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node ./node_modules/.bin/webpack --display-modules --config webpack.prod.config.js",
     "watch": "node ./node_modules/.bin/webpack --watch --config webpack.prod.config.js",
-    "deploy": "npm run build gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",

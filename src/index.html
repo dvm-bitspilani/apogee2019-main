@@ -177,6 +177,8 @@
         /* @media all and (max-width) */
 
     </style>
+    <link href="./static/js/chosen.min.css" rel="stylesheet"/>
+
 </head>
 
 <body class="scroll-disable">
@@ -208,7 +210,7 @@
     <hr class="vertical-lines desktop-only" style="left: 90vw;" />
 
     <div id="nav" class="desktop-only">
-        <div class="nav-item">
+        <div class="nav-item nav-link" data-to="home">
             <div class="bar"></div>
             <div class="nav-number-primary nav-link">01</div>
             <span class="nav-hover-text">&nbsp;&nbsp;&nbsp;Home</span>
@@ -223,7 +225,7 @@
             <div id="nav-links" class="desktop-only">
                 <span id="view-all-events" class="view-all-events-btn">EVENTS</span>
                 <span><a href="https://bits-apogee.org/aic" target="_blank">AIC</a></span>
-                <span>Profshows</span>
+                <!-- <span>Profshows</span> -->
                 <span><a href="http://bitsmun.co.in/" target="_blank">BITSMUN</a></span>
                 <span id="register-btn">Register</span>
             </div>
@@ -292,6 +294,83 @@
             <input type="submit" id="single-event-register" class="register-button" value="Register">
         </div>
     </div>
+
+
+    <div id="register" class = "overlay">
+            <div class="overlay-topbar">
+                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
+                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
+            </div>
+            <div id="register-content" class = "overlay-content">
+                <h2>REGISTRATION</h2>
+                <form id="register-form" action="">
+                    <div id="register-form-content">
+                        <div class="reg-col">
+                            <input type="text" name="name" id="register-name" placeholder="Name*">
+                            <select id="register-college">
+                                <option id = "reg-clg-label" value="select" disabled selected>Loading...</option>
+                            </select>
+                            <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
+                            <label class="required">Gender</label>
+                            <div id="gender-div">
+                                <div>
+                                    <input type="radio" id="male" class="gender-option" name="gender" value="1" checked>
+                                    Male
+                                </div>
+                                <div>
+                                    <input type="radio" id="female" class="gender-option" name="gender" value="2">
+                                    Female
+                                </div>
+                                <div>
+                                    <input type="radio" id="other" class="gender-option" name="gender" value="0"> Other
+                                </div>
+                            </div>
+                            <label class="required">Year of study</label>
+                            <div id="year-div">
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="1" checked>
+                                    1
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="2">
+                                    2
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="3">
+                                    3
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="4">
+                                    4
+                                </div>
+                                <div>
+                                    <input type="radio" id="" class="year-option" name="year" value="5">
+                                    5
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reg-col">
+                            <select id="register-events" data-placeholder = "Select Event(s)*" multiple>
+                                <option id = "reg-events-label" value="select" disabled>Loading...</option>
+                            </select>
+                            <input type="text" name="city" id="register-city" placeholder="City*">
+                            <input type="email" name="email" id="register-email" placeholder="Email*">
+                            <input type="text" name="phone" id="register-phone" placeholder="Phone*">
+                            <input type="text" name="referral" id="register-referral" placeholder="Referral">
+                        </div>
+                    </div>
+                    <label id="error"></label>
+                    <div id="register-buttons">
+                        <input type="submit" id="register-submit" class="register-button" value="Register">
+                        <button id="register-back" class="register-button">Go back</button>
+                    </div>
+                    <div id="register-form-complete">
+                        <label>Your registration is complete.</label><br>
+                        <button id='register-again' class='register-button'>Register again</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
 
     <div id="container">
@@ -613,79 +692,6 @@
             </div>
         </div>
 
-        <div id="register" class = "overlay" >
-            <div class="overlay-topbar">
-                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
-                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
-            </div>
-            <div id="register-content" class = "overlay-content">
-                <h2>REGISTRATION</h2>
-                <form id="register-form" action="">
-                    <div id="register-form-content">
-                        <div class="reg-col">
-                            <input type="text" name="name" id="register-name" placeholder="Name*">
-                            <select id="register-college">
-                                <option id = "reg-clg-label" value="select" disabled selected>Loading...</option>
-                            </select>
-                            <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
-                            <label class="required">Gender</label>
-                            <div id="gender-div">
-                                <div>
-                                    <input type="radio" id="male" class="gender-option" name="gender" value="1" checked>
-                                    Male
-                                </div>
-                                <div>
-                                    <input type="radio" id="female" class="gender-option" name="gender" value="2">
-                                    Female
-                                </div>
-                                <div>
-                                    <input type="radio" id="other" class="gender-option" name="gender" value="0"> Other
-                                </div>
-                            </div>
-                            <label class="required">Year of study</label>
-                            <div id="year-div">
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="1" checked>
-                                    1
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="2">
-                                    2
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="3">
-                                    3
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="4">
-                                    4
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="5">
-                                    5
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reg-col">
-                            <input type="text" name="city" id="register-city" placeholder="City*">
-                            <input type="email" name="email" id="register-email" placeholder="Email*">
-                            <input type="text" name="phone" id="register-phone" placeholder="Phone*">
-                            <input type="text" name="referral" id="register-referral" placeholder="Referral">
-                        </div>
-                    </div>
-                    <label id="error"></label>
-                    <div id="register-buttons">
-                        <input type="submit" id="register-submit" class="register-button" value="Register">
-                        <button id="register-back" class="register-button">Go back</button>
-                    </div>
-                    <div id="register-form-complete">
-                        <label>Your registration is complete.</label><br>
-                        <button id='register-again' class='register-button'>Register again</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
         <div id="developers" class = "overlay">
             <div class="overlay-topbar">
                 <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
@@ -807,6 +813,15 @@
             </div>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type = "text/javascript" src="./static/js/chosen.jquery.min.js"></script>
+
+    <script>
+        $('document').ready(function () {
+            $('#register-events').chosen();
+        })
+    </script>
 </body>
 
 </html>

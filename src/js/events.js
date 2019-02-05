@@ -7,6 +7,7 @@ function init() {
     const errorDiv = document.getElementById("category-error");
     const categoriesContainer = document.getElementById("all-events-categories");
     const eventsContainer = document.getElementById("category-events");
+    const regEvents = document.getElementById("register-events");
 
     let events = null;
     fetch(URL, {
@@ -19,7 +20,7 @@ function init() {
         .then(res => {
             if (res) {
                 events = res;
-                console.log(events);
+                let eventCount = 0; // to check if events rendered in reg
                 if (events) {
                     let categoriesDiv = document.createElement("div");
                     categoriesDiv.id = "categories-items";
@@ -30,6 +31,8 @@ function init() {
                         span.addEventListener("click", () => changeCategory(index));
                         span.innerHTML = category.category_name;
                         categoriesDiv.appendChild(span);
+
+                        eventCount += category.events.length;
 
                         if (index === 0) {
                             category.events.map(event => {
@@ -46,9 +49,36 @@ function init() {
                                 eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules));
 
                                 eventsContainer.appendChild(eventBox);
+
+                                // for registrations
+                                let eventOption = document.createElement("option");
+                                eventOption.setAttribute("value", event.name);
+                                eventOption.innerHTML = event.name;
+                                regEvents.appendChild(eventOption);
+                            })
+                        }
+                        else {
+                            category.events.map(event => {
+                                // for registrations
+                                let eventOption = document.createElement("option");
+                                eventOption.setAttribute("value", event.name);
+                                eventOption.innerHTML = event.name;
+                                regEvents.appendChild(eventOption);
                             })
                         }
                     });
+
+                    function updateRegEvents () {
+                        if (eventCount == regEvents.children.length - 1) {
+                            document.get
+                            regEvents.removeChild(document.getElementById("reg-events-label"));
+                            $('#register-events').trigger('chosen:updated');
+                        }
+                        else {
+                            setTimeout(() => updateRegEvents(), 200);
+                        }
+                    }
+                    updateRegEvents();
 
                     loadingDiv.style.display = "none";
                     categoriesContainer.appendChild(categoriesDiv);

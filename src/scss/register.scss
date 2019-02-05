@@ -50,6 +50,31 @@
             margin-top: 30px;
         }
 
+        #register_events_chosen {
+            width: 100% !important;
+            margin-bottom: 15px;
+            ul {
+                background: #ffffff20;
+                outline: none;
+                border: none;
+                border-bottom: 1.5px solid #ffffff80;
+                padding: 10px;
+                color: #fff;
+                transition: all 0.1s ease-in-out;
+            }
+            
+            .chosen-drop {
+                border-color: black;
+                background: black;
+            }
+            
+            input {
+                width: auto !important;
+                margin: 0;
+                font-size: 18px;
+            }
+        }
+
         input, select {
             background: #ffffff20;
             outline: none;

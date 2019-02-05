@@ -177,6 +177,8 @@
         /* @media all and (max-width) */
 
     </style>
+    <link href="./static/chosen.min.css" rel="stylesheet"/>
+
 </head>
 
 <body class="scroll-disable">
@@ -611,7 +613,7 @@
             </div>
         </div>
 
-        <div id="register" class = "overlay" >
+        <div id="register" class = "overlay" style = "top: 0;">
             <div class="overlay-topbar">
                 <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
                 <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
@@ -665,6 +667,9 @@
                             </div>
                         </div>
                         <div class="reg-col">
+                            <select id="register-events" data-placeholder = "Select Event(s)*" multiple>
+                                <option id = "reg-events-label" value="select" disabled>Loading...</option>
+                            </select>
                             <input type="text" name="city" id="register-city" placeholder="City*">
                             <input type="email" name="email" id="register-email" placeholder="Email*">
                             <input type="text" name="phone" id="register-phone" placeholder="Phone*">
@@ -805,6 +810,15 @@
             </div>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./static/chosen.jquery.min.js"></script>
+
+    <script>
+        $('document').ready(function () {
+            $('#register-events').chosen();
+        })
+    </script>
 </body>
 
 </html>

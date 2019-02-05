@@ -43,7 +43,13 @@ function init() {
         }
         document.getElementById("register").style.top = 0;
         window.closeMenu();
+        if (window.registerForEvent != "" && window.registerForEvent != undefined) {
+            $('#register-events').val(window.registerForEvent);
+            $('#register-events').trigger('chosen:updated');
+        }
     }
+
+    window.openReg = openReg;
 
     function closeReg() {
         document.getElementById("register").style.top = '120%';

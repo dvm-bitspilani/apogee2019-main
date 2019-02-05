@@ -190,6 +190,15 @@ function init() {
         document.getElementById("single-event-heading").innerHTML = name;
         document.getElementById("single-event-content").innerHTML = content;
         document.getElementById("single-event-rules").innerHTML = rules;
+
+        document.getElementById("single-event-register").addEventListener("click", function () {
+            window.registerForEvent = name;
+
+            setTimeout(() => window.registerForEvent = "", 2000);
+
+            window.openReg();
+        });
+
         openSingleEventPage();
     }
 

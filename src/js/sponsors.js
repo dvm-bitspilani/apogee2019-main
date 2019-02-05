@@ -69,7 +69,7 @@ function init() {
     sponsors.map(sponsorObj => {
         sponsorObj.sponsors.map(sponsor => obj.sponsors.push(sponsor))
     })
-    console.log(obj);
+    // console.log(obj);
     sponsors[0] = obj;
 
     // init sponsors
@@ -88,8 +88,10 @@ function init() {
                 sponsorsContainer.innerHTML += `
                             <div class="box" data-category=${category.category_name} data-event=${sponsor.name}>
                                 <img src=${sponsor.image} alt=${sponsor.name} /> 
-                                <span>${sponsor.name}</span>
-                                <span class="sponsor-role">< ${sponsor.role} ></span>
+                                <div class="sponsor-content">
+                                    <span>${sponsor.name}</span>
+                                    <span class="sponsor-role">< ${sponsor.role} ></span>
+                                </div>
                             </div>
                             `;
             })
@@ -119,8 +121,10 @@ function init() {
                 sponsorsContainer.innerHTML += `
                 <div class="box" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
                     <img src=${sponsor.image} alt=${sponsor.name} /> 
-                    <span>${sponsor.name}</span>
-                    <span class="sponsor-role">< ${sponsor.role} ></span>
+                    <div class="sponsor-content">
+                        <span>${sponsor.name}</span>
+                        <span class="sponsor-role">< ${sponsor.role} ></span>
+                    </div>
                 </div>
                 `;
             })

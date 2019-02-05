@@ -105,7 +105,7 @@ function init() {
     window.addEventListener("resize", function () {
         let newVwWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         if ((vwWidth >= MOBILE_WIDTH && newVwWidth < MOBILE_WIDTH) || (vwWidth <= MOBILE_WIDTH && newVwWidth > MOBILE_WIDTH)) {
-            console.log("resized!");
+            // console.log("resized!");
             vwWidth = newVwWidth;
             currentMobileIndex = 0;
             currentDesktopIndex = 0;

@@ -65,14 +65,14 @@ function init() {
         const city = document.getElementById('register-city').value;
         const referral = document.getElementById('register-referral').value;
         const events = $('#register-events').chosen().val();
-        let gender = 1;
+        let gender = 'M';
         let year = 1;
 
         // get gender
         const genders = document.getElementsByClassName('gender-option');
         for (let i = 0; i < genders.length; i++) {
             if (genders[i].checked)
-                gender = parseInt(genders[i].value);
+                gender = genders[i].value;
         }
 
         // get year of study
@@ -128,7 +128,7 @@ function init() {
                         document.getElementById("backend-reg-success").innerHTML = response.message;
                     },
                     error: function (err) {
-                        // console.log(err);
+                        //console.log(err);
                         displayError(err.responseJSON.message);
                     }
                 }

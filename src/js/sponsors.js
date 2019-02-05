@@ -29,7 +29,7 @@ function init() {
                 },
                 {
                     name: "AB InBev",
-                    image: require("../static/sponsors/ABInbev.png"),
+                    image: require("../static/sponsors/ABInBev.png"),
                     role: 'Official Innovatino Partner'
                 },
                 {

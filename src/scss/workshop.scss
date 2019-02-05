@@ -3,7 +3,7 @@
 #workshop{
     h1{
             font-family: 'teko-light';
-            font-size: 100px;
+            font-size: 75px;
             line-height: 1;
             font-weight: lighter;
             letter-spacing: 20px;
@@ -50,7 +50,10 @@
 }
 
 .workshop-image{
-    width: 30%;
+    // width: 30%;
+    width: 100px;
+    height: 100px;
+    align-self: center;
     background-image: url('../imgs/cara.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -109,6 +112,11 @@
     .workshop-cell{
         height: 40%;
         width: 100%;
+    }
+
+    .workshop-image {
+        height: 70px;
+        width: 70px;
     }
 }
 

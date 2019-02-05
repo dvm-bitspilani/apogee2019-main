@@ -80,7 +80,6 @@ function init() {
     function openMenu () {
         if(!isMenuOpen) {
             sideMenu.style.right = 0;
-            console.log("hi");
             document.body.classList.add('scroll-disable');
         } else {
             sideMenu.style.right = sideMenuRight;
@@ -91,7 +90,6 @@ function init() {
         if(isMenuOpen) {
             sideMenu.style.right = 0;
         } else {
-            console.log("bye");
             document.body.classList.remove('scroll-disable');
             sideMenu.style.right = sideMenuRight;
         }

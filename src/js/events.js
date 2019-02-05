@@ -20,6 +20,7 @@ function init() {
         .then(res => {
             if (res) {
                 events = res;
+                console.log(events);
                 let eventCount = 0; // to check if events rendered in reg
                 if (events) {
                     let categoriesDiv = document.createElement("div");

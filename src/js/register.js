@@ -64,6 +64,7 @@ function init() {
         const phone = document.getElementById('register-phone').value;
         const city = document.getElementById('register-city').value;
         const referral = document.getElementById('register-referral').value;
+        const events = $('#register-events').chosen().val();
         let gender = 1;
         let year = 1;
 
@@ -94,23 +95,29 @@ function init() {
         } else if (!validatePhone(phone)) {
             displayError('Please enter a valid phone number');
         } else {
-            fetch(BASE_URL + "/registrations/introreg", {
+            let sendData = {
+                name,
+                college_id: college,
+                city,
+                email: email,
+                phone: parseInt(phone),
+                gender,
+                year,
+                events
+            };
+
+            console.log(sendData);
+
+            if (referral) sendData[referral] = referral;
+
+            fetch(BASE_URL + "/registrations/new/register", {
                 method: "post",
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
 
-                body: JSON.stringify({
-                    name,
-                    college_id: college,
-                    city,
-                    email_id: email,
-                    phone,
-                    gender,
-                    year,
-                    referral
-                })
+                body: JSON.stringify(sendData)
             })
                 .then((res) => res.json())
                 .then((response) => {

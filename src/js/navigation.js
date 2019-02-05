@@ -59,6 +59,12 @@ function init() {
                 navTexts[i].style.zIndex = 5;
                 navNumSecondary[i].style.opacity = 1;
                 active = true;
+
+                if(i === 0) {
+                    document.getElementById("navbar").style.background = "none";
+                } else {
+                    document.getElementById("navbar").style.background = "#01061C";
+                }
             } else {
                 bars[i].classList.remove('active-bar');
                 navItems[i].classList.remove('nav-active');

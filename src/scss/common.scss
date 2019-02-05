@@ -44,7 +44,6 @@ a {
     align-items: center;
     z-index: 998;
     transition: transform 0.1s linear;
-    background: #01061C;
 
     #links2 {
         display: none;
@@ -79,12 +78,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 35vw;
 }
 
 #nav-links span {
     text-transform: uppercase;
     cursor: pointer;
+    margin-right: 40px;
     transition: all 0.2s ease-in-out;
 }
 

@@ -1,4 +1,25 @@
 function init() {
+    const MOBILE_WIDTH = 900;
+    const vwWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    let img = document.createElement("img");
+    console.log(vwWidth, MOBILE_WIDTH);
+    if(vwWidth > MOBILE_WIDTH) {
+        img.src = require('../static/desktop-bg.jpg');
+        img.id = "desktop-bg";
+        document.getElementById("home").appendChild(img);
+    } else {
+        img.src = require('../static/mobile-bg.jpg');
+        img.id = "mobile-bg";
+        document.getElementById("home").innerHTML += 
+        `
+        <div id='mobile-bg'></div>
+        <div id='mobile-subtitle'>THE REALITY ROULETTE</div>
+        <a id="watch-teaser-mobile" href="https://youtu.be/MqpPYIjDw4I" target="_blank" class="teaser-button">
+            WATCH TEASER
+        </a>
+        `;
+    }
+
     window.onload = () => {
         let loader = document.getElementById("loader-wrap");
         loader.style.opacity = "0";

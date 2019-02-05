@@ -16,16 +16,19 @@ function init() {
     let navData = ["About", "Events", "Speakers", "Workshops", "Contact"];
     let navToPage = ["about", "events", "speakers", "workshop", "contact"]; // MAINTAIN ORDER
     navData.map((data, index) => {
-        nav.innerHTML += `
-        <div class="nav-item">
-            <div class="bar"></div>
-            <div class="nav-number-primary">${index < 10 ? '0' : null}${index+2}
-            </div>
-            <span class="nav-hover-text">&nbsp;&nbsp;&nbsp;${data}</span>
-            <div class="nav-number-secondary">${index < 10 ? '0' : null}${index+2}</div>
-            <div class="nav-text">${data}</div>
+        let div = document.createElement("div");
+        div.className = "nav-item";
+        div.addEventListener("click", () => goToPage(navToPage[index]))
+        div.innerHTML = 
+        `
+        <div class="bar"></div>
+        <div class="nav-number-primary">${index < 10 ? '0' : null}${index+2}
         </div>
-        `;
+        <span class="nav-hover-text">&nbsp;&nbsp;&nbsp;${data}</span>
+        <div class="nav-number-secondary">${index < 10 ? '0' : null}${index+2}</div>
+        <div class="nav-text">${data}</div>
+        `
+        nav.appendChild(div);
     });
 
     bars[0].classList.add('active-bar');

@@ -2,10 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta property="og:site_name" content="APOGEE '19">
+    <meta property="og:title" content="APOGEE'19 | The Reality Roulette">
+    <meta property="og:description" content="The official website of the technical festival of BITS Pilani, Pilani Campus - 2019 Edition">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://bits-apogee.org/">
+    <meta property="og:type" content="education.education">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>APOGEE 2019 | The Reality Roulette</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" href="./static/favicon.png" />
     <style>
         #loader-wrap {
             height: 100vh;
@@ -177,7 +184,7 @@
         /* @media all and (max-width) */
 
     </style>
-    <link href="./static/js/chosen.min.css" rel="stylesheet"/>
+    <link href="./static/js/chosen.min.css" rel="stylesheet" />
 
 </head>
 
@@ -233,7 +240,7 @@
             <img src="./static/hamburger.svg" alt="MENU" id="hamburger">
         </div>
         <div id="links2">
-            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-events" />
+            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id="close-events" />
         </div>
     </div>
 
@@ -277,19 +284,19 @@
         </div>
     </div>
 
-    <div id="single-event-page" class = "overlay">
+    <div id="single-event-page" class="overlay">
         <div class="overlay-topbar">
-            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-single-event" />
+            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id="close-single-event" />
         </div>
-        <div class = "overlay-content">
-            <h2 id = "single-event-heading">EVENT NAME</h2>
+        <div class="overlay-content">
+            <h2 id="single-event-heading">EVENT NAME</h2>
             <h3>DESCRIPTION</h3>
-            <div id = "single-event-content">
+            <div id="single-event-content">
                 description
             </div>
             <br>
             <h3>RULES</h3>
-            <div id = "single-event-rules">
+            <div id="single-event-rules">
                 rules
             </div>
             <input type="submit" id="single-event-register" class="register-button" value="Register">
@@ -297,202 +304,202 @@
     </div>
 
 
-    <div id="register" class = "overlay">
-            <div class="overlay-topbar">
-                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
-                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-register" />
-            </div>
-            <div id="register-content" class = "overlay-content">
-                <h2>REGISTRATION</h2>
-                <form id="register-form" action="">
-                    <div id="register-form-content">
-                        <div class="reg-col">
-                            <input type="text" name="name" id="register-name" placeholder="Name*">
-                            <select id="register-college">
-                                <option id = "reg-clg-label" value="select" disabled selected>Loading...</option>
-                            </select>
-                            <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
-                            <label class="required">Gender</label>
-                            <div id="gender-div">
-                                <div>
-                                    <input type="radio" id="male" class="gender-option" name="gender" value="M" checked>
-                                    Male
-                                </div>
-                                <div>
-                                    <input type="radio" id="female" class="gender-option" name="gender" value="F">
-                                    Female
-                                </div>
-                                <div>
-                                    <input type="radio" id="other" class="gender-option" name="gender" value="O"> Other
-                                </div>
-                            </div>
-                            <label class="required">Year of study</label>
-                            <div id="year-div">
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="1" checked>
-                                    1
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="2">
-                                    2
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="3">
-                                    3
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="4">
-                                    4
-                                </div>
-                                <div>
-                                    <input type="radio" id="" class="year-option" name="year" value="5">
-                                    5
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reg-col">
-                            <select id="register-events" data-placeholder = "Select Event(s)*" multiple>
-                                <option id = "reg-events-label" value="select" disabled>Loading...</option>
-                            </select>
-                            <input type="text" name="city" id="register-city" placeholder="City*">
-                            <input type="email" name="email" id="register-email" placeholder="Email*">
-                            <input type="text" name="phone" id="register-phone" placeholder="Phone*">
-                            <input type="text" name="referral" id="register-referral" placeholder="Referral">
-                        </div>
-                    </div>
-                    <label id="error"></label>
-                    <div id="register-buttons">
-                        <input type="submit" id="register-submit" class="register-button" value="Register">
-                        <button id="register-back" class="register-button">Go back</button>
-                    </div>
-                    <div id="register-form-complete">
-                        <label>Your registration is complete.</label><label id = "backend-reg-success"></label><br>
-                        <button id='register-again' class='register-button'>Register again</button>
-                    </div>
-                </form>
-            </div>
+    <div id="register" class="overlay">
+        <div class="overlay-topbar">
+            <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
+            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id="close-register" />
         </div>
+        <div id="register-content" class="overlay-content">
+            <h2>REGISTRATION</h2>
+            <form id="register-form" action="">
+                <div id="register-form-content">
+                    <div class="reg-col">
+                        <input type="text" name="name" id="register-name" placeholder="Name*">
+                        <select id="register-college">
+                            <option id="reg-clg-label" value="select" disabled selected>Loading...</option>
+                        </select>
+                        <label class="reg-message">If you cannot find your college above, please contact PCr (<a href="tel:+919462011235">+91-9462011235</a>)</label>
+                        <label class="required">Gender</label>
+                        <div id="gender-div">
+                            <div>
+                                <input type="radio" id="male" class="gender-option" name="gender" value="M" checked>
+                                Male
+                            </div>
+                            <div>
+                                <input type="radio" id="female" class="gender-option" name="gender" value="F">
+                                Female
+                            </div>
+                            <div>
+                                <input type="radio" id="other" class="gender-option" name="gender" value="O"> Other
+                            </div>
+                        </div>
+                        <label class="required">Year of study</label>
+                        <div id="year-div">
+                            <div>
+                                <input type="radio" id="" class="year-option" name="year" value="1" checked>
+                                1
+                            </div>
+                            <div>
+                                <input type="radio" id="" class="year-option" name="year" value="2">
+                                2
+                            </div>
+                            <div>
+                                <input type="radio" id="" class="year-option" name="year" value="3">
+                                3
+                            </div>
+                            <div>
+                                <input type="radio" id="" class="year-option" name="year" value="4">
+                                4
+                            </div>
+                            <div>
+                                <input type="radio" id="" class="year-option" name="year" value="5">
+                                5
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reg-col">
+                        <select id="register-events" data-placeholder="Select Event(s)*" multiple>
+                            <option id="reg-events-label" value="select" disabled>Loading...</option>
+                        </select>
+                        <input type="text" name="city" id="register-city" placeholder="City*">
+                        <input type="email" name="email" id="register-email" placeholder="Email*">
+                        <input type="text" name="phone" id="register-phone" placeholder="Phone*">
+                        <input type="text" name="referral" id="register-referral" placeholder="Referral">
+                    </div>
+                </div>
+                <label id="error"></label>
+                <div id="register-buttons">
+                    <input type="submit" id="register-submit" class="register-button" value="Register">
+                    <button id="register-back" class="register-button">Go back</button>
+                </div>
+                <div id="register-form-complete">
+                    <label>Your registration is complete.</label><label id="backend-reg-success"></label><br>
+                    <button id='register-again' class='register-button'>Register again</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-        <div id="developers" class = "overlay">
-            <div class="overlay-topbar">
-                <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
-                <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id = "close-dev" />
-            </div>
-            <div id="dev-content" class = "overlay-content">
-                <h2>DEVELOPERS</h2>
+    <div id="developers" class="overlay">
+        <div class="overlay-topbar">
+            <img class="logo-overlay" src="./static/logo.svg" alt="APOGEE 2019" />
+            <img src="static/close_button.svg" alt="CLOSE" class="close-overlay" id="close-dev" />
+        </div>
+        <div id="dev-content" class="overlay-content">
+            <h2>DEVELOPERS</h2>
 
-                <div id = "dev-container">
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/sarthak.jpeg" />
-                        </div>
-                        <div class = "dev-name">Sarthak Sehgal</div>
-                        <div class="dev-role">Frontend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/sarthak-sehgal" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                            <a href="https://www.linkedin.com/in/sarthak-sehgal99/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
-                        </div>
+            <div id="dev-container">
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/sarthak.jpeg" />
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/yash.jpg" />
-                        </div>
-                        <div class = "dev-name">Yash Bhagat</div>
-                        <div class="dev-role">Designer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://instagram.com/yash.bhagat3" target="_blank"><img src="./static/dev-insta-icon.svg" /></a>
-                            <a href="https://www.behance.net/yashbhagatd053" target="_blank"><img src="./static/dev-behance-logo.svg" /></a>
-                            <a href="https://dribbble.com/yashbhagat" target="_blank"><img src="./static/dev-dribble-icon.svg" /></a>
-                        </div>
+                    <div class="dev-name">Sarthak Sehgal</div>
+                    <div class="dev-role">Frontend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/sarthak-sehgal" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        <a href="https://www.linkedin.com/in/sarthak-sehgal99/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/placeholder.png" />
-                        </div>
-                        <div class = "dev-name">Laksh Singla</div>
-                        <div class="dev-role">Frontend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/LakshSingla" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                        </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/yash.jpg" />
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/kunal.jpg" />
-                        </div>
-                        <div class = "dev-name">Kunal Mohta</div>
-                        <div class="dev-role">Frontend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/kunal-mohta" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                            <a href="https://www.linkedin.com/in/kunal-mohta/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
-                        </div>
+                    <div class="dev-name">Yash Bhagat</div>
+                    <div class="dev-role">Designer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://instagram.com/yash.bhagat3" target="_blank"><img src="./static/dev-insta-icon.svg" /></a>
+                        <a href="https://www.behance.net/yashbhagatd053" target="_blank"><img src="./static/dev-behance-logo.svg" /></a>
+                        <a href="https://dribbble.com/yashbhagat" target="_blank"><img src="./static/dev-dribble-icon.svg" /></a>
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/sanchit.jpg" />
-                        </div>
-                        <div class = "dev-name">Sanchit Ahuja</div>
-                        <div class="dev-role">Backend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/sanchit-ahuja" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                            <a href="https://www.linkedin.com/in/sanchit-ahuja-146541149/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
-                        </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/placeholder.png" />
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/nayan.jpg" />
-                        </div>
-                        <div class = "dev-name">Nayan Khanna</div>
-                        <div class="dev-role">Backend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/nayan2000" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                            <a href="https://www.linkedin.com/in/nayankhanna/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
-                        </div>
+                    <div class="dev-name">Laksh Singla</div>
+                    <div class="dev-role">Frontend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/LakshSingla" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/divyam.jpg" />
-                        </div>
-                        <div class = "dev-name">Divyam Goel</div>
-                        <div class="dev-role">Backend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/DiVyaM17" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                            <a href="https://www.linkedin.com/in/divyam-goel/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
-                        </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/kunal.jpg" />
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/raghav.jpg" />
-                        </div>
-                        <div class = "dev-name">Raghav Arora</div>
-                        <div class="dev-role">Backend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/RAraghavarora" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                            <a href="https://www.linkedin.com/in/raghav-arora-9820a648/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
-                        </div>
+                    <div class="dev-name">Kunal Mohta</div>
+                    <div class="dev-role">Frontend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/kunal-mohta" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        <a href="https://www.linkedin.com/in/kunal-mohta/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
                     </div>
-                    <div class = "dev-card">
-                        <div class = "dev-img">
-                            <img src = "imgs/devs/hemant.jpg" />
-                        </div>
-                        <div class = "dev-name">Hemant Alluri</div>
-                        <div class="dev-role">Backend Developer</div>
-                        <hr>
-                        <div class="dev-links">
-                            <a href="https://github.com/hypro999/" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
-                            <!-- <a href="https://www.linkedin.com/in/divyam-goel/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a> -->
-                        </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/sanchit.jpg" />
+                    </div>
+                    <div class="dev-name">Sanchit Ahuja</div>
+                    <div class="dev-role">Backend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/sanchit-ahuja" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        <a href="https://www.linkedin.com/in/sanchit-ahuja-146541149/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/nayan.jpg" />
+                    </div>
+                    <div class="dev-name">Nayan Khanna</div>
+                    <div class="dev-role">Backend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/nayan2000" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        <a href="https://www.linkedin.com/in/nayankhanna/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/divyam.jpg" />
+                    </div>
+                    <div class="dev-name">Divyam Goel</div>
+                    <div class="dev-role">Backend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/DiVyaM17" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        <a href="https://www.linkedin.com/in/divyam-goel/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/raghav.jpg" />
+                    </div>
+                    <div class="dev-name">Raghav Arora</div>
+                    <div class="dev-role">Backend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/RAraghavarora" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        <a href="https://www.linkedin.com/in/raghav-arora-9820a648/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a>
+                    </div>
+                </div>
+                <div class="dev-card">
+                    <div class="dev-img">
+                        <img src="imgs/devs/hemant.jpg" />
+                    </div>
+                    <div class="dev-name">Hemant Alluri</div>
+                    <div class="dev-role">Backend Developer</div>
+                    <hr>
+                    <div class="dev-links">
+                        <a href="https://github.com/hypro999/" target="_blank"><img src="./static/dev-github-logo.svg" /></a>
+                        <!-- <a href="https://www.linkedin.com/in/divyam-goel/" target="_blank"><img src="./static/dev-linkedin-logo.svg" /></a> -->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
     <div id="container">
@@ -582,10 +589,16 @@
                     <div class="content-line-wrap">
                         <div class="before-content-line"></div>
                     </div>
-                    <div class="content-text">BITS, Pilani, India is back with the 37<sup>th</sup> edition of APOGEE- the institute’s annual technical extravaganza, from 28th to 31st March 2019, 
-                        this time as The Reality Roulette! A melange of technology, innovation and inspiration across space and time of humankind, this technical conference will, as always, 
-                        play host to the brightest minds and thinkers in the country and world. From presenting papers and projects at the oldest-of-its-kind events in the country, 
-                        developing amazing solutions to real-life cases and problems, exhibitions of the best contraptions that man has made, guest lectures that tell stories never heard before, to the college’s own literature festival, APOGEE challenges the intellect of the participants and piques the minds of the audience.
+                    <div class="content-text">BITS, Pilani, India is back with the 37<sup>th</sup> edition of APOGEE-
+                        the institute’s annual technical extravaganza, from 28th to 31st March 2019,
+                        this time as The Reality Roulette! A melange of technology, innovation and inspiration across
+                        space and time of humankind, this technical conference will, as always,
+                        play host to the brightest minds and thinkers in the country and world. From presenting papers
+                        and projects at the oldest-of-its-kind events in the country,
+                        developing amazing solutions to real-life cases and problems, exhibitions of the best
+                        contraptions that man has made, guest lectures that tell stories never heard before, to the
+                        college’s own literature festival, APOGEE challenges the intellect of the participants and
+                        piques the minds of the audience.
                     </div>
                 </div>
             </div>
@@ -653,7 +666,7 @@
 
         <div id="speakers" class="section">
             <span id="speakers-heading">Speakers</span>
-            <div id="arrows" class = "desktop-only">
+            <div id="arrows" class="desktop-only">
                 <img src="static/speakers/arrow.png" alt="GO LEFT" id="speaker-left-arrow" class="speaker-arrow" />
                 <img src="static/speakers/arrow.png" alt="GO LEFT" id="speaker-right-arrow" class="speaker-arrow" />
             </div>
@@ -818,7 +831,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type = "text/javascript" src="./static/js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="./static/js/chosen.jquery.min.js"></script>
 
     <script>
         $('document').ready(function () {

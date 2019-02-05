@@ -62,8 +62,10 @@ function init() {
 
                 if(i === 0) {
                     document.getElementById("navbar").style.background = "none";
+                    document.getElementById("navbar").style.borderColor = "transparent";
                 } else {
                     document.getElementById("navbar").style.background = "#01061C";
+                    document.getElementById("navbar").style.borderColor = "#B525E9";
                 }
             } else {
                 bars[i].classList.remove('active-bar');

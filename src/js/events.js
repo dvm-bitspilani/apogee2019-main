@@ -104,7 +104,11 @@ function init() {
         }, currEvents.length * 10)
     }
 
-    document.getElementById("view-all-events").addEventListener("click", openAllEvents);
+    let alleventsBtn = document.getElementsByClassName("view-all-events-btn");
+    for(let i=0; i<alleventsBtn.length; i++) {
+        alleventsBtn[i].addEventListener("click", openAllEvents);
+    }
+
 
     function openAllEvents() {
         let container = document.getElementById("container");

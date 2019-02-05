@@ -81,7 +81,7 @@ config = {
 				preserveLineBreaks: false,
 				minifyCSS: true
 			}
-		})
+		}),
 		new UglifyJSPlugin(),
 	],
 }

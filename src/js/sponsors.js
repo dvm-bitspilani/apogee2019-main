@@ -15,48 +15,28 @@ function init() {
             sponsors: []
         },
         {
-            category_name: "Media Partners",
+            category_name: "Partners",
             sponsors: [
                 {
-                    name: "Sponsor1",
-                    image: require("../static/speakers/cara.jpg"),
+                    name: "L&T",
+                    image: require("../static/sponsors/L&T.png"),
                     role: 'Title sponsor'
                 },
                 {
-                    name: "Sponsor2",
-                    image: require("../static/speakers/cara.jpg"),
-                    role: 'Paisa diya'
+                    name: "YesBank",
+                    image: require("../static/sponsors/YesBank.png"),
+                    role: 'Banking Partner'
                 },
                 {
-                    name: "Sponsor3",
-                    image: require("../static/speakers/cara.jpg"),
-                    role: 'Mere paise pe hilaoge'
-                },
-            ]
-        },
-        {
-            category_name: "Powered by",
-            sponsors: [
-                {
-                    name: "Sponsor1",
-                    image: require("../static/speakers/cara.jpg"),
-                    role: 'Powered By'
-                },
-            ]
-        },
-        {
-            category_name: "Others",
-            sponsors: [
-                {
-                    name: "Sponsor1",
-                    image: require("../static/speakers/cara.jpg"),
-                    role: "Castaa aaah"
+                    name: "AB InBev",
+                    image: require("../static/sponsors/ABInbev.png"),
+                    role: 'Official Innovatino Partner'
                 },
                 {
-                    name: "Sponsor2",
-                    image: require("../static/speakers/cara.jpg"),
-                    role: "Sidelined sponsor"
-                }
+                    name: "Casio",
+                    image: require("../static/sponsors/Casio.jpg"),
+                    role: 'Official Calculator Partner'
+                },
             ]
         }
     ];

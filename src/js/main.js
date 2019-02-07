@@ -35,7 +35,7 @@ function init() {
                     let colleges = data.data;
                     let regClgDropDown = document.getElementById('register-college');
                     let regClgLabel = document.getElementById('reg-clg-label');
-    
+
                     function lazyRenderClgs (clgs, index) {
                       let count = 0;
                       for (; index < clgs.length && count < 500; index++, count++) {

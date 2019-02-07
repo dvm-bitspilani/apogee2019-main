@@ -123,6 +123,38 @@ html, body {
         box-shadow: 0 0 30px 5px #00000040;
     }
 
+    #lnt {
+        width: 500px;
+        height: 250px;
+        margin: 0 30%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media all and (max-width: 600px) {
+            width: 90%;
+            margin: 0;
+            flex-direction: column;
+            align-items: center;
+
+            .sponsor-content {
+                text-align: center;
+                align-items: center;
+                
+                span {
+                    font-size: 30px;
+
+                }
+                
+                .sponsor-role {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
     @keyframes popup {
         from {
             transform: scale(0);
@@ -184,7 +216,7 @@ html, body {
             background-image: $theme-gradient;
             margin: 10px;
             flex-direction: row;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-start;
             z-index: 99;
     

@@ -11,7 +11,7 @@ function init() {
             image: require('../static/speakers/ashwin.jpg'),
             name: "Ashwin Sanghi",
             occupation: "Author",
-            info: "India's best-selling and most popular author. Author of three best-selling novels: The Rozabal Line, Chanakya's Chant and The Krishna Key. \"The India Dan Brown\""
+            info: "India's best-selling and most popular author. Author of three best-selling novels: The Rozabal Line, Chanakya's Chant and The Krishna Key. \"The Indian Dan Brown\""
         }
     ];
 

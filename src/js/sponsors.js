@@ -28,9 +28,9 @@ function init() {
                     role: 'Banking Partner'
                 },
                 {
-                    name: "AB InBev",
+                    name: "AB InBev Innovation Brewery",
                     image: require("../static/sponsors/ABInBev.png"),
-                    role: 'Official Innovatino Partner'
+                    role: 'Official Innovation Partner'
                 },
                 {
                     name: "Casio",
@@ -65,15 +65,28 @@ function init() {
 
         if (index === 0) {
             category.sponsors.map(sponsor => {
+                if (sponsor.name === "L&T") {
                 sponsorsContainer.innerHTML += `
+                            <div class="box" id = "lnt" data-category=${category.category_name} data-event=${sponsor.name}>
+                                <img src=${sponsor.image} alt=${sponsor.name} /> 
+                                <div class="sponsor-content">
+                                    <span>${sponsor.name}</span>
+                                    <span class="sponsor-role">${sponsor.role}</span>
+                                </div>
+                            </div>
+                            `;
+                }
+                else {
+                    sponsorsContainer.innerHTML += `
                             <div class="box" data-category=${category.category_name} data-event=${sponsor.name}>
                                 <img src=${sponsor.image} alt=${sponsor.name} /> 
                                 <div class="sponsor-content">
                                     <span>${sponsor.name}</span>
-                                    <span class="sponsor-role">< ${sponsor.role} ></span>
+                                    <span class="sponsor-role">${sponsor.role}</span>
                                 </div>
                             </div>
                             `;
+                }
             })
         }
     });
@@ -98,15 +111,28 @@ function init() {
         setTimeout(function () {
             sponsorsContainer.innerHTML = '';
             sponsors[categoryIndex].sponsors.map(sponsor => {
+                if (sponsor.name === "L&T") {
                 sponsorsContainer.innerHTML += `
-                <div class="box" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
-                    <img src=${sponsor.image} alt=${sponsor.name} /> 
-                    <div class="sponsor-content">
-                        <span>${sponsor.name}</span>
-                        <span class="sponsor-role">< ${sponsor.role} ></span>
-                    </div>
-                </div>
-                `;
+                            <div class="box" id = "lnt" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
+                                <img src=${sponsor.image} alt=${sponsor.name} /> 
+                                <div class="sponsor-content">
+                                    <span>${sponsor.name}</span>
+                                    <span class="sponsor-role">${sponsor.role}</span>
+                                </div>
+                            </div>
+                            `;
+                }
+                else {
+                    sponsorsContainer.innerHTML += `
+                            <div class="box" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
+                                <img src=${sponsor.image} alt=${sponsor.name} /> 
+                                <div class="sponsor-content">
+                                    <span>${sponsor.name}</span>
+                                    <span class="sponsor-role">${sponsor.role}</span>
+                                </div>
+                            </div>
+                            `;
+                }
             })
         }, currsponsors.length * 10)
     }

@@ -15,7 +15,10 @@ html, body{
     height: 100%;
     width: 100%;
     background: #01061C;
-    // overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 #container {
@@ -57,7 +60,7 @@ a {
 }
 
 #logo {
-    max-height: 50px;
+    max-height: 80px;
 }
 
 #hamburger {

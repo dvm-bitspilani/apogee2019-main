@@ -89,6 +89,7 @@ function init() {
         if(!isMenuOpen) {
             sideMenu.style.right = 0;
             document.body.classList.add('scroll-disable');
+            document.documentElement.classList.add('scroll-disable');
         } else {
             sideMenu.style.right = sideMenuRight;
         }
@@ -99,6 +100,7 @@ function init() {
             sideMenu.style.right = 0;
         } else {
             document.body.classList.remove('scroll-disable');
+            document.documentElement.classList.remove('scroll-disable');
             sideMenu.style.right = sideMenuRight;
         }
     }

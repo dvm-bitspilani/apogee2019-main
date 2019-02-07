@@ -2,7 +2,7 @@ function init() {
     const MOBILE_WIDTH = 900;
     const vwWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     let img = document.createElement("img");
-    console.log(vwWidth, MOBILE_WIDTH);
+    // console.log(vwWidth, MOBILE_WIDTH);
     if(vwWidth > MOBILE_WIDTH) {
         img.src = require('../static/desktop-bg.jpg');
         img.id = "desktop-bg";
@@ -58,10 +58,10 @@ function init() {
                 .catch(err => console.log(err))
         }
     }
-
+    
     let homeFooterVisible = true;
     let homeFooter = document.getElementsByClassName("home-footer")[0];
-    window.onscroll = () => {
+    window.onscroll = (e) => {
         if (homeFooterVisible && window.scrollY/window.innerHeight > 0.05) {
             homeFooter.style.opacity = 0;
             homeFooterVisible = false;
@@ -74,21 +74,25 @@ function init() {
 
     document.getElementById("dev-navlink").addEventListener("click", function (e) {
         e.preventDefault();
-        openReg();
+        openDev();
     })
 
     document.getElementById("close-dev").addEventListener("click", function (e) {
         e.preventDefault();
-        closeReg();
+        closeDev();
     });
 
-    function openReg() {
+    function openDev() {
         document.getElementById("developers").style.top = 0;
         window.closeMenu();
+        document.body.classList.add('scroll-disable');
+        document.documentElement.classList.add('scroll-disable');
     }
 
-    function closeReg() {
+    function closeDev() {
         document.getElementById("developers").style.top = '120%';
+        document.body.classList.remove('scroll-disable');
+        document.documentElement.classList.remove('scroll-disable');
     }
 };
 

@@ -47,12 +47,16 @@ function init() {
             $('#register-events').val(window.registerForEvent);
             $('#register-events').trigger('chosen:updated');
         }
+        document.body.classList.add('scroll-disable');
+        document.documentElement.classList.add('scroll-disable');
     }
 
     window.openReg = openReg;
 
     function closeReg() {
         document.getElementById("register").style.top = '120%';
+        document.body.classList.remove('scroll-disable');
+        document.documentElement.classList.remove('scroll-disable');
     }
 
     document.getElementById("register-form").onsubmit = function (e) {

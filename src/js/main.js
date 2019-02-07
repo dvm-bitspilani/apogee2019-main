@@ -2,8 +2,16 @@ function init() {
     const MOBILE_WIDTH = 900;
     const vwWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     let img = document.createElement("img");
-    // console.log(vwWidth, MOBILE_WIDTH);
-    if(vwWidth > MOBILE_WIDTH) {
+    window.isMobile = vwWidth <= MOBILE_WIDTH;
+
+    if(!isMobile) {
+        document.getElementById("home").innerHTML += "<div id='home-subtitle'>THE REALITY ROULETTE</div>";
+
+        let ladyImg = document.createElement("img");
+        ladyImg.id = "lady-img";
+        ladyImg.src = require("../static/girl_float.png");
+        document.getElementById("lady-container").appendChild(ladyImg);
+
         img.src = require('../static/desktop-bg.jpg');
         img.id = "desktop-bg";
         document.getElementById("home").appendChild(img);
@@ -13,7 +21,7 @@ function init() {
         document.getElementById("home").innerHTML += 
         `
         <div id='mobile-bg'></div>
-        <div id='mobile-subtitle'>THE REALITY ROULETTE</div>
+        <div id='home-subtitle'>THE REALITY ROULETTE</div>
         <a id="watch-teaser-mobile" href="https://youtu.be/MqpPYIjDw4I" target="_blank" class="teaser-button">
             WATCH TEASER
         </a>
@@ -58,17 +66,39 @@ function init() {
                 .catch(err => console.log(err))
         }
     }
-    
+
     let homeFooterVisible = true;
+    let homeSubtitleVisible = true;
     let homeFooter = document.getElementsByClassName("home-footer")[0];
-    window.onscroll = (e) => {
-        if (homeFooterVisible && window.scrollY/window.innerHeight > 0.05) {
+    let homeSubtitle = document.getElementById("home-subtitle");
+    window.onscroll = () => {
+        const vwWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        window.isMobile = vwWidth <= MOBILE_WIDTH;
+
+        if (homeFooterVisible && window.scrollY/window.innerHeight > 0.4) {
+            if(!isMobile) {
+                homeSubtitle.style.opacity = 0;
+                homeSubtitleVisible = false;
+                setTimeout(() => homeSubtitle.style.display = "none", 450);
+            }
+
             homeFooter.style.opacity = 0;
             homeFooterVisible = false;
+            setTimeout(() => homeFooter.style.display = "none", 450);
         }
-        else if (!homeFooterVisible && window.scrollY < 0.2) {
-            homeFooter.style.opacity = 1;
-            homeFooterVisible = true;
+        else if (!homeFooterVisible && window.scrollY/window.innerHeight < 0.4) {
+            homeSubtitle.style.display = "block";
+            homeFooter.style.display = "flex";
+
+            setTimeout(() => {
+                if(!isMobile) {
+                    homeSubtitle.style.opacity = 1;
+                    homeSubtitleVisible = false;
+                }
+
+                homeFooter.style.opacity = 1;
+                homeFooterVisible = true;
+            }, 10);
         }
     }
 

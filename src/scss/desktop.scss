@@ -161,6 +161,10 @@
     left: 200px;
     transform: rotate(135deg);
     z-index: 5;
+
+    @media all and (max-width: 900px) {
+        left: 0px;
+    }
 }
 
 @for $i from 1 through 7 {
@@ -177,6 +181,10 @@
         animation: rain #{random(5)}s ease infinite;
         opacity: 0;
         animation-delay: #{random(20)}s;
+
+        @media all and (max-width: 900px) {
+            animation: rain #{random(10)}s ease infinite;
+        }
     }
 }
 

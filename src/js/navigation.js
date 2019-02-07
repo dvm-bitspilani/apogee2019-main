@@ -88,8 +88,8 @@ function init() {
     function openMenu () {
         if(!isMenuOpen) {
             sideMenu.style.right = 0;
-            document.body.classList.add('scroll-disable');
-            document.documentElement.classList.add('scroll-disable');
+            // document.body.classList.add('scroll-disable');
+            // document.documentElement.classList.add('scroll-disable');
         } else {
             sideMenu.style.right = sideMenuRight;
         }

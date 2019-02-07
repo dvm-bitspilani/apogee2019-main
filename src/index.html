@@ -253,7 +253,7 @@
         </div>
     </div>
 
-    <div id="star-container">
+    <div id="star-container" class = "desktop-only">
         <div class="star">
         </div>
         <div class="star">
@@ -382,7 +382,8 @@
                         </div>
                     </div>
                     <div class="reg-col">
-                        <select id="register-events" data-placeholder="Select Event(s)*" multiple>
+                        <label class = "mobile-only">Event(s) interested in*</label>
+                        <select id="register-events" data-placeholder="Event(s) interested in*" multiple>
                             <option id="reg-events-label" value="select" disabled>Loading...</option>
                         </select>
                         <input type="text" name="city" id="register-city" placeholder="City*">

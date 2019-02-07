@@ -79,12 +79,12 @@ function init() {
             if(!isMobile) {
                 homeSubtitle.style.opacity = 0;
                 homeSubtitleVisible = false;
-                setTimeout(() => homeSubtitle.style.display = "none", 450);
+                setTimeout(() => homeSubtitle.style.display = "none", 250);
             }
 
             homeFooter.style.opacity = 0;
             homeFooterVisible = false;
-            setTimeout(() => homeFooter.style.display = "none", 450);
+            setTimeout(() => homeFooter.style.display = "none", 250);
         }
         else if (!homeFooterVisible && window.scrollY/window.innerHeight < 0.4) {
             homeSubtitle.style.display = "block";

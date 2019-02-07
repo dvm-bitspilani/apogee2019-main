@@ -139,3 +139,48 @@
 .scroll-y-disable {
     overflow-y: hidden;
 }
+
+#star-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 200px;
+    transform: rotate(135deg);
+    z-index: 5;
+}
+
+@for $i from 1 through 7 {
+    .star:nth-child(#{$i}) {
+        position: absolute;
+        top: calc(100% - #{random(600) - 100px});
+        left: 0px;
+        height: 0.7px;
+        width: 200px;
+        // background: #fff;
+        box-shadow: 0 0 2px 2px #fff inset;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        animation: rain #{random(5)}s ease infinite;
+        opacity: 0;
+        animation-delay: #{random(20)}s;
+    }
+}
+
+
+@keyframes rain {
+    0% {
+        transform: translate(0);
+        opacity: 0.4;
+        width: 0px;
+    }
+    30% {
+        width: 200px;
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.4;
+        width: 0px;
+        transform: translate(1500px);
+    }
+}

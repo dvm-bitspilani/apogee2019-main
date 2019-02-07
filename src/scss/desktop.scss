@@ -1,12 +1,25 @@
 @import './variables';
 
-// #pointer {
-//     position: fixed;
-//     height: 90vh;
-//     width: 90vh;
-//     border-radius: 100%;
-//     background: radial-gradient(rgba(256,256,256,0.4), rgba(256,256,256,0) 70%);
+#pointer {
+    position: fixed;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 100%;
+    // background: radial-gradient(rgba(256,256,256,0.4), rgba(256,256,256,0) 70%);
+    background: url('../static/pointer.svg');
+    background-size: cover;
+    animation: rot 20s linear infinite;
+}
+
+// @keyframes rot {
+//     0% {
+//         transform: rotate(0deg) scale(1)
+//     }
+//     100% {
+//         transform: rotate(360deg) scale(0.5)
+//     }
 // }
+
 .mobile-only {
     display: none;
 }
@@ -16,11 +29,11 @@
 }
 
 .vertical-lines {
-    background: #1d4273;
+    background: #060d41;
     height: 100vh;
     width: 1px;
     position: fixed;
-    opacity: 0.2;
+    opacity: 1;
 }
 
 #nav {
@@ -55,7 +68,7 @@
 
 .active-bar {
     width: 3px;
-    height: 120%;
+    height: 110%;
     z-index: 999;
     margin-left: -1.5px;
 }
@@ -96,7 +109,7 @@
 
 .nav-number-primary {
     font-size: 12px;
-    color: #63385b;
+    color: #d300e999;
     z-index: 5;
 }
 

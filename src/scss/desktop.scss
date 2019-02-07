@@ -148,6 +148,10 @@
     left: 200px;
     transform: rotate(135deg);
     z-index: 5;
+
+    @media all and (max-width: 900px) {
+        left: 0px;
+    }
 }
 
 @for $i from 1 through 7 {

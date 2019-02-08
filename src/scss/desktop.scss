@@ -35,12 +35,12 @@ $sphere-angles: (
     $sphere-container-rot: #{map-get($sphere-angles, $i)};
 
     .random-sphere-container:nth-child(#{$i}) {
-        $height: random(500) +200+($i*100);
-        height: #{$height}px;
-        width: #{$height}px;
+        $height: random(40) + 40;
+        height: #{$height}vh;
+        width: #{$height}vh;
         position: fixed;
         left: #{map-get($sphere-lefts, $i)};
-        top: -#{$height}px;
+        top: -#{$height}vh;
         animation: translation-#{$i} 60s #{map-get($sphere-delays, $i)} linear infinite;
         transform: rotate($sphere-container-rot) translateY(0);
 

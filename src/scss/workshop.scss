@@ -37,7 +37,8 @@
 }
 
 .workshop-row:nth-child(even){
-    justify-content: right;
+    // justify-content: right;
+    justify-content: center;
 }
 .workshop-cell{
     height: 100%;

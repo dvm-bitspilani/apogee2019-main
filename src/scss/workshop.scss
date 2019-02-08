@@ -63,7 +63,7 @@
 }
 
 .workshop-info{
-    width: 70%;
+    width: calc(91% - 100px);
     margin-left: 20px;
     display: flex;
     flex-direction: column;

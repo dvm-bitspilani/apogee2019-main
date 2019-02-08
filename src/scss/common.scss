@@ -254,6 +254,7 @@ a {
         font-family: 'teko-light';
         letter-spacing: 20px;
         color: $pink-here;
+        font-weight: lighter;
 
         @media all and (max-width: 1000px) {
             font-size: 2.5em;
@@ -298,7 +299,7 @@ a {
     }
 
     .logo-overlay {
-        max-height: 40px;
+        max-height: 80px;
     }
 }
 

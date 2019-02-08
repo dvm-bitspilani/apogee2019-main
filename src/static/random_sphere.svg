@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="901.437" height="901.437" viewBox="0 0 901.437 901.437">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.8" cy="0.5" r="0.925" gradientTransform="translate(-0.023 0.038) rotate(-2.688)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e052be" stop-opacity="0.212"/>
+      <stop offset="0.298" stop-color="#3a0bf7" stop-opacity="0.169"/>
+      <stop offset="0.556" stop-color="#1810df" stop-opacity="0.329"/>
+      <stop offset="1" stop-color="#1700e8"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.8" cy="0.5" r="0.925" gradientTransform="translate(-0.023 0.038) rotate(-2.688)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8ecec" stop-opacity="0"/>
+      <stop offset="0.298" stop-color="#e82323" stop-opacity="0.169"/>
+      <stop offset="0.556" stop-color="#df1010" stop-opacity="0.329"/>
+      <stop offset="1" stop-color="#e80055"/>
+    </radialGradient>
+  </defs>
+  <g id="rancircle2" transform="translate(537.691 -925.839) rotate(45)">
+    <circle id="Ellipse_17" data-name="Ellipse 17" cx="368.009" cy="368.009" r="368.009" transform="translate(409.163 900.171) rotate(-30)" opacity="0.46" fill="url(#radial-gradient)"/>
+    <circle id="Ellipse_18" data-name="Ellipse 18" cx="368.009" cy="368.009" r="368.009" transform="translate(1414.584 1169.572) rotate(150)" opacity="0.49" fill="url(#radial-gradient-2)"/>
+  </g>
+</svg>

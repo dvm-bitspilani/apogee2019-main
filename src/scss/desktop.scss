@@ -8,17 +8,66 @@
     // background: radial-gradient(rgba(256,256,256,0.4), rgba(256,256,256,0) 70%);
     background: url('../static/pointer.svg');
     background-size: cover;
-    animation: rot 20s linear infinite;
 }
 
-// @keyframes rot {
-//     0% {
-//         transform: rotate(0deg) scale(1)
-//     }
-//     100% {
-//         transform: rotate(360deg) scale(0.5)
-//     }
-// }
+$sphere-delays: (
+    1: 0s,
+    2: 10s,
+    3: 45s
+);
+
+$sphere-angles: (
+    1: 20deg,
+    2: -15deg,
+    3: 5deg
+);
+
+@for $i from 1 through 3 {
+    $sphere-container-rot: #{map-get($sphere-angles, $i)};
+
+    .random-sphere-container:nth-child(#{$i}) {
+        $height: random(500) + 200;
+        height: #{$height}px;
+        width: #{$height}px;
+        position: fixed;
+        top: #{random(30)}vh;
+        left: -#{$height + 100}px;
+        animation: translation-#{$i} 30s #{map-get($sphere-delays, $i)} linear infinite;
+        transform: rotate($sphere-container-rot) translateX(0);
+
+        .random-sphere {
+            height: 100%;
+            width: 100%;
+            background: url('../static/random_sphere.svg');
+            background-size: cover;
+            animation: rotation-scale 40s linear infinite;
+        }
+
+        @keyframes rotation-scale {
+            0% {
+                transform: rotate(0deg) scale(1)
+            }
+            50% {
+                transform: rotate(360deg) scale(0.7)
+            }
+            100% {
+                transform: rotate(0deg) scale(1)
+            }
+        }
+    }
+
+    @keyframes translation-#{$i} {
+        0% {
+            transform: rotate($sphere-container-rot) translateX(0vw);
+        }
+        50% {
+            transform: rotate($sphere-container-rot) translateX(160vw);
+        }
+        100% {
+            transform: rotate($sphere-container-rot) translateX(0vw);
+        }
+    }
+}
 
 .mobile-only {
     display: none;

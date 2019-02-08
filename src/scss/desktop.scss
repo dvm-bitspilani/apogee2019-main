@@ -49,7 +49,7 @@ $sphere-angles: (
             width: 100%;
             background: url('../static/random_sphere.svg');
             background-size: cover;
-            animation: rotation-scale 40s linear infinite;
+            animation: rotation-scale 35s linear infinite;
         }
 
         @keyframes rotation-scale {

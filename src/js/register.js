@@ -72,6 +72,9 @@ function init() {
         let gender = 'M';
         let year = 1;
 
+        // converting string ids into int ids
+        let eventsInt = events.map((eventId) => parseInt(eventId));
+
         // get gender
         const genders = document.getElementsByClassName('gender-option');
         for (let i = 0; i < genders.length; i++) {
@@ -109,11 +112,13 @@ function init() {
                 phone: parseInt(phone),
                 gender,
                 year,
-                events
+                events: eventsInt
             };
 
             
             if (referral) sendData['referral'] = referral;
+
+            // console.log(sendData);
 
             $.ajax(
                 {
@@ -133,7 +138,10 @@ function init() {
                     },
                     error: function (err) {
                         //console.log(err);
-                        displayError(err.responseJSON.message);
+                        if (err.responseJSON)
+                            displayError(err.responseJSON.message);
+                        else
+                            displayError('Contact admins!');
                     }
                 }
             )

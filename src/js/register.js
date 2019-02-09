@@ -72,9 +72,6 @@ function init() {
         let gender = 'M';
         let year = 1;
 
-        // converting string ids into int ids
-        let eventsInt = events.map((eventId) => parseInt(eventId));
-
         // get gender
         const genders = document.getElementsByClassName('gender-option');
         for (let i = 0; i < genders.length; i++) {
@@ -104,6 +101,9 @@ function init() {
         } else if (!validatePhone(phone)) {
             displayError('Please enter a valid phone number');
         } else {
+            // converting string ids into int ids
+            let eventsInt = events.map((eventId) => parseInt(eventId));
+
             let sendData = {
                 name,
                 college_id: college,
@@ -115,10 +115,7 @@ function init() {
                 events: eventsInt
             };
 
-            
             if (referral) sendData['referral'] = referral;
-
-            // console.log(sendData);
 
             $.ajax(
                 {
@@ -137,7 +134,7 @@ function init() {
                         document.getElementById("backend-reg-success").innerHTML = response.message;
                     },
                     error: function (err) {
-                        //console.log(err);
+                        // console.log(err);
                         if (err.responseJSON)
                             displayError(err.responseJSON.message);
                         else

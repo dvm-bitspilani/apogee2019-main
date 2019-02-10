@@ -146,15 +146,18 @@ function init() {
         let navLinks = document.getElementById("links");
         let closeEvents = document.getElementById("links2");
         let allEvents = document.getElementById("all-events");
+        let stars = document.getElementById("star-container");
 
         container.style.opacity = 0;
         nav.style.opacity = 0;
         navLinks.style.opacity = 0;
+        stars.style.opacity = 0;
 
         setTimeout(function () {
             container.style.display = 'none';
             nav.style.display = 'none';
             navLinks.style.display = 'none';
+            stars.style.display = 'none';
             closeEvents.style.display = 'flex';
             allEvents.style.display = 'flex';
             allEvents.style.opacity = 1;
@@ -169,6 +172,7 @@ function init() {
         let navLinks = document.getElementById("links");
         let closeEvents = document.getElementById("links2");
         let allEvents = document.getElementById("all-events");
+        let stars = document.getElementById("star-container");
 
         allEvents.style.opacity = 0;
         closeEvents.style.opacity = 0;
@@ -177,11 +181,13 @@ function init() {
             container.style.display = 'block';
             nav.style.display = 'flex';
             navLinks.style.display = 'flex';
+            stars.style.display = 'block';
             closeEvents.style.display = 'none';
             allEvents.style.display = 'none';
             container.style.opacity = 1;
             nav.style.opacity = 1;
             navLinks.style.opacity = 1;
+            stars.style.opacity = 1;
         }, 600)
     }
 

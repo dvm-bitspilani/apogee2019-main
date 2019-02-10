@@ -7,18 +7,73 @@ window.addEventListener('load', () => {
 });
 
 function init () {
-    const eventImgs = [
-        require('../imgs/kernel-events/armageddon.jpg'),
-        require('../imgs/kernel-events/icl.jpg'),
-        require('../imgs/kernel-events/raw.jpg'),
-        require('../imgs/kernel-events/robosoc.jpg'),
-        require('../imgs/kernel-events/sms.jpg'),
-        require('../imgs/kernel-events/ml.png'),
-        require('../imgs/kernel-events/junky.jpg'),
-        require('../imgs/kernel-events/reveng.jpg'),
-        require('../imgs/kernel-events/aic.png'),
-        require('../imgs/kernel-events/qed.jpg'),
-        require('../imgs/kernel-events/bplan.jpg'),
+    const eventsData = [
+        {
+            heading: 'Armageddon',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/armageddon.jpg'),
+        }, 
+        {
+            heading: 'ICL',
+            subheading: 'International Coding League',
+            description: '',
+            img: require('../imgs/kernel-events/icl.jpg'),
+        }, 
+        {
+            heading: 'RAW',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/raw.jpg'),
+        }, 
+        {
+            heading: 'Robo Soccer',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/robosoc.jpg'),
+        }, 
+        {
+            heading: 'SMS',
+            subheading: 'Stock Market Simulation',
+            description: '',
+            img: require('../imgs/kernel-events/sms.jpg'),
+        }, 
+        {
+            heading: 'Machine Learning Hackathon',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/ml.jpg'),
+        }, 
+        {
+            heading: 'Junkyard Wars',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/junky.jpg'),
+        }, 
+        {
+            heading: 'Reverse Engineering',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/reveng.jpg'),
+        }, 
+        {
+            heading: 'Apogee Innovation Challenge',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/aic.jpg'),
+        }, 
+        {
+            heading: 'Q.E.D',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/qed.jpg'),
+        }, 
+        {
+            heading: 'Business Plan Competition',
+            subheading: '',
+            description: '',
+            img: require('../imgs/kernel-events/bplan.jpg'),
+        }, 
     ];
 }
 

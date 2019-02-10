@@ -135,7 +135,7 @@ function init() {
                     },
                     error: function (err) {
                         // console.log(err);
-                        if (err.responseJSON)
+                        if (err.responseJSON.message)
                             displayError(err.responseJSON.message);
                         else
                             displayError('Contact admins!');

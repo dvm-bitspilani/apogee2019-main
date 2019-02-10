@@ -83,7 +83,7 @@ function init () {
                     <!-- <span>FIND OUT MORE</span> -->
             </div>
         </div>
-    `);
+    `).join('');
     
     document.getElementById("events-content-inner").innerHTML = eventsHTML;
 

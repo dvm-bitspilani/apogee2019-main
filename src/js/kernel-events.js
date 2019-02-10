@@ -42,7 +42,7 @@ function init () {
             heading: 'Machine Learning Hackathon',
             subheading: '',
             description: '',
-            img: require('../imgs/kernel-events/ml.jpg'),
+            img: require('../imgs/kernel-events/ml.png'),
         }, 
         {
             heading: 'Junkyard Wars',
@@ -60,7 +60,7 @@ function init () {
             heading: 'Apogee Innovation Challenge',
             subheading: '',
             description: '',
-            img: require('../imgs/kernel-events/aic.jpg'),
+            img: require('../imgs/kernel-events/aic.png'),
         }, 
         {
             heading: 'Q.E.D',
@@ -75,6 +75,23 @@ function init () {
             img: require('../imgs/kernel-events/bplan.jpg'),
         }, 
     ];
+
+    const eventsHTML = eventsData.map(({heading, subheading, description, img}) => `
+        <div class="event-card">
+            <div class="event-image" style="background-image: url('${img}')"></div>
+                <div class="event-info">
+                    <h3>${heading}</h3>
+                    <h6>${subheading}</h6>
+                    <p>${description}</p>
+                    <hr />
+                    <!-- <span>FIND OUT MORE</span> -->
+            </div>
+        </div>
+    `);
+    
+    document.getElementById("events-content-inner").innerHTML = eventsHTML;
+
+
 }
 
 init();

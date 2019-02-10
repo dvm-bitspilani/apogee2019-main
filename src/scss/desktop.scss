@@ -1,14 +1,14 @@
 @import './variables';
 
-#pointer {
-    position: fixed;
-    height: 70vh;
-    width: 70vh;
-    border-radius: 100%;
-    // background: radial-gradient(rgba(256,256,256,0.4), rgba(256,256,256,0) 70%);
-    background: url('../static/pointer.svg');
-    background-size: cover;
-}
+// #pointer {
+//     position: fixed;
+//     height: 70vh;
+//     width: 70vh;
+//     border-radius: 100%;
+//     // background: radial-gradient(rgba(256,256,256,0.4), rgba(256,256,256,0) 70%);
+//     background: url('../static/pointer.svg');
+//     background-size: cover;
+// }
 
 $sphere-lefts: (
     1: 10vw,

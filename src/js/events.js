@@ -20,6 +20,7 @@ function init() {
         .then(res => {
             if (res) {
                 events = res;
+                // console.log(events);
                 let eventCount = 0; // to check if events rendered in reg
                 if (events) {
                     let categoriesDiv = document.createElement("div");
@@ -46,7 +47,7 @@ function init() {
                                     <span>${event.name}</span>
                                 `;
 
-                                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules, event.id));
+                                eventBox.addEventListener("click", () => eventClick(event.name, event.details, event.rules, event.id));
 
                                 eventsContainer.appendChild(eventBox);
 
@@ -61,7 +62,7 @@ function init() {
                             category.events.map(event => {
                                 // for registrations
                                 let eventOption = document.createElement("option");
-                                eventOption.setAttribute("value", event.name);
+                                eventOption.setAttribute("value", event.id);
                                 eventOption.innerHTML = event.name;
                                 regEvents.appendChild(eventOption);
                             })
@@ -127,7 +128,7 @@ function init() {
                     <span>${event.name}</span>
                 `;
 
-                eventBox.addEventListener("click", () => eventClick(event.name, event.content, event.rules, event.id));
+                eventBox.addEventListener("click", () => eventClick(event.name, event.details, event.rules, event.id));
 
                 eventsContainer.appendChild(eventBox);
             })

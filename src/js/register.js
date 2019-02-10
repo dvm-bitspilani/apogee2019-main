@@ -101,6 +101,9 @@ function init() {
         } else if (!validatePhone(phone)) {
             displayError('Please enter a valid phone number');
         } else {
+            // converting string ids into int ids
+            let eventsInt = events.map((eventId) => parseInt(eventId));
+
             let sendData = {
                 name,
                 college_id: college,
@@ -109,10 +112,9 @@ function init() {
                 phone: parseInt(phone),
                 gender,
                 year,
-                events
+                events: eventsInt
             };
 
-            
             if (referral) sendData['referral'] = referral;
 
             $.ajax(
@@ -132,8 +134,11 @@ function init() {
                         document.getElementById("backend-reg-success").innerHTML = response.message;
                     },
                     error: function (err) {
-                        //console.log(err);
-                        displayError(err.responseJSON.message);
+                        // console.log(err);
+                        if (err.responseJSON.message)
+                            displayError(err.responseJSON.message);
+                        else
+                            displayError('Contact admins!');
                     }
                 }
             )

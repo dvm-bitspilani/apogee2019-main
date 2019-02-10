@@ -219,6 +219,7 @@ $sphere-angles: (
     left: 200px;
     transform: rotate(135deg);
     z-index: 5;
+    transition: all 0.5s ease;
 
     @media all and (max-width: 900px) {
         left: 0px;

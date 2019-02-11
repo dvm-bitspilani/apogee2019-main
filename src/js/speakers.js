@@ -2,16 +2,28 @@ function init() {
     const MOBILE_WIDTH = 900;
     const data = [
         {
-            image: require('../static/speakers/alan.jpg'),
+            image: require('../imgs/speakers/alan.png'),
             name: "Alan Emtage",
             occupation: "FOUNDER",
             info: "The man who laid the foundation of the internet. Creator of world's first search engine - ARCHIE. \"I wrote a piece of code that gave birth to a multibillion-dollar industry.\""
         },
         {
-            image: require('../static/speakers/ashwin.jpg'),
+            image: require('../imgs/speakers/rakesh.jpg'),
+            name: "Rakesh Sharma",
+            occupation: "Indian space traveller",
+            info: "The first Indian citizen to travel to space. Recipient of prestigious Ashok Chakra."
+        },
+        {
+            image: require('../imgs/speakers/ashwin.jpg'),
             name: "Ashwin Sanghi",
             occupation: "Author",
             info: "India's best-selling and most popular author. Author of three best-selling novels: The Rozabal Line, Chanakya's Chant and The Krishna Key. \"The Indian Dan Brown\""
+        },
+        {
+            image: require('../imgs/speakers/vikramaditya.jpg'),
+            name: "Vikramaditya Motwane",
+            occupation: "Indian film director",
+            info: "Film director, producer and screenwriter for films like Dev.D and Dhan Dhana Dhan Goal."
         }
     ];
 
@@ -87,14 +99,14 @@ function init() {
             div.id = "arrows";
             
             let leftImgDiv = document.createElement("img");
-            leftImgDiv.src = require('../static/speakers/arrow.png');
+            leftImgDiv.src = require('../static/arrow.png');
             leftImgDiv.alt = "GO LEFT";
             leftImgDiv.id = "speaker-left-arrow";
             leftImgDiv.className = "speaker-arrow";
             leftImgDiv.addEventListener("click", speakerLeft);
             
             let rightImgDiv = document.createElement("img");
-            rightImgDiv.src = require('../static/speakers/arrow.png');
+            rightImgDiv.src = require('../static/arrow.png');
             rightImgDiv.alt = "GO LEFT";
             rightImgDiv.id = "speaker-right-arrow";
             rightImgDiv.className = "speaker-arrow";

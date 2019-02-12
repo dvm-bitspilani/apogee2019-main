@@ -221,6 +221,8 @@ function init() {
     function closeSingleEventPage () {
         singleEventPage.style.top = "120%";
     }
+
+    document.getElementById('view-all-events-btn').addEventListener('click', openAllEvents);
 };
 
 init();

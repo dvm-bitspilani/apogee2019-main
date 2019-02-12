@@ -3,13 +3,25 @@
 #events{
     h1{
             font-family: 'teko-light';
-            font-size: 75px;
+            font-size: 65px;
             line-height: 1;
             font-weight: lighter;
             letter-spacing: 20px;
             text-align: center;
             padding-left:20px
             // margin-top: 30px;
+    }
+
+    #view-all-events-btn {
+        width: 220px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 1%;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #view-all-events-btn:hover { 
+        transform: scale(1.1);
     }
 
     padding-top: 0;
@@ -26,6 +38,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 4%;
 }
 
 .event-card {

@@ -23,7 +23,7 @@ function init() {
             image: require('../imgs/speakers/vikramaditya.jpg'),
             name: "Vikramaditya Motwane",
             occupation: "Indian film director",
-            info: "Film director, producer and screenwriter for films like Dev.D and Dhan Dhana Dhan Goal."
+            info: "Film director, producer and screenwriter for films and web series like Sacred Games, Dev.D and Dhan Dhana Dhan Goal."
         }
     ];
 

@@ -1,5 +1,5 @@
 function init() {
-    const BASE_URL = "https://bits-apogee.org/2019";
+    const BASE_URL = "https://www.bits-apogee.org/2019";
 
     let isRegisteredOnce = false;
 

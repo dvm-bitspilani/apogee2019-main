@@ -34,7 +34,7 @@ function init() {
         setTimeout(() => loader.style.display = "none", 400);
         document.body.classList.remove('scroll-disable');
 
-        const BASE_URL = "https://bits-apogee.org/2019";
+        const BASE_URL = "https://www.bits-apogee.org/2019";
         setColleges();
         function setColleges() {
             fetch(BASE_URL + '/registrations/get_college')

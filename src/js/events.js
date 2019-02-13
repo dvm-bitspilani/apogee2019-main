@@ -1,5 +1,5 @@
 function init() {
-    const URL = "https://bits-apogee.org/2019/registrations/events_details";
+    const URL = "https://www.bits-apogee.org/2019/registrations/events_details";
 
     // define divs here
     const loadingDiv = document.getElementById("category-loading");

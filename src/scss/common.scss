@@ -94,7 +94,7 @@ a {
     transform: scale(1.1);
 }
 
-#register-btn {
+.highlighted-btn {
     color: #fff;
     padding: 5px 20px;
     border: 1.5px solid #B525E9;
@@ -178,7 +178,7 @@ a {
 
 #events{
     position: relative;
-    height: 130vh;
+    height: 293vh;
 }
 
 .content-wrap {
@@ -303,14 +303,14 @@ a {
     }
 }
 
-#events {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh !important;
-    min-height: 0;
-}
+// #events {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: 60vh !important;
+//     min-height: 0;
+// }
 
 @media all and (max-width: 600px) and (orientation: portrait) {
     .content-wrap {

@@ -3,13 +3,25 @@
 #events{
     h1{
             font-family: 'teko-light';
-            font-size: 75px;
+            font-size: 65px;
             line-height: 1;
             font-weight: lighter;
             letter-spacing: 20px;
             text-align: center;
             padding-left:20px
             // margin-top: 30px;
+    }
+
+    #view-all-events-btn {
+        width: 220px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 1%;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #view-all-events-btn:hover { 
+        transform: scale(1.1);
     }
 
     padding-top: 0;
@@ -26,20 +38,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 4%;
 }
 
 .event-card {
     display: flex;
     height: 23.5%;
-    background-image: linear-gradient(45deg, #1f0936, #200736)
+    background-image: linear-gradient(45deg, #1f0936, #200736);
+    margin-bottom: 10px;
 }
 
 .event-image{
-    width: 25%;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
     // background-image: url('../imgs/cara.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    align-self: center;
 }
 
 .event-info {
@@ -48,6 +65,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
+    align-self: center;
     h3{
         color: white;
         font-family: 'bahnschrift';

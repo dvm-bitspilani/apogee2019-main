@@ -1,5 +1,6 @@
 function init() {
     const URL = "https://www.bits-apogee.org/2019/registrations/events_details";
+    const URL2 = "https://bits-apogee.org/2019/registrations/events_details";
 
     // define divs here
     const loadingDiv = document.getElementById("category-loading");
@@ -95,9 +96,99 @@ function init() {
             }
         })
         .catch(err => {
-            console.log(err);
-            loadingDiv.style.display = "none";
-            errorDiv.style.display = "flex";
+            // console.log(err);
+            // loadingDiv.style.display = "none";
+            // errorDiv.style.display = "flex";
+
+            fetch(URL2, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(res => res.json())
+                .then(res => {
+                    if (res) {
+                        events = res;
+                        // console.log(events);
+                        let eventCount = 0; // to check if events rendered in reg
+                        if (events) {
+                            let categoriesDiv = document.createElement("div");
+                            categoriesDiv.id = "categories-items";
+                            events.map((category, index) => {
+                                let span = document.createElement("span");
+                                span.className = `category-item ${index === 0 ? 'active-category' : ''}`;
+                                span.setAttribute('data', `category: '${category.category_name}', index: '${index}'`);
+                                span.addEventListener("click", () => changeCategory(index));
+                                span.innerHTML = category.category_name;
+                                categoriesDiv.appendChild(span);
+        
+                                eventCount += category.events.length;
+        
+                                if (index === 0) {
+                                    category.events.map(event => {
+                                        let eventBox = document.createElement("div");
+                                        eventBox.className = "event-box";
+                                        eventBox.setAttribute("data-category", category.category_name);
+                                        eventBox.setAttribute("data-event", event.name);
+        
+                                        eventBox.innerHTML += `
+                                            ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
+                                            <span>${event.name}</span>
+                                        `;
+        
+                                        eventBox.addEventListener("click", () => eventClick(event.name, event.details, event.rules, event.id));
+        
+                                        eventsContainer.appendChild(eventBox);
+        
+                                        // for registrations
+                                        let eventOption = document.createElement("option");
+                                        eventOption.setAttribute("value", event.id);
+                                        eventOption.innerHTML = event.name;
+                                        regEvents.appendChild(eventOption);
+                                    })
+                                }
+                                else {
+                                    category.events.map(event => {
+                                        // for registrations
+                                        let eventOption = document.createElement("option");
+                                        eventOption.setAttribute("value", event.id);
+                                        eventOption.innerHTML = event.name;
+                                        regEvents.appendChild(eventOption);
+                                    })
+                                }
+                            });
+        
+                            function updateRegEvents () {
+                                if (eventCount == regEvents.children.length - 1) {
+                                    document.get
+                                    regEvents.removeChild(document.getElementById("reg-events-label"));
+                                    $('#register-events').trigger('chosen:updated');
+                                }
+                                else {
+                                    setTimeout(() => updateRegEvents(), 200);
+                                }
+                            }
+                            updateRegEvents();
+        
+                            loadingDiv.style.display = "none";
+                            categoriesContainer.appendChild(categoriesDiv);
+                        } else {
+                            loadingDiv.style.display = "none";
+                            errorDiv.style.display = "flex";
+                        }
+                    }
+                    else {
+                        console.log("Error occurred while fetching events!");
+                        loadingDiv.style.display = "none";
+                        errorDiv.style.display = "flex";
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                    loadingDiv.style.display = "none";
+                    errorDiv.style.display = "flex";
+                })
         })
 
     function changeCategory(categoryIndex) {

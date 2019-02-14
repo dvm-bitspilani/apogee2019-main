@@ -1,5 +1,6 @@
 function init() {
     const BASE_URL = "https://www.bits-apogee.org/2019";
+    const BASE_URL2 = "https://bits-apogee.org/2019";
 
     let isRegisteredOnce = false;
 
@@ -134,11 +135,31 @@ function init() {
                         document.getElementById("backend-reg-success").innerHTML = response.message;
                     },
                     error: function (err) {
-                        // console.log(err);
-                        if (err.responseJSON.message)
-                            displayError(err.responseJSON.message);
-                        else
-                            displayError('Contact admins!');
+                        $.ajax(
+                            {
+                                type: "POST",
+                                contentType: "application/json",
+                                url: BASE_URL2 + "/registrations/new/register",
+                                data: JSON.stringify(sendData),
+                                dataType: "json",
+                                success: function (response) {
+                                    displayError('');
+                                    setTimeout(function () {
+                                        document.getElementById("register-form-content").style.display = "none";
+                                        document.getElementById("register-form-complete").style.display = "flex";
+                                    }, 100);
+                                    isRegisteredOnce = true;
+                                    document.getElementById("backend-reg-success").innerHTML = response.message;
+                                },
+                                error: function (err) {
+                                    // console.log(err);
+                                    if (err.responseJSON.message)
+                                        displayError(err.responseJSON.message);
+                                    else
+                                        displayError('Contact admins!');
+                                }
+                            }
+                        )
                     }
                 }
             )

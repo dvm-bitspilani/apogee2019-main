@@ -129,6 +129,11 @@
             color: #fff;
         }
 
+        #register-submit:disabled {
+            cursor: not-allowed;
+            color: grey;
+        }
+
         .reg-message {
           font-size: 15px;
           color: #fff;

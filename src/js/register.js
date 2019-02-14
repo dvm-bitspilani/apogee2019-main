@@ -93,7 +93,7 @@ function init() {
             displayError('Please enter your city');
         } else if (gender === '') {
             displayError('Please select your gender')
-        } else if (college === 'select') {
+        } else if (college === 'select' || college === '') {
             displayError('Please select a college');
         } else if (!events) {
             displayError('Please select event(s) you want to register for')
@@ -118,6 +118,8 @@ function init() {
 
             if (referral) sendData['referral'] = referral;
 
+            document.getElementById("register-submit").setAttribute('disabled', true);
+
             $.ajax(
                 {
                     type: "POST",
@@ -133,8 +135,11 @@ function init() {
                         }, 100);
                         isRegisteredOnce = true;
                         document.getElementById("backend-reg-success").innerHTML = response.message;
+
+                        document.getElementById("register-submit").removeAttribute('disabled');
                     },
                     error: function (err) {
+                        console.log(sendData);
                         $.ajax(
                             {
                                 type: "POST",
@@ -150,8 +155,12 @@ function init() {
                                     }, 100);
                                     isRegisteredOnce = true;
                                     document.getElementById("backend-reg-success").innerHTML = response.message;
+
+                                    document.getElementById("register-submit").removeAttribute('disabled');
                                 },
                                 error: function (err) {
+                                    document.getElementById("register-submit").removeAttribute('disabled');
+
                                     // console.log(err);
                                     if (err.responseJSON.message)
                                         displayError(err.responseJSON.message);

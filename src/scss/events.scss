@@ -32,7 +32,7 @@
     // padding-right: 17.5vw;
     height: 85%;
     // right: 0;
-    left: 50%;
+    left: 50%;  
     transform: translateX(-50%);
     width: 65%;
     display: flex;
@@ -154,7 +154,7 @@
         }
     }    
     #events-content-inner{
-        width: 75%;
+        width: 88%;
     }
 
     .event-info {
@@ -167,7 +167,7 @@
 @media screen and (max-width: 480px){
     .event-info{
         h3 {
-            font-size: 16px;
+            font-size: 15px;
         }
         h6, span{
             font-size: 14px;

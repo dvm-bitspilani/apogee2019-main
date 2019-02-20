@@ -46,6 +46,15 @@
             color: #fff;
         }
 
+        #register-google-form {
+            text-align: center;
+
+            a {
+                text-decoration: underline;
+                color: $pink-here;
+            }
+        }
+
         input[type="text"], input[type="email"], select {
             margin-top: 30px;
         }

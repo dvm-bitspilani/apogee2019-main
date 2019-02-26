@@ -24,6 +24,12 @@ function init() {
             name: "Vikramaditya Motwane",
             occupation: "Indian film director",
             info: "Film director, producer and screenwriter for films and web series like Sacred Games, Dev.D and Dhan Dhana Dhan Goal."
+        },
+        {
+            image: require('../imgs/speakers/arun.jpg'),
+            name: "Arun Shourie",
+            occupation: "Economist, Author, Politician",
+            info: "An economist with the World Bank, a consultant to the Planning Commission of India, editor of the Indian Express and The Times of India."
         }
     ];
 

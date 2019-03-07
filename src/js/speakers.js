@@ -28,8 +28,20 @@ function init() {
         {
             image: require('../imgs/speakers/arun.jpg'),
             name: "Arun Shourie",
-            occupation: "Economist, Author, Politician",
+            occupation: "Renowned Journalist, Former Politician",
             info: "An economist with the World Bank, a consultant to the Planning Commission of India, editor of the Indian Express and The Times of India."
+        },
+        {
+            image: require('../imgs/speakers/morse.jpg'),
+            name: "Stephen Morse",
+            occupation: "Chief Architect, Intel 8086 processor",
+            info: ""
+        },
+        {
+            image: require('../imgs/speakers/hasabnis.png'),
+            name: "Lt Gen SS Hasabnis",
+            occupation: "Deputy Army Chief of India",
+            info: ""
         }
     ];
 

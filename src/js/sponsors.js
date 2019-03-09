@@ -37,6 +37,12 @@ function init() {
                     image: require("../static/sponsors/Casio.jpg"),
                     role: 'Official Calculator Partner'
                 },
+                {
+                    name: "Entrepreneur India",
+                    image: require("../static/sponsors/EntrepreneurIndia.png"),
+                    role: 'Sponsor',
+                    link: 'https://www.entrepreneur.com/in'
+                },
             ]
         }
     ];
@@ -76,7 +82,7 @@ function init() {
                             </div>
                             `;
                 }
-                else {
+                else if(!sponsor.link) {
                     sponsorsContainer.innerHTML += `
                             <div class="box" data-category=${category.category_name} data-event=${sponsor.name}>
                                 <img src=${sponsor.image} alt=${sponsor.name} /> 
@@ -84,6 +90,18 @@ function init() {
                                     <span>${sponsor.name}</span>
                                     <span class="sponsor-role">${sponsor.role}</span>
                                 </div>
+                            </div>
+                            `;
+                } else {
+                    sponsorsContainer.innerHTML += `
+                            <div class="box" data-category=${category.category_name} data-event=${sponsor.name}>
+                                <a href=${sponsor.link} target="_blank" class="box-link">
+                                    <img src=${sponsor.image} alt=${sponsor.name} /> 
+                                    <div class="sponsor-content">
+                                        <span>${sponsor.name}</span>
+                                        <span class="sponsor-role">${sponsor.role}</span>
+                                    </div>
+                                </a>
                             </div>
                             `;
                 }

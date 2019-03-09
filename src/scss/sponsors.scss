@@ -71,7 +71,7 @@ html, body {
         align-items: center;
     }
 
-    .box {
+    .box, .box-link {
         width: 200px;
         height: 300px;
         background-image: $theme-gradient;
@@ -118,6 +118,10 @@ html, body {
                 content: none;
             }
         }
+    }
+
+    .box-link {
+        margin: 0 !important;
     }
 
     .sponsor-box:hover {
@@ -213,7 +217,7 @@ html, body {
             }
         }
 
-        .box {
+        .box, .box-link {
             width: 90%;
             height: 100px;
             background-image: $theme-gradient;
@@ -258,6 +262,11 @@ html, body {
                     content: none;
                 }
             }
+        }
+
+        .box-link {
+            width: 100% !important;
+            margin: 0 !important;
         }
     }
 }

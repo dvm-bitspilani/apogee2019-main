@@ -60,7 +60,7 @@ function init() {
                 {
                     name: "Entrepreneur India",
                     image: require("../static/sponsors/EntrepreneurIndia.png"),
-                    role: 'Sponsor',
+                    role: 'Digital Media Partner',
                     link: 'https://www.entrepreneur.com/in'
                 },
             ]

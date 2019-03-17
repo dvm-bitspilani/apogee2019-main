@@ -13,6 +13,16 @@
     }
 
 }
+
+.workshop-btn {
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: $pink-here;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
 #workshop-content{
     padding-top: 10vh;
     position: absolute;

@@ -23,9 +23,9 @@ function init() {
                     role: 'Title sponsor'
                 },
                 {
-                    name: "YesBank",
-                    image: require("../static/sponsors/YesBank.png"),
-                    role: 'Banking Partner'
+                    name: "Casio",
+                    image: require("../static/sponsors/Casio.jpg"),
+                    role: 'Official Education Partner'
                 },
                 {
                     name: "AB InBev Innovation Brewery",
@@ -33,9 +33,29 @@ function init() {
                     role: 'Official Innovation Partner'
                 },
                 {
-                    name: "Casio",
-                    image: require("../static/sponsors/Casio.jpg"),
-                    role: 'Official Calculator Partner'
+                    name: "Beardo",
+                    image: require("../static/sponsors/beardo.png"),
+                    role: 'Official Partner'
+                },
+                {
+                    name: "Qalaxia",
+                    image: require("../static/sponsors/qalaxia.png"),
+                    role: 'Official Partner'
+                },
+                {
+                    name: "YesBank",
+                    image: require("../static/sponsors/YesBank.png"),
+                    role: 'Banking Partner'
+                },
+                {
+                    name: "EdSense",
+                    image: require("../static/sponsors/edsense.png"),
+                    role: 'Official Partner'
+                },
+                {
+                    name: "Ixigo",
+                    image: require("../static/sponsors/ixigo.png"),
+                    role: 'Official Travel Partner'
                 },
                 {
                     name: "Entrepreneur India",
@@ -140,7 +160,7 @@ function init() {
                             </div>
                             `;
                 }
-                else {
+                else if (sponsor.link) {
                     sponsorsContainer.innerHTML += `
                             <div class="box" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
                                 <img src=${sponsor.image} alt=${sponsor.name} /> 
@@ -148,6 +168,19 @@ function init() {
                                     <span>${sponsor.name}</span>
                                     <span class="sponsor-role">${sponsor.role}</span>
                                 </div>
+                            </div>
+                            `;
+                }
+                else {
+                    sponsorsContainer.innerHTML += `
+                            <div class="box" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
+                                <a href=${sponsor.link} target="_blank" class="box-link">
+                                    <img src=${sponsor.image} alt=${sponsor.name} /> 
+                                    <div class="sponsor-content">
+                                        <span>${sponsor.name}</span>
+                                        <span class="sponsor-role">${sponsor.role}</span>
+                                    </div>
+                                </a>
                             </div>
                             `;
                 }

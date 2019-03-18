@@ -1,6 +1,7 @@
 @import './variables';
 
 #workshop{
+    height: 165vh !important;
     padding-top: 10vh;
     h1{
         font-family: 'teko-light';
@@ -38,7 +39,7 @@
 
 .workshop-row{
     width: 100%;
-    height: 30%;
+    height: 20%;
     display: flex;
 }
 

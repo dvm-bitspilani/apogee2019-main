@@ -23,6 +23,16 @@ function init() {
                     role: 'Title sponsor'
                 },
                 {
+                    name: "Cisco",
+                    image: require("../static/sponsors/cisco.png"),
+                    role: 'Associate Title sponsor'
+                },
+                {
+                    name: "Verzeo",
+                    image: require("../static/sponsors/verzeo.jpg"),
+                    role: 'Associate Title sponsor'
+                },
+                {
                     name: "Casio",
                     image: require("../static/sponsors/Casio.jpg"),
                     role: 'Official Education Partner'
@@ -35,12 +45,12 @@ function init() {
                 {
                     name: "Beardo",
                     image: require("../static/sponsors/beardo.png"),
-                    role: 'Official Partner'
+                    role: 'Official Grooming Partner'
                 },
                 {
                     name: "Qalaxia",
                     image: require("../static/sponsors/qalaxia.png"),
-                    role: 'Official Partner'
+                    role: 'Official Discussion Partner'
                 },
                 {
                     name: "YesBank",
@@ -92,7 +102,7 @@ function init() {
         if (index === 0) {
             category.sponsors.map(sponsor => {
                 if (sponsor.name === "L&T") {
-                sponsorsContainer.innerHTML += `
+                    sponsorsContainer.innerHTML += `
                             <div class="box" id = "lnt" data-category=${category.category_name} data-event=${sponsor.name}>
                                 <img src=${sponsor.image} alt=${sponsor.name} /> 
                                 <div class="sponsor-content">
@@ -101,6 +111,17 @@ function init() {
                                 </div>
                             </div>
                             `;
+                }
+                else if (sponsor.name === "Cisco" || sponsor.name === "Verzeo") {
+                    sponsorsContainer.innerHTML += `
+                    <div class="box assoc-title" data-category=${category.category_name} data-event=${sponsor.name}>
+                        <img src=${sponsor.image} alt=${sponsor.name} /> 
+                        <div class="sponsor-content">
+                            <span>${sponsor.name}</span>
+                            <span class="sponsor-role">${sponsor.role}</span>
+                        </div>
+                    </div>
+                    `;
                 }
                 else if(!sponsor.link) {
                     sponsorsContainer.innerHTML += `

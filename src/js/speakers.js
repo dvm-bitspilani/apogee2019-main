@@ -28,8 +28,8 @@ function init() {
         {
             image: require('../imgs/speakers/arun.jpg'),
             name: "Arun Shourie",
-            occupation: "Renowned Journalist, Former Politician",
-            info: "An economist with the World Bank, a consultant to the Planning Commission of India, editor of the Indian Express and The Times of India."
+            occupation: "Journalist, Former Politician",
+            info: "Economist (World Bank), Consultant to Planning Commission (India), Editor (Indian Express, The Times of India)"
         },
         {
             image: require('../imgs/speakers/morse.jpg'),

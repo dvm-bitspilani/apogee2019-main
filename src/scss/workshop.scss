@@ -1,6 +1,7 @@
 @import './variables';
 
 #workshop{
+    height: 165vh !important;
     padding-top: 10vh;
     h1{
         font-family: 'teko-light';
@@ -38,7 +39,7 @@
 
 .workshop-row{
     width: 100%;
-    height: 30%;
+    height: 20%;
     display: flex;
 }
 
@@ -47,8 +48,7 @@
 }
 
 .workshop-row:nth-child(even){
-    // justify-content: right;
-    justify-content: center;
+    // justify-content: center;
 }
 .workshop-cell{
     height: 100%;
@@ -80,7 +80,7 @@
     justify-content: center;
     h3{
         letter-spacing: 2px;
-        font-size: 23px;
+        font-size: 18px;
         font-weight: 400;
     }
     h6{
@@ -144,9 +144,9 @@
 
 @media screen and (max-width: 480px){
     #workshop {
-        h1 {
-            // font-size: 36px;
-        }
+        padding-top: 0;
+        
+
     }
     .workshop-cell {
         h3 {
@@ -155,5 +155,16 @@
         h6 {
             font-size: 12px;
         }
+        .long-heading {
+            font-size: 13px;
+        }
+    }
+
+    .workshop-btn {
+        font-size: 12px;
+    }
+
+    .workshop-cell {
+        .workshop-date {display: none;}
     }
 }

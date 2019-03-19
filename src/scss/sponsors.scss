@@ -75,7 +75,7 @@ html, body {
         width: 200px;
         height: 300px;
         background-image: $theme-gradient;
-        margin: 20px;
+        margin: 30px;
         transition: all 0.5s ease;
         display: flex;
         flex-direction: column;
@@ -159,6 +159,17 @@ html, body {
                     font-size: 20px;
                 }
             }
+        }
+    }
+
+    .assoc-title {
+        width: 450px;
+        margin-left: 3%;
+        margin-right: 3%;
+
+        img {
+            height: 220px;
+            width: 220px;
         }
     }
 

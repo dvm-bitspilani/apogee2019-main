@@ -20,52 +20,62 @@ function init() {
                 {
                     name: "L&T",
                     image: require("../static/sponsors/L&T.png"),
-                    role: 'Title sponsor'
+                    role: 'Title sponsor',
+                    link: 'http://www.larsentoubro.com/'
                 },
                 {
                     name: "Cisco",
                     image: require("../static/sponsors/cisco.png"),
-                    role: 'Associate Title sponsor'
+                    role: 'Associate Title sponsor',
+                    link: 'https://www.cisco.com/c/en_in/index.html'
                 },
                 {
                     name: "Verzeo",
                     image: require("../static/sponsors/verzeo.jpg"),
-                    role: 'Associate Title sponsor'
+                    role: 'Associate Title sponsor',
+                    link: 'https://verzeo.in/'
                 },
                 {
                     name: "Casio",
                     image: require("../static/sponsors/Casio.jpg"),
-                    role: 'Official Education Partner'
+                    role: 'Official Education Partner',
+                    link: 'https://www.casio.com/'
                 },
                 {
                     name: "AB InBev Innovation Brewery",
                     image: require("../static/sponsors/ABInBev.png"),
-                    role: 'Official Innovation Partner'
+                    role: 'Official Innovation Partner',
+                    link: 'https://www.ab-inbev.com/'
                 },
                 {
                     name: "Beardo",
                     image: require("../static/sponsors/beardo.png"),
-                    role: 'Official Grooming Partner'
+                    role: 'Official Grooming Partner',
+                    link: 'https://www.beardo.in/?utm_source=google&utm_medium=cpc&utm_campaignid=1496397113&utm_adgroupId=58903062718&utm_adtextid=286039786492&utm_keyword=beardo&placement=&device=c&matchtype=e&adposition=1t1&target=&network=g&gclid=EAIaIQobChMI3Iu2kpWT4QIVj4iPCh36NQeHEAAYASAAEgI_1PD_BwE'
                 },
                 {
                     name: "Qalaxia",
                     image: require("../static/sponsors/qalaxia.png"),
-                    role: 'Official Discussion Partner'
+                    role: 'Official Discussion Partner',
+                    link: 'https://www.qalaxia.com/'
                 },
                 {
                     name: "YesBank",
                     image: require("../static/sponsors/YesBank.png"),
-                    role: 'Banking Partner'
+                    role: 'Banking Partner',
+                    link: 'https://www.yesbank.in/'
                 },
                 {
                     name: "EdSense",
                     image: require("../static/sponsors/edsense.png"),
-                    role: 'Official Partner'
+                    role: 'Official Partner',
+                    link: 'https://edsense.in/'
                 },
                 {
                     name: "Ixigo",
                     image: require("../static/sponsors/ixigo.png"),
-                    role: 'Official Travel Partner'
+                    role: 'Official Travel Partner',
+                    link: 'https://www.ixigo.com/'
                 },
                 {
                     name: "Entrepreneur India",
@@ -73,6 +83,36 @@ function init() {
                     role: 'Digital Media Partner',
                     link: 'https://www.entrepreneur.com/in'
                 },
+                {
+                    name: "Autodesk",
+                    image: require("../static/sponsors/Autodesk.png"),
+                    role: 'Official Design Partner',
+                    link: 'https://www.autodesk.com/education/home'
+                },
+                {
+                    name: "4700 BC Popcorn",
+                    image: require("../static/sponsors/4700BCPopcorn.png"),
+                    role: 'Official Popcorn Partner',
+                    link: 'http://www.4700bcpopcorn.com/?gclid=EAIaIQobChMIsZyu_t6S4QIViJOPCh3XLQrxEAAYASAAEgI_Z_D_BwE'
+                },
+                {
+                    name: "Gustora Foods",
+                    image: require("../static/sponsors/Gustora.png"),
+                    role: 'Official Pasta Partner',
+                    link: 'https://gustorafoods.com/'
+                },
+                {
+                    name: "Kronokare",
+                    image: require("../static/sponsors/Kronokare.png"),
+                    role: 'Official Beauty Partner',
+                    link: 'https://kronokare.com/'
+                },
+                // {
+                //     name: "Zebronics",
+                //     image: require("../static/sponsors/Kronokare.png"),
+                //     role: 'Official Audio Partner',
+                //     link: 'https://zebronics.com/'
+                // },
             ]
         }
     ];
@@ -101,31 +141,17 @@ function init() {
 
         if (index === 0) {
             category.sponsors.map(sponsor => {
+                let idVal = "", classVal = "box";
                 if (sponsor.name === "L&T") {
-                    sponsorsContainer.innerHTML += `
-                            <div class="box" id = "lnt" data-category=${category.category_name} data-event=${sponsor.name}>
-                                <img src=${sponsor.image} alt=${sponsor.name} /> 
-                                <div class="sponsor-content">
-                                    <span>${sponsor.name}</span>
-                                    <span class="sponsor-role">${sponsor.role}</span>
-                                </div>
-                            </div>
-                            `;
+                    idVal = "lnt";
                 }
                 else if (sponsor.name === "Cisco" || sponsor.name === "Verzeo") {
-                    sponsorsContainer.innerHTML += `
-                    <div class="box assoc-title" data-category=${category.category_name} data-event=${sponsor.name}>
-                        <img src=${sponsor.image} alt=${sponsor.name} /> 
-                        <div class="sponsor-content">
-                            <span>${sponsor.name}</span>
-                            <span class="sponsor-role">${sponsor.role}</span>
-                        </div>
-                    </div>
-                    `;
+                    classVal += " assoc-title";
                 }
-                else if(!sponsor.link) {
+
+                if(!sponsor.link) {
                     sponsorsContainer.innerHTML += `
-                            <div class="box" data-category=${category.category_name} data-event=${sponsor.name}>
+                            <div class="${classVal}" id="${idVal}" data-category=${category.category_name} data-event=${sponsor.name}>
                                 <img src=${sponsor.image} alt=${sponsor.name} /> 
                                 <div class="sponsor-content">
                                     <span>${sponsor.name}</span>
@@ -135,7 +161,7 @@ function init() {
                             `;
                 } else {
                     sponsorsContainer.innerHTML += `
-                            <div class="box" data-category=${category.category_name} data-event=${sponsor.name}>
+                            <div class="${classVal}" id="${idVal}" data-category=${category.category_name} data-event=${sponsor.name}>
                                 <a href=${sponsor.link} target="_blank" class="box-link">
                                     <img src=${sponsor.image} alt=${sponsor.name} /> 
                                     <div class="sponsor-content">

@@ -139,12 +139,22 @@ html, body {
             height: auto;
         }
 
+        .box-link {
+            width: 100%;
+            height: 250px;
+        }
+
         @media all and (max-width: 600px) {
             width: 90%;
             height: 180px;
             margin: 0;
             flex-direction: column;
             align-items: center;
+
+            .box-link {
+                flex-direction: column;
+                height: 180px;
+            }
 
             .sponsor-content {
                 text-align: center;
@@ -163,12 +173,16 @@ html, body {
     }
 
     .assoc-title {
-        width: 450px;
+        width: 350px;
         margin-left: 3%;
         margin-right: 3%;
 
         img {
             height: 220px;
+            width: 220px;
+        }
+
+        .box-link {
             width: 220px;
         }
     }

@@ -90,7 +90,7 @@ function init() {
                     link: 'https://www.autodesk.com/education/home'
                 },
                 {
-                    name: "4700 BC Popcorn",
+                    name: "4700BC Popcorn",
                     image: require("../static/sponsors/4700BCPopcorn.png"),
                     role: 'Official Popcorn Partner',
                     link: 'http://www.4700bcpopcorn.com/?gclid=EAIaIQobChMIsZyu_t6S4QIViJOPCh3XLQrxEAAYASAAEgI_Z_D_BwE'
@@ -107,12 +107,12 @@ function init() {
                     role: 'Official Beauty Partner',
                     link: 'https://kronokare.com/'
                 },
-                // {
-                //     name: "Zebronics",
-                //     image: require("../static/sponsors/Kronokare.png"),
-                //     role: 'Official Audio Partner',
-                //     link: 'https://zebronics.com/'
-                // },
+                {
+                    name: "Zebronics",
+                    image: require("../static/sponsors/zebronics.png"),
+                    role: 'Official Audio Partner',
+                    link: 'https://zebronics.com/'
+                },
             ]
         }
     ];

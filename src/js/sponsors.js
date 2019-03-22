@@ -68,7 +68,7 @@ function init() {
                 {
                     name: "EdSense",
                     image: require("../static/sponsors/edsense.png"),
-                    role: 'Official Partner',
+                    role: 'Official Awards Partner',
                     link: 'https://edsense.in/'
                 },
                 {

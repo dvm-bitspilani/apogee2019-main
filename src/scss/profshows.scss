@@ -1,0 +1,107 @@
+@import './variables';
+
+html, body {
+    overflow-x: hidden;
+}
+
+#all-profshows {
+    min-height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0 0 0;
+    transition: all 0.5s ease;
+
+    #all-profshows-title {
+        font-size: 80px;
+        letter-spacing: 20px;
+        color: #fff;
+        font-family: 'teko-light';
+    }
+
+    #profshows-container {
+        display: flex;
+        flex-direction: column;
+        z-index: 500;
+
+        .profshow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 100vw;
+            margin: 40px 0 100px 0;
+
+            .profshow-img {
+                // max-width: 35vw;
+                height: 60vh;
+            }
+
+            .profshow-content {
+                width: 35vw;
+                .profshow-subheader {
+                    color: $pink-here;
+                }
+
+                .profshow-desc {
+                    margin-top: 20px;
+
+                    a {
+                      text-decoration: underline;
+                    }
+
+                    a:hover {
+                      color: $pink-here;
+                    }
+                }
+            }
+        }
+
+        .profshow:nth-child(even) {
+            .profshow-img {
+                order: 2;
+            }
+        }
+    }
+
+    .nav-links-profshows {
+        justify-content: flex-end !important;
+    }
+}
+
+@media all and (max-width: 800px) {
+    #all-profshows {
+        #profshows-container {
+            .profshow {
+                flex-direction: column;
+
+                .profshow-img, .profshow-content {
+                    width: 90vw;
+                    text-align: center;
+                }
+
+                .profshow-img {
+                    max-width: 60vw;
+                    height: auto;
+                    order: 1;
+                }
+
+                .profshow-content {
+                    margin-top: 40px;
+                    order: 2;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) and (orientation: portrait) {
+    #all-profshows {
+        #all-profshows-title {
+            font-size: 50px;
+            padding-left: 10px;
+        }
+    }
+}

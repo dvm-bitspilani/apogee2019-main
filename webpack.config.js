@@ -7,7 +7,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 config = {
 	entry: {
 		main: path.resolve(__dirname, "src", "js", "index.js"),
-		sponsors: path.resolve(__dirname, "src", "js", "sponsors.js")
+		sponsors: path.resolve(__dirname, "src", "js", "sponsors.js"),
+		profs: path.resolve(__dirname, "src", "js", "profs.js"),
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -56,7 +57,12 @@ config = {
 		],
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "src", "profs.html"),
+			filename: "profs.html",
+            chunks: ['profs']
+        }),
+        new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "src", "sponsors.html"),
 			filename: "sponsors.html",
 			chunks: ['sponsors']
@@ -65,7 +71,7 @@ config = {
 			template: path.resolve(__dirname, "src", "index.html"),
 			inject: 'body',
 			chunks: ['main']
-		}),
+        }),
 	],
 }
 

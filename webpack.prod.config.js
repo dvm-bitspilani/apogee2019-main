@@ -8,7 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 config = {
 	entry: {
 		main: path.resolve(__dirname, "src", "js", "index.js"),
-		sponsors: path.resolve(__dirname, "src", "js", "sponsors.js")
+		sponsors: path.resolve(__dirname, "src", "js", "sponsors.js"),
+		profs: path.resolve(__dirname, "src", "js", "profs.js"),
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -74,6 +75,19 @@ config = {
 			inject: 'body',
 			filename: 'sponsors.html',
 			chunks: ['sponsors'],
+			minify: {
+				removeComments: true,
+    			collapseWhitespace: true,
+    			conservativeCollapse: false,
+				preserveLineBreaks: false,
+				minifyCSS: true
+			}
+        }),
+        new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, "src", "profs.html"),
+			inject: 'body',
+			filename: 'profs.html',
+			chunks: ['profs'],
 			minify: {
 				removeComments: true,
     			collapseWhitespace: true,

@@ -12,10 +12,6 @@ function init() {
     let sponsors = [
         {
             category_name: "All",
-            sponsors: []
-        },
-        {
-            category_name: "Partners",
             sponsors: [
                 {
                     name: "L&T",
@@ -78,12 +74,6 @@ function init() {
                     link: 'https://www.ixigo.com/'
                 },
                 {
-                    name: "Entrepreneur India",
-                    image: require("../static/sponsors/EntrepreneurIndia.png"),
-                    role: 'Digital Media Partner',
-                    link: 'https://www.entrepreneur.com/in'
-                },
-                {
                     name: "Autodesk",
                     image: require("../static/sponsors/Autodesk.png"),
                     role: 'Official Design Partner',
@@ -114,7 +104,18 @@ function init() {
                     link: 'https://zebronics.com/'
                 },
             ]
-        }
+        },
+        {
+            category_name: "Media Partners",
+            sponsors: [
+                {
+                    name: "Entrepreneur India",
+                    image: require("../static/sponsors/EntrepreneurIndia.png"),
+                    role: 'Digital Media Partner',
+                    link: 'https://www.entrepreneur.com/in'
+                },
+            ]
+        },
     ];
 
     // define an "all" category
@@ -196,9 +197,17 @@ function init() {
         setTimeout(function () {
             sponsorsContainer.innerHTML = '';
             sponsors[categoryIndex].sponsors.map(sponsor => {
+                let idVal = "", classVal = "box";
                 if (sponsor.name === "L&T") {
-                sponsorsContainer.innerHTML += `
-                            <div class="box" id = "lnt" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
+                    idVal = "lnt";
+                }
+                else if (sponsor.name === "Cisco" || sponsor.name === "Verzeo") {
+                    classVal += " assoc-title";
+                }
+
+                if(!sponsor.link) {
+                    sponsorsContainer.innerHTML += `
+                            <div class="${classVal}" id="${idVal}" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
                                 <img src=${sponsor.image} alt=${sponsor.name} /> 
                                 <div class="sponsor-content">
                                     <span>${sponsor.name}</span>
@@ -206,21 +215,9 @@ function init() {
                                 </div>
                             </div>
                             `;
-                }
-                else if (sponsor.link) {
+                } else {
                     sponsorsContainer.innerHTML += `
-                            <div class="box" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
-                                <img src=${sponsor.image} alt=${sponsor.name} /> 
-                                <div class="sponsor-content">
-                                    <span>${sponsor.name}</span>
-                                    <span class="sponsor-role">${sponsor.role}</span>
-                                </div>
-                            </div>
-                            `;
-                }
-                else {
-                    sponsorsContainer.innerHTML += `
-                            <div class="box" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
+                            <div class="${classVal}" id="${idVal}" data-category=${sponsors[categoryIndex].category_name} data-event=${sponsor.name}>
                                 <a href=${sponsor.link} target="_blank" class="box-link">
                                     <img src=${sponsor.image} alt=${sponsor.name} /> 
                                     <div class="sponsor-content">

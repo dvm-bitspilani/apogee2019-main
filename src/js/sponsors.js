@@ -32,16 +32,16 @@ function init() {
                     link: 'https://verzeo.in/'
                 },
                 {
-                    name: "Casio",
-                    image: require("../static/sponsors/Casio.jpg"),
-                    role: 'Official Education Partner',
-                    link: 'https://www.casio.com/'
-                },
-                {
                     name: "AB InBev Innovation Brewery",
                     image: require("../static/sponsors/ABInBev.png"),
                     role: 'Official Innovation Partner',
                     link: 'https://www.ab-inbev.com/'
+                },
+                {
+                    name: "Casio",
+                    image: require("../static/sponsors/Casio.jpg"),
+                    role: 'Official Education Partner',
+                    link: 'https://www.casio.com/'
                 },
                 {
                     name: "Beardo",

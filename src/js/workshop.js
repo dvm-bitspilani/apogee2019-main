@@ -1,11 +1,12 @@
 function init () {
     const workshop_imgs = [
-        require('../imgs/workshops/iot.png'),
         require('../imgs/workshops/deep.jpeg'),
+        require('../imgs/workshops/ethicalhacking.jpeg'),
         require('../imgs/workshops/arvr.png'),
-        null,
-        null,
-        // require('../imgs/workshops/worldquant.jpg'),
+        require('../imgs/workshops/iot.png'),
+        require('../imgs/workshops/androidapp.jpeg'),
+        require('../imgs/workshops/finance.png'),
+        require('../imgs/workshops/cisco.jpeg'),
     ];
 
     let workshopImage = document.getElementsByClassName("workshop-image");

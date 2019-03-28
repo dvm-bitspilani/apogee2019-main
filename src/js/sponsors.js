@@ -38,6 +38,34 @@ function init() {
                     link: 'https://www.ab-inbev.com/'
                 },
                 {
+                    name: "Autodesk",
+                    image: require("../static/sponsors/Autodesk.png"),
+                    role: 'Official Design Partner',
+                    link: 'https://www.autodesk.com/education/home'
+                },
+                {
+                    name: "Qalaxia",
+                    image: require("../static/sponsors/qalaxia.png"),
+                    role: 'Official Discussion Partner',
+                    link: 'https://www.qalaxia.com/'
+                },
+                {
+                    name: "WorldQuant",
+                    image: require("../static/sponsors/worldquant.png"),
+                    role: 'Official FinTech Partner'
+                },
+                {
+                    name: "International Quant Championship",
+                    image: require("../static/sponsors/iqc.png"),
+                    role: ''
+                },
+                {
+                    name: "YesBank",
+                    image: require("../static/sponsors/YesBank.png"),
+                    role: 'Banking Partner',
+                    link: 'https://www.yesbank.in/'
+                },
+                {
                     name: "Casio",
                     image: require("../static/sponsors/Casio.jpg"),
                     role: 'Official Education Partner',
@@ -50,40 +78,10 @@ function init() {
                     link: 'https://www.beardo.in/?utm_source=google&utm_medium=cpc&utm_campaignid=1496397113&utm_adgroupId=58903062718&utm_adtextid=286039786492&utm_keyword=beardo&placement=&device=c&matchtype=e&adposition=1t1&target=&network=g&gclid=EAIaIQobChMI3Iu2kpWT4QIVj4iPCh36NQeHEAAYASAAEgI_1PD_BwE'
                 },
                 {
-                    name: "Qalaxia",
-                    image: require("../static/sponsors/qalaxia.png"),
-                    role: 'Official Discussion Partner',
-                    link: 'https://www.qalaxia.com/'
-                },
-                {
-                    name: "YesBank",
-                    image: require("../static/sponsors/YesBank.png"),
-                    role: 'Banking Partner',
-                    link: 'https://www.yesbank.in/'
-                },
-                {
                     name: "EdSense",
                     image: require("../static/sponsors/edsense.png"),
                     role: 'Official Awards Partner',
                     link: 'https://edsense.in/'
-                },
-                {
-                    name: "Ixigo",
-                    image: require("../static/sponsors/ixigo.png"),
-                    role: 'Official Travel Partner',
-                    link: 'https://www.ixigo.com/'
-                },
-                {
-                    name: "Autodesk",
-                    image: require("../static/sponsors/Autodesk.png"),
-                    role: 'Official Design Partner',
-                    link: 'https://www.autodesk.com/education/home'
-                },
-                {
-                    name: "4700BC Popcorn",
-                    image: require("../static/sponsors/4700BCPopcorn.png"),
-                    role: 'Official Popcorn Partner',
-                    link: 'http://www.4700bcpopcorn.com/?gclid=EAIaIQobChMIsZyu_t6S4QIViJOPCh3XLQrxEAAYASAAEgI_Z_D_BwE'
                 },
                 {
                     name: "Gustora Foods",
@@ -98,9 +96,32 @@ function init() {
                     link: 'https://kronokare.com/'
                 },
                 {
+                    name: "4700BC Popcorn",
+                    image: require("../static/sponsors/4700BCPopcorn.png"),
+                    role: 'Official Popcorn Partner',
+                    link: 'http://www.4700bcpopcorn.com/?gclid=EAIaIQobChMIsZyu_t6S4QIViJOPCh3XLQrxEAAYASAAEgI_Z_D_BwE'
+                },
+                {
+                    name: "Ixigo",
+                    image: require("../static/sponsors/ixigo.png"),
+                    role: 'Official Travel Partner',
+                    link: 'https://www.ixigo.com/'
+                },
+                {
                     name: "Zebronics",
                     image: require("../static/sponsors/zebronics.png"),
                     role: 'Official Audio Partner',
+                    link: 'https://zebronics.com/'
+                },
+                {
+                    name: "Creambell",
+                    image: require("../static/sponsors/creambell.jpg"),
+                    role: 'Official Ice-Cream Partner'
+                },
+                {
+                    name: "Kores",
+                    image: require("../static/sponsors/kores.jpg"),
+                    role: 'Official Stationary Partner',
                     link: 'https://zebronics.com/'
                 },
             ]
@@ -113,6 +134,91 @@ function init() {
                     image: require("../static/sponsors/EntrepreneurIndia.png"),
                     role: 'Digital Media Partner',
                     link: 'https://www.entrepreneur.com/in'
+                },
+                {
+                    name: "OhCampus",
+                    image: require("../static/sponsors/ohcampus.png"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "9XM",
+                    image: require("../static/sponsors/9XM.png"),
+                    role: 'Music Partner',
+                    link: 'https://www.9xm.in/'
+                },{
+                    name: "HelloIntern",
+                    image: require("../static/sponsors/hellointern.png"),
+                    role: 'Internship Partner',
+                    link: 'https://www.hellointern.com/'
+                },
+                {
+                    name: "Scientific India",
+                    image: require("../static/sponsors/scientificindia.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'http://www.scind.org/'
+                },
+                {
+                    name: "New Delhi Times",
+                    image: require("../static/sponsors/NDT.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.newdelhitimes.com/'
+                },
+                {
+                    name: "Dare2Compete",
+                    image: require("../static/sponsors/d2c.png"),
+                    role: 'Competition Partner',
+                    link: 'https://dare2compete.com/'
+                },
+                {
+                    name: "DU Express",
+                    image: require("../static/sponsors/DU.png"),
+                    role: 'Online Media Partner',
+                    link: ' https://www.duexpress.in/'
+                },
+                {
+                    name: "Entrepreneur India",
+                    image: require("../static/sponsors/EntrepreneurIndia.png"),
+                    role: 'Digital Media Partner',
+                    link: 'https://www.entrepreneur.com/in'
+                },
+                {
+                    name: "Ignite Engineers",
+                    image: require("../static/sponsors/ignite.png"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.igniteengineers.com/'
+                },
+                {
+                    name: "The College Fever",
+                    image: require("../static/sponsors/collegefever.png"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.thecollegefever.com/'
+                },
+                {
+                    name: "KnowAFest",
+                    image: require("../static/sponsors/knowafest.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'http://www.knowafest.com/'
+                },
+                {
+                    name: "Education Tree",
+                    image: require("../static/sponsors/educationtree.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Aapka Times",
+                    image: require("../static/sponsors/apkatimes.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.aapkatimes.com/'
+                },
+                {
+                    name: "Campus Bloggers",
+                    image: require("../static/sponsors/CampusBloggers.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Institute of Entrepreneurship",
+                    image: require("../static/sponsors/IOE.png"),
+                    role: 'Online Media Partner',
                 },
             ]
         },

@@ -140,6 +140,75 @@ function init() {
                     image: require("../static/sponsors/ohcampus.png"),
                     role: 'Online Media Partner',
                 },
+                {
+                    name: "9XM",
+                    image: require("../static/sponsors/9XM.png"),
+                    role: 'Music Partner',
+                },{
+                    name: "HelloIntern",
+                    image: require("../static/sponsors/hellointern.png"),
+                    role: 'Internship Partner',
+                },
+                {
+                    name: "Scientific India",
+                    image: require("../static/sponsors/scientificindia.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "New Delhi Times",
+                    image: require("../static/sponsors/NDT.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Dare2Compete",
+                    image: require("../static/sponsors/d2c.png"),
+                    role: 'Competition Partner',
+                },
+                {
+                    name: "DU Express",
+                    image: require("../static/sponsors/DU.png"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Entrepreneur India",
+                    image: require("../static/sponsors/EntrepreneurIndia.png"),
+                    role: 'Digital Media Partner',
+                },
+                {
+                    name: "Ignite Engineers",
+                    image: require("../static/sponsors/ignite.png"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "The College Fever",
+                    image: require("../static/sponsors/collegefever.png"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "KnowAFest",
+                    image: require("../static/sponsors/knowafest.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Education Tree",
+                    image: require("../static/sponsors/educationtree.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Aapka Times",
+                    image: require("../static/sponsors/apkatimes.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Campus Bloggers",
+                    image: require("../static/sponsors/CampusBloggers.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Institute of Entrepreneurship",
+                    image: require("../static/sponsors/IOE.png"),
+                    role: 'Online Media Partner',
+                },
             ]
         },
     ];

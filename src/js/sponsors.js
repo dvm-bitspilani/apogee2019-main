@@ -51,8 +51,13 @@ function init() {
                 },
                 {
                     name: "WorldQuant",
-                    image: require("../static/sponsors/worldquant.jpg"),
+                    image: require("../static/sponsors/worldquant.png"),
                     role: 'Official FinTech Partner'
+                },
+                {
+                    name: "International Quant Championship",
+                    image: require("../static/sponsors/iqc.png"),
+                    role: ''
                 },
                 {
                     name: "YesBank",
@@ -129,6 +134,11 @@ function init() {
                     image: require("../static/sponsors/EntrepreneurIndia.png"),
                     role: 'Digital Media Partner',
                     link: 'https://www.entrepreneur.com/in'
+                },
+                {
+                    name: "OhCampus",
+                    image: require("../static/sponsors/ohcampus.png"),
+                    role: 'Online Media Partner',
                 },
             ]
         },

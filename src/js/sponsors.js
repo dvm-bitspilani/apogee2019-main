@@ -51,8 +51,13 @@ function init() {
                 },
                 {
                     name: "WorldQuant",
-                    image: require("../static/sponsors/worldquant.jpg"),
+                    image: require("../static/sponsors/worldquant.png"),
                     role: 'Official FinTech Partner'
+                },
+                {
+                    name: "International Quant Championship",
+                    image: require("../static/sponsors/iqc.png"),
+                    role: ''
                 },
                 {
                     name: "YesBank",
@@ -129,6 +134,91 @@ function init() {
                     image: require("../static/sponsors/EntrepreneurIndia.png"),
                     role: 'Digital Media Partner',
                     link: 'https://www.entrepreneur.com/in'
+                },
+                {
+                    name: "OhCampus",
+                    image: require("../static/sponsors/ohcampus.png"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "9XM",
+                    image: require("../static/sponsors/9XM.png"),
+                    role: 'Music Partner',
+                    link: 'https://www.9xm.in/'
+                },{
+                    name: "HelloIntern",
+                    image: require("../static/sponsors/hellointern.png"),
+                    role: 'Internship Partner',
+                    link: 'https://www.hellointern.com/'
+                },
+                {
+                    name: "Scientific India",
+                    image: require("../static/sponsors/scientificindia.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'http://www.scind.org/'
+                },
+                {
+                    name: "New Delhi Times",
+                    image: require("../static/sponsors/NDT.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.newdelhitimes.com/'
+                },
+                {
+                    name: "Dare2Compete",
+                    image: require("../static/sponsors/d2c.png"),
+                    role: 'Competition Partner',
+                    link: 'https://dare2compete.com/'
+                },
+                {
+                    name: "DU Express",
+                    image: require("../static/sponsors/DU.png"),
+                    role: 'Online Media Partner',
+                    link: ' https://www.duexpress.in/'
+                },
+                {
+                    name: "Entrepreneur India",
+                    image: require("../static/sponsors/EntrepreneurIndia.png"),
+                    role: 'Digital Media Partner',
+                    link: 'https://www.entrepreneur.com/in'
+                },
+                {
+                    name: "Ignite Engineers",
+                    image: require("../static/sponsors/ignite.png"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.igniteengineers.com/'
+                },
+                {
+                    name: "The College Fever",
+                    image: require("../static/sponsors/collegefever.png"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.thecollegefever.com/'
+                },
+                {
+                    name: "KnowAFest",
+                    image: require("../static/sponsors/knowafest.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'http://www.knowafest.com/'
+                },
+                {
+                    name: "Education Tree",
+                    image: require("../static/sponsors/educationtree.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Aapka Times",
+                    image: require("../static/sponsors/apkatimes.jpg"),
+                    role: 'Online Media Partner',
+                    link: 'https://www.aapkatimes.com/'
+                },
+                {
+                    name: "Campus Bloggers",
+                    image: require("../static/sponsors/CampusBloggers.jpg"),
+                    role: 'Online Media Partner',
+                },
+                {
+                    name: "Institute of Entrepreneurship",
+                    image: require("../static/sponsors/IOE.png"),
+                    role: 'Online Media Partner',
                 },
             ]
         },

@@ -46,6 +46,7 @@ function init() {
                                 eventBox.innerHTML += `
                                     ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
                                     <span>${event.name}</span>
+                                    <span>Time: ${new Date(event.date_time).toLocaleString()}</span>
                                 `;
 
                                 eventBox.addEventListener("click", () => eventClick(event.name, event.details, event.rules, event.id));
@@ -135,6 +136,7 @@ function init() {
                                         eventBox.innerHTML += `
                                             ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
                                             <span>${event.name}</span>
+                                            <span>Time: ${new Date(event.date_time).toLocaleString()}</span>
                                         `;
         
                                         eventBox.addEventListener("click", () => eventClick(event.name, event.details, event.rules, event.id));
@@ -217,6 +219,7 @@ function init() {
                 eventBox.innerHTML += `
                     ${event.img_url.toLowerCase() !== "nill" ? `<img src=${event.img_url} alt=${event.name} />` : `<img src=${require("../static/logo.svg")} alt="APOGEE" />`} 
                     <span>${event.name}</span>
+                    <span>Time: ${new Date(event.date_time).toLocaleString()}</span>
                 `;
 
                 eventBox.addEventListener("click", () => eventClick(event.name, event.details, event.rules, event.id));
